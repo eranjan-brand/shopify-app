@@ -1,0 +1,207 @@
+{% comment %}
+    Renders universal sizing grids based on available sizes on the PLP
+
+    Accepts:
+    - sizeList: {Object} filter object  (Required)
+    
+    Usage:
+    {% render 'universal-size-grid' with filter as sizeList %}
+{% endcomment %}
+
+{% liquid
+    for value in sizeList.values
+        if value.label contains ","
+            assign label = value.label
+            break
+        endif
+    endfor 
+    if label
+        assign universalValueArray = label | split: ','
+    endif
+%}
+
+
+{% if label %}
+    <div class="size-grid__wrapper">
+        <div class="size-grid__tab--wrapper">
+        <ul class="size-grid__tab size-grid__tab-nonuniversal">
+            {% for sizeOption in sizeList.values %}
+                {% assign index = forloop.index %}
+                {% unless sizeOption.label contains "," %}
+                <li class="list-menu__item facets__item size-grid__tab--item{% if sizeOption.active %} active{% endif %}">
+                    <label for="Filter-{{ sizeList.param_name | escape }}-{{ index }}-nonuniversal" class="facet-checkbox{% if value.count == 0 and value.active == false %} facet-checkbox--disabled{% endif %}">
+                        <input type="checkbox"
+                            name="{{ sizeOption.param_name }}"
+                            value="{{ sizeOption.value }}"
+                            id="Filter-{{ sizeList.param_name | escape }}-{{ index }}-nonuniversal"
+                            {% if sizeOption.active %}checked{% endif %}
+                            {% if sizeOption.count == 0 and sizeOption.active == false %}disabled{% endif %}
+                        >
+                        <svg width="1.6rem" height="1.6rem" viewBox="0 0 16 16" aria-hidden="true" focusable="false">
+                            <rect width="16" height="16" stroke="currentColor" fill="none" stroke-width="1"></rect>
+                        </svg>
+                        <svg class="icon icon-checkmark"
+                            width="1.1rem"
+                            height="0.7rem"
+                            viewBox="0 0 11 7"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1.5 3.5L2.83333 4.75L4.16667 6L9.5 1"
+                            stroke="currentColor"
+                            stroke-width="1.75"
+                            stroke-linecap="round"
+                            stroke-linejoin="round" />
+                        </svg>
+                        
+                        <span aria-hidden="true">{{ sizeOption.label }}</span>
+                        <span class="visually-hidden">{{ sizeOption.label }}</span> 
+
+                        {% comment %} <span aria-hidden="true">{{ sizeOption.label }} ({{ sizeOption.count }})</span>
+                        <span class="visually-hidden">{{ sizeOption.label }} ({% if sizeOption.count == 1 %}{{ 'products.facets.product_count_simple.one' | t: count: sizeOption.count }}{% else %}{{ 'products.facets.product_count_simple.other' | t: count: value.count }}{% endif %})</span>  {% endcomment %}
+                    
+                    </label>
+                </li>
+                {% endunless %}
+            {% endfor %}
+        </ul>
+    </div>
+    </div>
+    
+    <div class="size-grid__wrapper">
+        <ul class="size-grid__gender--nav">
+            <li class="size-grid__gender--nav-item active"><a href="Womens" >Womens</a></li>
+            <li class="size-grid__gender--nav-item"><a href="Mens" >Mens</a></li>
+        </ul>
+        <ul class="size-grid__nav">
+            {% assign firstActive = true %}
+            {% for element in universalValueArray %}
+                {% assign element_parts = element | split: " " %}
+                {% assign size = "" %}
+                {% assign label = "" %}
+                {% for part in element_parts %}
+                    {% assign testVal = part | plus: 0 %}
+                    {% if testVal > 0 %}
+                        {% assign size = size | append: part %}
+                    {% else %}
+                        {% assign label = part %}
+                    {% endif %}
+                {% endfor %}
+                
+                {% if size != blank %}
+                    <li class="size-grid__nav--item{% if firstActive %} active{% endif %}"><a href="#{{ label }}" >{{ label }}</a></li>
+                    {% assign firstActive = false %}
+                {% endif %}
+            {% endfor %}
+        </ul>
+        
+        
+        {% for element in universalValueArray %}
+            {% liquid
+                assign element_parts = element | strip | split: " "
+                assign size = ""
+                assign label = ""
+                for part in element_parts
+                    assign testVal = part | plus: 0
+                    if testVal > 0
+                        assign size = size | append: part
+                    else
+                        assign label = part | strip
+                    endif
+                endfor
+            %}
+            {% if size != blank %}
+                <div id="{{ label }}" class="size-grid__tab--wrapper">
+                    <ul class="size-grid__tab">
+                        {% for sizeOption in sizeList.values %}
+                            {% assign index = forloop.index %}
+                            {% assign elementArr = sizeOption.label | split: ',' %}
+                                {% for el in elementArr %}
+                                    {% liquid 
+                                        assign elParts = el | split: " "
+                                        if elParts[0] != "Age" and elParts.size > 2
+                                            assign gender = elParts[0]
+                                        endif
+                                    %}
+                                {% endfor %}
+                                {% for sizeElement in elementArr %}
+                                    {% liquid
+                                        assign sizeElParts = sizeElement | strip | split: " "
+                                        if sizeElParts.size > 2
+                                            assign sizeLabel = sizeElParts[1] | strip
+                                            assign size = sizeElParts[2] | strip
+                                            assign testVal = size | plus: 0
+                                            if testVal <= 0
+                                                assign size = blank
+                                            endif
+                                        else
+                                            assign size = ""
+                                            assign sizeLabel = ""
+                                            for part in sizeElParts
+                                                assign testVal = part | plus: 0
+                                                if testVal > 0
+                                                    assign size = part | strip
+                                                else
+                                                    assign sizeLabel = part | strip
+                                                endif
+                                            endfor
+                                        endif 
+                                    %}
+                                {% if sizeLabel == label and size != blank %}
+                                    <li {% if gender %}data-gender="{{gender}}" {% endif %} class="list-menu__item facets__item size-grid__tab--item{% if sizeOption.active %} active{% endif %}">
+                                        <label for="Filter-{{ sizeList.param_name | escape }}-{{ index }}" class="facet-checkbox{% if value.count == 0 and value.active == false %} facet-checkbox--disabled{% endif %}">
+                                            <input type="checkbox"
+                                                name="{{ sizeOption.param_name }}"
+                                                value="{{ sizeOption.value }}"
+                                                id="Filter-{{ sizeList.param_name | escape }}-{{ index }}"
+                                                {% if sizeOption.active %}checked{% endif %}
+                                                {% if sizeOption.count == 0 and sizeOption.active == false %}disabled{% endif %}
+                                            >
+                                            <svg width="1.6rem" height="1.6rem" viewBox="0 0 16 16" aria-hidden="true" focusable="false">
+                                                <rect width="16" height="16" stroke="currentColor" fill="none" stroke-width="1"></rect>
+                                            </svg>
+                                            <svg class="icon icon-checkmark"
+                                                width="1.1rem"
+                                                height="0.7rem"
+                                                viewBox="0 0 11 7"
+                                                fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M1.5 3.5L2.83333 4.75L4.16667 6L9.5 1"
+                                                stroke="currentColor"
+                                                stroke-width="1.75"
+                                                stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                            </svg>
+                                            <span aria-hidden="true">{{ label }}</span>
+                                            <span aria-hidden="true">{{ size }}</span>
+                                            <span class="visually-hidden">{{ size }}</span> 
+
+
+                                            {% comment %} 
+                                            <span aria-hidden="true">{{ size }} ({{ sizeOption.count }})</span>
+                                            <span class="visually-hidden">{{ size }} ({% if sizeOption.count == 1 %}{{ 'products.facets.product_count_simple.one' | t: count: sizeOption.count }}{% else %}{{ 'products.facets.product_count_simple.other' | t: count: value.count }}{% endif %})</span> 
+                                            {% endcomment %}
+                                        
+                                        </label>
+                                    </li>
+                                {% endif %}
+                            {% endfor %}
+                        {% endfor %}
+                    </ul>
+                </div>
+            {% endif %}
+        {% endfor %}
+    </div>
+{% else %}
+<div>
+    <ul class="size-grid__tab">
+    <li class="list-menu__item facets__item size-grid__tab--item">
+        <label for="one-size" class="facet-checkbox">
+
+            <span aria-hidden="true">One Size</span>
+            <span class="visually-hidden">One Size</span>
+        
+        </label>
+    </li>
+    </ul>
+</div>
+{% endif %}

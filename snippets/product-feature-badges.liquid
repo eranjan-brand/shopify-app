@@ -1,0 +1,57 @@
+{% comment %} 
+Renders a badges band with 3 badges on PDP
+
+Accepts:
+- product: {Object} product object (Required)
+- badgeSettings: {section.block} the block where the type is "feature_badges" {Required}
+- desc_type: {string} the type of the badge content, either be section or be modal {Requuired}
+
+Usage:
+{% render 'product-feature-badges', product: product %}
+
+{% endcomment %}
+<style>
+    @media screen and (min-width: 750px) {
+
+        modal-dialog[id^='feature-badge-'] .product-popup-modal__content {
+          padding-bottom: 3rem;
+          width: 40%;
+        }
+
+        modal-dialog[id^='feature-badge-'] .product-popup-modal__content h1 {
+          text-align: {{ badgeSettings[0].settings.badge_content_header-align }};
+        }
+
+
+      }
+</style>
+
+<div class="product-badges-container">
+      {% for badge in product.metafields.utopia.features.value %}
+         <modal-opener class="" data-modal="#feature-badge-{{ badge }}">
+            <button class="product-popup-modal__button link button--primary" type="button" aria-haspopup="dialog">
+              {% if desc_type == 'section' %} <a href="#section_feature-{{ badge }}"> {% endif %}
+                <img src="https://cdn.shopify.com/s/files/1/0662/7524/6331/files/HP-Feature-Benefit-{{ badge }}.png" alt="{{badge}}" width="100"
+                  height=""100>
+                {% if desc_type == 'section' %} </a>{% endif %}
+            </button>
+        </modal-opener>
+      {% endfor %} 
+
+  </div>
+
+{% if desc_type == 'modal' %}
+  {% for badge in product.metafields.utopia.features.value %}
+    <modal-dialog id="feature-badge-{{ badge }}" class="product-popup-modal" {{ block.shopify_attributes }}>
+        <div role="dialog" aria-label="feature-badge" aria-modal="true" class="product-popup-modal__content size-guide__popup" tabindex="-1">
+          <button id="ModalClose-featureBadges-{{ badge }}" type="button" class="product-popup-modal__toggle" aria-label="{{ 'accessibility.close' | t }}">{% render 'icon-close' %}</button>
+          <div>
+            <h1>{{ badge }}</h1>
+            {% assign page_title = badge | downcase %}
+            {{ pages[page_title].content }}
+            </div>
+        </div>
+      </modal-dialog>
+    {% endfor %}
+
+{% endif %}

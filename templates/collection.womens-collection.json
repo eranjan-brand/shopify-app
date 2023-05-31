@@ -1,0 +1,223 @@
+{
+  "sections": {
+    "83e7c34e-391c-46ac-9933-a04da8bf6a2c": {
+      "type": "image-banner-hp",
+      "blocks": {
+        "template--18626565964057__83e7c34e-391c-46ac-9933-a04da8bf6a2c-16829177873e6a3aeb-0": {
+          "type": "heading",
+          "disabled": true,
+          "settings": {
+            "heading": "Image banner",
+            "timer_after_heading": "Test heading",
+            "heading_size": "h1",
+            "heading_color": "#000000"
+          }
+        },
+        "template--18626565964057__83e7c34e-391c-46ac-9933-a04da8bf6a2c-16829177873e6a3aeb-2": {
+          "type": "buttons",
+          "disabled": true,
+          "settings": {
+            "button_label_1": "Button label",
+            "button_link_1": "",
+            "button_style_secondary_1": false,
+            "button_label_2": "Button label",
+            "button_link_2": "",
+            "button_style_secondary_2": false,
+            "button_label_3": "Button label 3",
+            "button_link_3": "",
+            "button_label_4": "Button label 4",
+            "button_link_4": "",
+            "btn_color": "#000000",
+            "btn_color_hover": "#000000",
+            "btn_text_color": "#000000"
+          }
+        }
+      },
+      "block_order": [
+        "template--18626565964057__83e7c34e-391c-46ac-9933-a04da8bf6a2c-16829177873e6a3aeb-0",
+        "template--18626565964057__83e7c34e-391c-46ac-9933-a04da8bf6a2c-16829177873e6a3aeb-2"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/HP-50_Off_Boots_23_Banner-Desktop.jpg",
+        "image_mobile": "shopify:\/\/shop_images\/mobilebannerhires_1.5x.jpg",
+        "img_link": "",
+        "clickable_img": false,
+        "show_text_box": true,
+        "text_box_color": "#ffffff",
+        "desktop_content_position": "middle-center",
+        "desktop_content_alignment": "center",
+        "color_scheme": "background-1",
+        "desktop_content_container_width": 60,
+        "desktop_img_padding_left": 10,
+        "desktop_img_padding_right": 10,
+        "desktop_img_padding_top": 10,
+        "desktop_img_padding_bottom": 10,
+        "desktop_CTA_stacked": false,
+        "show_text_box_mobile": true,
+        "text_box_mobile_color": "#fff",
+        "mobile_below_image": false,
+        "mobile_img_padding_bottom": 50,
+        "mobile_top": 50,
+        "mobile_left": 50,
+        "mobile_img_padding_left": 0,
+        "mobile_img_padding_right": 0,
+        "mobile_padding_left": 10,
+        "mobile_padding_right": 10,
+        "mobile_padding_top": 10,
+        "mobile_padding_bottom": 10,
+        "mobile_content_alignment": "center",
+        "mobile_CTA_stacked": true
+      }
+    },
+    "banner": {
+      "type": "main-collection-banner",
+      "settings": {
+        "show_collection_description": false,
+        "show_collection_image": false,
+        "color_scheme": "background-1"
+      }
+    },
+    "ea8c5a1e-a85a-4d4e-9fd2-cff140e80f59": {
+      "type": "collection-list-plp",
+      "disabled": true,
+      "blocks": {
+        "template--16464605479163__ea8c5a1e-a85a-4d4e-9fd2-cff140e80f59-1674444608f37a9c9c-0": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "womens-boots",
+            "collection_title": "Boots",
+            "collection_link": "",
+            "collection_image": "shopify:\/\/shop_images\/1222HP-11__439.jpg",
+            "product_override": ""
+          }
+        },
+        "template--16464605479163__ea8c5a1e-a85a-4d4e-9fd2-cff140e80f59-1674444608f37a9c9c-1": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "womens-flat",
+            "collection_title": "Flats",
+            "collection_link": "",
+            "collection_image": "shopify:\/\/shop_images\/flats.jpg",
+            "product_override": ""
+          }
+        },
+        "03e753cc-67cd-45a5-8262-e6099644ed51": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "womens-heels",
+            "collection_title": "Heels",
+            "collection_link": "",
+            "collection_image": "shopify:\/\/shop_images\/heels.jpg",
+            "product_override": ""
+          }
+        },
+        "95ba6bf1-174f-4e9d-9600-330963c023fb": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "womens-sneakers",
+            "collection_title": "Sneakers",
+            "collection_link": "\/collections\/womens-flat?filter.mfield_utopia_colour_filter=Black",
+            "collection_image": "shopify:\/\/shop_images\/sneakers.jpg",
+            "product_override": ""
+          }
+        },
+        "12a92a8c-64d3-4a33-befc-57c7b792124f": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "womens-sandals",
+            "collection_title": "Sandals",
+            "collection_link": "",
+            "collection_image": "shopify:\/\/shop_images\/8_b2fdb5fe-e8da-433a-a54c-93c6496224d5.jpg",
+            "product_override": ""
+          }
+        },
+        "2bc67479-b422-49f3-8d3a-c41901b968e8": {
+          "type": "featured_collection",
+          "disabled": true,
+          "settings": {
+            "collection": "womens-gumboots",
+            "collection_title": "",
+            "collection_link": "",
+            "product_override": ""
+          }
+        },
+        "04754460-257a-40cf-937b-606f9a9a1bec": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "womens-slippers",
+            "collection_title": "Slippers",
+            "collection_link": "",
+            "collection_image": "shopify:\/\/shop_images\/slippers.jpg",
+            "product_override": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--16464605479163__ea8c5a1e-a85a-4d4e-9fd2-cff140e80f59-1674444608f37a9c9c-0",
+        "template--16464605479163__ea8c5a1e-a85a-4d4e-9fd2-cff140e80f59-1674444608f37a9c9c-1",
+        "03e753cc-67cd-45a5-8262-e6099644ed51",
+        "95ba6bf1-174f-4e9d-9600-330963c023fb",
+        "12a92a8c-64d3-4a33-befc-57c7b792124f",
+        "2bc67479-b422-49f3-8d3a-c41901b968e8",
+        "04754460-257a-40cf-937b-606f9a9a1bec"
+      ],
+      "settings": {
+        "title": "",
+        "heading_size": "h0",
+        "image_ratio": "adapt",
+        "columns_desktop": 9,
+        "color_scheme": "accent-2",
+        "bg_colour": "#ffffff",
+        "bg_image_padding": 0,
+        "show_view_all": false,
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "product-grid": {
+      "type": "main-collection-product-grid-hp",
+      "settings": {
+        "infinite_scroll": true,
+        "products_per_page": 16,
+        "columns_desktop": 4,
+        "image_ratio": "portrait",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "enable_quick_add": true,
+        "enable_filtering": true,
+        "filter_type": "horizontal",
+        "enable_sorting": true,
+        "columns_mobile": "2",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "a40d980f-7d31-4146-b484-09247213c50d": {
+      "type": "main-collection-description",
+      "settings": {
+        "show_title": true,
+        "color_scheme": "background-1",
+        "content_alignment": "center",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "1681194565d20f1d04": {
+      "type": "apps",
+      "settings": {
+        "include_margins": true
+      }
+    }
+  },
+  "order": [
+    "83e7c34e-391c-46ac-9933-a04da8bf6a2c",
+    "banner",
+    "ea8c5a1e-a85a-4d4e-9fd2-cff140e80f59",
+    "product-grid",
+    "a40d980f-7d31-4146-b484-09247213c50d",
+    "1681194565d20f1d04"
+  ]
+}

@@ -1,0 +1,85 @@
+ <style>
+    .universal-dropdown-container {
+        position:relative;
+    }
+
+    .universal-dropdown .universal-size-list {
+        display:none;
+        list-style:none;
+        padding-left:0;
+        width: 30%;
+        box-shadow: 0 5px 12px rgb(0 0 0 / 15%);
+        text-align:center;
+        position: absolute;
+        z-index: 2;
+        background: #ffff;
+        top: 30%;
+        
+    }
+
+    .open-dropdown-button {
+        border:unset;
+        background:unset;
+        width:fit-content;
+        position:relative;
+        padding-left:0;
+    }
+
+    .open-dropdown-button .icon-caret {
+        position: absolute;
+        right: -1rem;
+        /*top: calc(50% - 0.2rem);*/
+    }
+        
+
+    .universal-select, .universal-dropdown .universal-size-list .size-option {
+        text-decoration:none;
+        color:#000;
+        cursor:pointer;
+    }
+
+    .universal-dropdown .hp-open { 
+        display:block !important; 
+        
+    }
+
+    .universal-size-list .size-option:hover {
+        background: #BBBBBB;
+    }
+
+    .universal-size-list .size-option.selected {
+        background-color: #617F59;
+        
+    }
+
+    .universal-size-list .size-option.selected  {
+        color: #fff;
+    }
+
+</style>
+ 
+ 
+ <div class="universal-dropdown">
+                  <div class="universal-dropdown-container">
+                      <button class="universal-select open-dropdown-button">
+                          <div class="universal-select">
+                            <span class="universal-select">Select Size: </span>
+                            <span class="universal-select universal-label" data-title="{{ selectedSize }}">{{ selectedSize }}</span>
+                            <svg class="universal-select icon-caret" width="14" height="14" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" ratio="0.7"><polyline fill="none" stroke="#000" stroke-width="1.03" points="16 7 10 13 4 7"></polyline></svg>
+                          </div>
+                      </button>
+                      <ul class="universal-size-list" style="transition: all 2s ease-out;">
+                          <li class="size-option{% if selectedSize == 'US' %} selected{% endif %}" data-size="US">
+                              US
+                          </li>
+                          <li class="size-option{% if selectedSize == 'UK' %} selected{% endif %}" data-size="UK">
+                            UK
+                        </li>
+                          <li class="size-option{% if selectedSize == 'EU' %} selected{% endif %}" data-size="EU">
+                              EU
+                          </li>
+                      </ul>
+                  </div>
+              
+</div>
+

@@ -1,0 +1,335 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "4a88a001-bb46-42ee-ae9c-06d2f531d64a": {
+      "type": "rich-text",
+      "blocks": {
+        "template--18685132734745__4a88a001-bb46-42ee-ae9c-06d2f531d64a-1681862599e7e48d40-0": {
+          "type": "heading",
+          "disabled": true,
+          "settings": {
+            "heading": "<h2>FOR OUR PLANET<\/h2>",
+            "heading_size": "h1"
+          }
+        },
+        "template--18685132734745__4a88a001-bb46-42ee-ae9c-06d2f531d64a-1681862599e7e48d40-2": {
+          "type": "button",
+          "settings": {
+            "button_label": "",
+            "button_link": "",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        },
+        "template--18685132734745__4a88a001-bb46-42ee-ae9c-06d2f531d64a-1681862599e7e48d40-1": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "text": "<p>OUR MATERIALS<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "template--18685132734745__4a88a001-bb46-42ee-ae9c-06d2f531d64a-1681862599e7e48d40-0",
+        "template--18685132734745__4a88a001-bb46-42ee-ae9c-06d2f531d64a-1681862599e7e48d40-2",
+        "template--18685132734745__4a88a001-bb46-42ee-ae9c-06d2f531d64a-1681862599e7e48d40-1"
+      ],
+      "custom_css": [
+
+      ],
+      "settings": {
+        "desktop_content_position": "left",
+        "content_alignment": "left",
+        "color_scheme": "background-1",
+        "full_width": true,
+        "padding_top": 4,
+        "padding_bottom": 12
+      }
+    },
+    "2739150b-d31c-4545-a8d4-0fb387bd10d7": {
+      "type": "image-banner-hp",
+      "blocks": {
+        "template--18685376364825__2739150b-d31c-4545-a8d4-0fb387bd10d7-168289402616beb143-0": {
+          "type": "heading",
+          "disabled": true,
+          "settings": {
+            "heading": "Image banner",
+            "timer_after_heading": "Test heading",
+            "heading_size": "h1",
+            "heading_color": "#000000"
+          }
+        },
+        "template--18685376364825__2739150b-d31c-4545-a8d4-0fb387bd10d7-168289402616beb143-2": {
+          "type": "buttons",
+          "disabled": true,
+          "settings": {
+            "button_label_1": "Button label",
+            "button_link_1": "",
+            "button_style_secondary_1": false,
+            "button_label_2": "Button label",
+            "button_link_2": "",
+            "button_style_secondary_2": false,
+            "button_label_3": "Button label 3",
+            "button_link_3": "",
+            "button_label_4": "Button label 4",
+            "button_link_4": "",
+            "btn_color": "#000000",
+            "btn_color_hover": "#000000",
+            "btn_text_color": "#000000"
+          }
+        }
+      },
+      "block_order": [
+        "template--18685376364825__2739150b-d31c-4545-a8d4-0fb387bd10d7-168289402616beb143-0",
+        "template--18685376364825__2739150b-d31c-4545-a8d4-0fb387bd10d7-168289402616beb143-2"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/Untitled_5000_x_1080px_6000_x_1080px_6000_x_600px.png",
+        "image_mobile": "shopify:\/\/shop_images\/Untitled_5000_x_1080px_6000_x_1080px_6000_x_600px_e28b4e06-06e2-41e2-a5c9-cdc91efc2f38.png",
+        "img_link": "",
+        "clickable_img": false,
+        "show_text_box": false,
+        "text_box_color": "#ffffff",
+        "desktop_content_position": "middle-center",
+        "desktop_content_alignment": "center",
+        "color_scheme": "background-2",
+        "mobile_below_image": false,
+        "mobile_img_padding_bottom": 70,
+        "mobile_top": 50,
+        "mobile_left": 50,
+        "mobile_content_alignment": "center"
+      }
+    },
+    "a806b2e0-9d08-4c40-b1d3-d319af9079a1": {
+      "type": "rich-text",
+      "blocks": {
+        "template--18685376364825__a806b2e0-9d08-4c40-b1d3-d319af9079a1-168289531285c39ca2-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "<h2>By 2024, at least one element of every shoe will be recycled or eco-friendly.<\/h2>",
+            "heading_size": "h1"
+          }
+        },
+        "template--18685376364825__a806b2e0-9d08-4c40-b1d3-d319af9079a1-168289531285c39ca2-1": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "text": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.<\/p>"
+          }
+        },
+        "template--18685376364825__a806b2e0-9d08-4c40-b1d3-d319af9079a1-168289531285c39ca2-2": {
+          "type": "button",
+          "disabled": true,
+          "settings": {
+            "button_label": "Button label",
+            "button_link": "",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "template--18685376364825__a806b2e0-9d08-4c40-b1d3-d319af9079a1-168289531285c39ca2-0",
+        "template--18685376364825__a806b2e0-9d08-4c40-b1d3-d319af9079a1-168289531285c39ca2-1",
+        "template--18685376364825__a806b2e0-9d08-4c40-b1d3-d319af9079a1-168289531285c39ca2-2"
+      ],
+      "custom_css": [
+        "h2 {font-family: \"Basset-bold-hp\"; font-size: 38px;}"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "background-1",
+        "full_width": true,
+        "padding_top": 0,
+        "padding_bottom": 40
+      }
+    },
+    "4723b10a-d11b-428b-ae19-13c018c3fe9c": {
+      "type": "image-with-text-hp",
+      "disabled": true,
+      "blocks": {
+        "template--18685132734745__4723b10a-d11b-428b-ae19-13c018c3fe9c-16818617498dc71ba8-1": {
+          "type": "text",
+          "settings": {
+            "text": "<h2>By 2022, at least one element of every shoe will be recycled or eco-friendly.<\/h2>",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "template--18685132734745__4723b10a-d11b-428b-ae19-13c018c3fe9c-16818617498dc71ba8-1"
+      ],
+      "custom_css": [
+        "h2 {font-family: \"Basset-bold-hp\"; font-size: 38px;}"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/Product_Image_7.jpg",
+        "clickable_img": false,
+        "img_link": "",
+        "height": "adapt",
+        "desktop_image_width": "small",
+        "layout": "image_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "background_color": "#ffffff",
+        "content_color": "#ffffff",
+        "mobile_content_alignment": "left",
+        "padding_top": 4,
+        "padding_bottom": 28
+      }
+    },
+    "2b5804b3-4eb6-4c4a-a2ae-45522632559b": {
+      "type": "multicolumn",
+      "blocks": {
+        "template--18685132734745__2b5804b3-4eb6-4c4a-a2ae-45522632559b-16818618753d3979f2-0": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/ourmaterials-strip1.jpg",
+            "title": "THE GOOD SHOE",
+            "text": "<p>We are committed to the use of more sustainable materials in our production and products while still being known for our famous Hush Puppies quality and comfort. Each season, we will release a collection of sustainable and eco-friendly shoes, using and testing new materials. We will look to push boundaries and experiment with the most sustainable and eco-friendly fabrics, components, recycled materials and explore the current unknown.<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "6f267ad7-b595-46d9-82eb-85c734a3fa44": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/ourmaterials-strip4.jpg",
+            "title": "BETTER LEATHER",
+            "text": "<p>Using leather in the bulk of our range means that we are creating styles that will be durable and age beautifully. We are now using more tanneries that are part of the Leather Working Group which means we have a greater transparency and peace of mind that they are operating at their most ethically and sustainably. By 2023, our goal is to have at least 50% of our total volume coming from Leather Working Group certified tanneries.<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "a53e3472-0a75-4dcb-931d-a63d8824981b": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/ourmaterials-strip3.jpg",
+            "title": "RECYCLED PLASTIC KNIT",
+            "text": "<p>Keeping our waste to a bare minimum is key, which is why flyknit is so great. The shoe’s upper is knitted as one piece, exactly to its shape to reduce the mount of excess fabric used in the construction phase .<br\/><br\/>In 2020, we also introduced our first flyknit made from recycled, post-consumer plastic which we will continue to roll out to more of our range.<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--18685132734745__2b5804b3-4eb6-4c4a-a2ae-45522632559b-16818618753d3979f2-0",
+        "6f267ad7-b595-46d9-82eb-85c734a3fa44",
+        "a53e3472-0a75-4dcb-931d-a63d8824981b"
+      ],
+      "settings": {
+        "title": "",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "columns_desktop": 3,
+        "column_alignment": "left",
+        "background_style": "primary",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "accent-2",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "54333534-900d-456d-91bf-6034b2f8cca2": {
+      "type": "image-with-text-hp",
+      "blocks": {
+        "59d05e20-34ee-4ff9-8375-63e992484210": {
+          "type": "text",
+          "settings": {
+            "text": "<h2>By 2024, 100% of our packaging will be sustainably sourced and free of virgin plastic.<\/h2>",
+            "text_style": "body"
+          }
+        },
+        "fff35aa7-fd25-4eec-a3d0-1995277a4897": {
+          "type": "caption",
+          "settings": {
+            "caption": "We have now transitioned our shoe boxes to be made from FSC MIX raw material. We have also changed the printing ink on our shoe boxes over to eco-friendly,  non-toxic inks, which means the entire shoe box can be recycled, if not re-used, safely. We are also working towards reducing the amount of packaging to take care of your Hush Puppies shoes while they are in transit to you. We have committed that by 2022, we will no longer use any virgin plastic  and want to reduce the amount of paper wrapping inside the shoe box and shoes.  ",
+            "text_style": "subtitle",
+            "text_size": "small"
+          }
+        }
+      },
+      "block_order": [
+        "59d05e20-34ee-4ff9-8375-63e992484210",
+        "fff35aa7-fd25-4eec-a3d0-1995277a4897"
+      ],
+      "custom_css": [
+        "h2 {font-family: \"Basset-bold-hp\"; font-size: 38px;}"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/dog-boxcrop.png",
+        "clickable_img": false,
+        "img_link": "",
+        "height": "adapt",
+        "desktop_image_width": "small",
+        "layout": "image_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "background_color": "#ffffff",
+        "content_color": "#ffffff",
+        "mobile_content_alignment": "left",
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "de333018-6a65-4b9a-9871-bfcbc706fc2e": {
+      "type": "rich-text",
+      "disabled": true,
+      "blocks": {
+        "template--18685376364825__de333018-6a65-4b9a-9871-bfcbc706fc2e-1682479634d1e8e0dd-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p>Shoe Boxes<\/p>",
+            "heading_size": "h2"
+          }
+        },
+        "template--18685376364825__de333018-6a65-4b9a-9871-bfcbc706fc2e-1682479634d1e8e0dd-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>We have now transitioned our shoe boxes to be made from FSC MIX raw material. We have also changed the printing ink on our shoe boxes over to eco-friendly,  non-toxic inks, which means the entire shoe box can be recycled, if not re-used, safely.                  <br\/><\/p><p>We are also working towards reducing the amount of packaging to take care of your Hush Puppies shoes while they are in transit to you. We have committed that by 2022, we will no longer use any virgin plastic  and want to reduce the amount of paper wrapping inside the shoe box and shoes.  <\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "template--18685376364825__de333018-6a65-4b9a-9871-bfcbc706fc2e-1682479634d1e8e0dd-0",
+        "template--18685376364825__de333018-6a65-4b9a-9871-bfcbc706fc2e-1682479634d1e8e0dd-1"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "background-2",
+        "full_width": true,
+        "padding_top": 12,
+        "padding_bottom": 40
+      }
+    }
+  },
+  "order": [
+    "main",
+    "4a88a001-bb46-42ee-ae9c-06d2f531d64a",
+    "2739150b-d31c-4545-a8d4-0fb387bd10d7",
+    "a806b2e0-9d08-4c40-b1d3-d319af9079a1",
+    "4723b10a-d11b-428b-ae19-13c018c3fe9c",
+    "2b5804b3-4eb6-4c4a-a2ae-45522632559b",
+    "54333534-900d-456d-91bf-6034b2f8cca2",
+    "de333018-6a65-4b9a-9871-bfcbc706fc2e"
+  ]
+}

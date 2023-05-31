@@ -1,0 +1,288 @@
+<style type="text/css">
+  .title-{{ section.id }}-padding {
+    padding-top: {{ section.settings.title_padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.title_padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+
+  .body-{{ section.id }}-padding {
+    padding-top: {{ section.settings.body_padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.body_padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+  
+  @media screen and (min-width: 750px) {
+    .info-menu {
+      margin-top: {{ section.settings.margin_top }}px;
+    }
+  
+    .title-{{ section.id }}-padding {
+      padding-top: {{ section.settings.title_padding_top }}px;
+      padding-bottom: {{ section.settings.title_padding_bottom }}px;
+    }
+
+    .body-{{ section.id }}-padding {
+      padding-top: {{ section.settings.body_padding_top }}px;
+      padding-bottom: {{ section.settings.body_padding_bottom }}px;
+    }
+  }
+
+  :root {
+    --faq-spacing: 20px;
+  }
+
+    .faq__answer {
+        display: block;
+        height: 0;
+        opacity: 0;
+        transition: all ease-in-out 300ms;
+        background-color: rgb(var(--gradient-background));
+        
+        padding-block: 0;
+        padding-inline: 20px;
+        overflow: hidden;
+    }
+
+    .faq__answer.open {
+        height: auto;
+        opacity: 1;
+        padding-block: 30px;
+        margin-bottom: 25px;
+    }
+
+    .faq__question {
+        font-size: 16px;
+        font-weight: bold;
+        padding-block: var(--faq-spacing);
+        border-bottom: 1px solid #eaeaea;
+        cursor: pointer;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+
+    .faq__question svg {
+        width: 2rem;
+        height: 2rem;
+    }
+
+    .faq__question--icon {
+        display: flex;
+    }
+
+    .faq__question--icon.active svg {
+        transform: rotate(180deg);
+    }
+
+    .faq__subheading {
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 32px;
+        {% comment %} padding-inline: 20px; {% endcomment %}
+        border-bottom: 1px solid #eaeaea;
+      margin: 0;
+      padding-block: var(--faq-spacing);
+    }
+
+    .title-holder h2 {
+      font-weight: 700;
+      font-size: 30px;
+      border-bottom: 1px solid #eaeaea;
+      margin: 0;
+      padding-block: var(--faq-spacing);
+    }
+
+</style>
+
+{% if section.settings.title != blank %}
+  <div class="page-width section-{{ section.id }}-padding title-{{ section.id }}-padding">
+    <div class="title-holder">
+      <h2>{{ section.settings.title | escape }}</h2>
+      <p class="faq-subtitle">{{ section.settings.subtitle }}</p>
+    </div>
+  </div>
+{% endif %}
+
+
+
+<div class="page-width body-{{ section.id }}-padding {% if section.settings.title == blank %}section-{{ section.id }}-padding{% endif %}" data-section-id="{{ section.id }}">
+    {% if section.blocks.size > 0 %}
+    <div class="faq__wrapper">
+        {% for block in section.blocks %}
+        <div class="faq--{{ block.id }}" {{ block.shopify_attributes }}>
+
+            {% case block.type %}
+                {% when 'text_block'%}
+                    <div class="faq__individual">
+                    {% if block.settings.question != blank %}
+                        <div class="faq__question">
+                            {{ block.settings.question }}
+                            <div class="faq__question--icon">
+                                {% render 'icon-caret' %}
+                            </div>
+                        </div>
+                    {% endif %}
+                    {% if block.settings.answer != blank %}
+                        <div class="faq__answer">{{ block.settings.answer }}</div>
+                    {% endif %}
+                    </div>
+                {% when 'subheading' %}
+                    <h3 class="faq__subheading">
+                        {{ block.settings.text }}
+                    </h3>
+            {% endcase %}
+        </div>
+        {% endfor %}
+    </div>
+    {% endif %}
+
+    {% if section.settings.faq_footer_title != blank %}
+    <div class="faq-footer-title">
+        <h3>{{ section.settings.faq_footer_title }}</h3>
+    </div>
+    {% endif %}
+    </div>
+
+
+
+<script type="text/javascript">
+    document.querySelectorAll('.faq__question').forEach(function (el) {
+        el.addEventListener('click', function () {
+            const answer = this.nextElementSibling;
+            const openState = answer.classList.contains('open')
+            
+            const openElements = document.querySelectorAll('.faq__answer.open')
+            openElements.forEach(openEl => {
+              openEl.classList.remove('open')
+            })
+
+            if (!openState) {
+                answer.classList.add('open')
+            }
+
+            const activeCarets = document.querySelectorAll('.faq__question--icon.active')
+            activeCarets.forEach(caret => {
+              caret.classList.remove('active')
+            })
+
+            let caretIcon = el.querySelector('.faq__question--icon');
+            if (!openState) {
+                caretIcon.classList.add('active');
+            }
+        });
+    });
+</script>
+{% schema %}
+{
+  "name": "FAQ",
+  "class": "index-section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "FAQ page heading",
+      "default": "FAQ"
+    },
+    {
+      "type": "text",
+      "id": "subtitle",
+      "label": "FAQ page subtitle",
+      "default": "FAQ Subtitle"
+    },
+    {
+      "type": "text",
+      "id": "faq_footer_title",
+      "label": "Footer title",
+      "default": "If you can’t find answer for your quesion, contact us"
+    },
+    {
+      "type": "range",
+      "id": "title_padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Title padding top",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "title_padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Title padding bottom",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "body_padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Accordion padding top",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "body_padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Accordion padding bottom",
+      "default": 36
+    }
+  ],
+  "blocks": [
+    {
+      "type": "text_block",
+      "name": "Item",
+      "settings": [
+        {
+          "type": "text",
+          "id": "question",
+          "label": "Question",
+          "default": "Add Question"
+        },
+        {
+          "type": "richtext",
+          "id": "answer",
+          "label": "Add answer",
+          "default": "<p>Add Answer</p>"
+        }
+      ]
+    },
+    {
+        "type": "subheading",
+        "name": "Sub Heading",
+        "settings": [
+          {
+            "type": "text",
+            "id": "text",
+            "label": "Text",
+            "default": "Heading"
+          }
+        ]
+      }
+  ],
+  "presets": [
+    {
+      "name": "FAQ",
+      "category": "Text",
+      "blocks": [
+        {
+          "type": "text_block"
+        },
+        {
+          "type": "text_block"
+        },
+        {
+          "type": "text_block"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,128 @@
+{
+  "wrapper": "div#info-page__wrapper.page-width",
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "e6053cb1-7c27-4ab5-81a3-58e489d080f2": {
+      "type": "breadcrumb-section",
+      "settings": {
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "2b0fea8d-df5e-4170-889e-a2bb18c67a87": {
+      "type": "info-menu",
+      "blocks": {
+        "1ac1f800-16d3-47f1-991a-e38873f7bad7": {
+          "type": "link_list",
+          "settings": {
+            "heading": "Quick links",
+            "menu": "info-menu"
+          }
+        }
+      },
+      "block_order": [
+        "1ac1f800-16d3-47f1-991a-e38873f7bad7"
+      ],
+      "settings": {
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "cf9ab64e-153c-482d-96fb-ae12822fc0a5": {
+      "type": "faq-hp",
+      "blocks": {
+        "1240624f-6f84-41a0-ad3c-2d2d8ec226fd": {
+          "type": "text_block",
+          "disabled": true,
+          "settings": {
+            "question": "Click Frenzy 30-50% off everything",
+            "answer": "<p>Prices as marked. Cannot be used in conjunction with any other offer. Offer extended and now ends 21st May 2023, 11:59pm AEST.<\/p>"
+          }
+        },
+        "faf997da-9b1c-4dd8-b98f-82419dc5a788": {
+          "type": "text_block",
+          "settings": {
+            "question": "$50 off Boots",
+            "answer": "<p>Valid on full price boots only. Excludes Muddy. Pricesd as marked. Not  to be used in conjunction with any other offer. Offer ends 11th June 2023 11:59pm AEST<\/p>"
+          }
+        },
+        "template--16687490892027__cf9ab64e-153c-482d-96fb-ae12822fc0a5-1675113294682c4214-1": {
+          "type": "text_block",
+          "disabled": true,
+          "settings": {
+            "question": "25% off Sandals",
+            "answer": "<p>Valid on full price sandals only. Prices as marked. Not to be used in conjunction with any other offer. Offer ends Sunday 12th February 2023, 11:59pm AEDT<\/p>"
+          }
+        },
+        "template--16687490892027__cf9ab64e-153c-482d-96fb-ae12822fc0a5-1675113294682c4214-2": {
+          "type": "text_block",
+          "settings": {
+            "question": "Online Clearance Sale",
+            "answer": "<p>Valid on Sale styles only. Nothing over $99. Prices as marked. Not valid in conjunction with any other offer. While stocks last.<\/p>"
+          }
+        },
+        "63f0ef9f-993a-40ac-8106-4551fd3763b1": {
+          "type": "text_block",
+          "settings": {
+            "question": "First Purchaser Discount",
+            "answer": "<p>$10 off your first full price purchase is available in store at Hush Puppies retail stores by presenting your Welcome Email and online at www.hushpuppies.com.au with use of unique code at checkout. Code is one time use only. Offer is only available on full priced purchases. Excludes prior purchases. Cannot be used in conjunction with any other offer. All offers are correct at the time of publishing and may be subject to change without prior notice. Offer not available during sitewide promotions.<\/p>"
+          }
+        },
+        "template--16687490892027__cf9ab64e-153c-482d-96fb-ae12822fc0a5-1675113294682c4214-0": {
+          "type": "text_block",
+          "disabled": true,
+          "settings": {
+            "question": "Hush Puppies x Reebok Promotion",
+            "answer": "<p>Get 30% off full-price Hush Puppies footwear styles. Use code HUSHPUPS30 during checkout to redeem the discount. This offer is not valid in conjunction with any other offer. Offer expires on Friday, 31st March 2023 at 11:59 PM AEDT.<\/p>"
+          }
+        },
+        "7456b102-0c41-4c8f-ac64-9825de94fb6b": {
+          "type": "text_block",
+          "settings": {
+            "question": "RSPCA Partner Discount",
+            "answer": "<p>Valid until 30 September 2023. Valid online only and on full price footwear. Minimum spend $100. One use per customer and per order. Cannot be used in conjunction with any other offer. Enter code received at activation or event at the checkout.<\/p>"
+          }
+        },
+        "ccc416b3-2f37-48ba-a951-98d98bd99400": {
+          "type": "text_block",
+          "settings": {
+            "question": "Final Sale",
+            "answer": "<p>For all items marked FINAL SALE, unfortunately we do not offer refunds or exchanges for change of mind. However, if your item is faulty, please contact our Returns Department to arrange an exchange or refund. Not valid in conjunction with any other offer.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "1240624f-6f84-41a0-ad3c-2d2d8ec226fd",
+        "faf997da-9b1c-4dd8-b98f-82419dc5a788",
+        "template--16687490892027__cf9ab64e-153c-482d-96fb-ae12822fc0a5-1675113294682c4214-1",
+        "template--16687490892027__cf9ab64e-153c-482d-96fb-ae12822fc0a5-1675113294682c4214-2",
+        "63f0ef9f-993a-40ac-8106-4551fd3763b1",
+        "template--16687490892027__cf9ab64e-153c-482d-96fb-ae12822fc0a5-1675113294682c4214-0",
+        "7456b102-0c41-4c8f-ac64-9825de94fb6b",
+        "ccc416b3-2f37-48ba-a951-98d98bd99400"
+      ],
+      "settings": {
+        "title": "Competitions & Promotions",
+        "subtitle": "",
+        "faq_footer_title": "",
+        "title_padding_top": 0,
+        "title_padding_bottom": 0,
+        "body_padding_top": 0,
+        "body_padding_bottom": 36
+      }
+    }
+  },
+  "order": [
+    "main",
+    "e6053cb1-7c27-4ab5-81a3-58e489d080f2",
+    "2b0fea8d-df5e-4170-889e-a2bb18c67a87",
+    "cf9ab64e-153c-482d-96fb-ae12822fc0a5"
+  ]
+}

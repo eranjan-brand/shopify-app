@@ -1,0 +1,60 @@
+{% comment %} Progress Bar Component
+
+Customised through the theme settings schema
+Calculates distance to free shipping based off of threshold set in the Theme Settings
+
+{% endcomment %}
+
+
+{%  assign percentFilled = cart.total_price | times: 100 | divided_by: shipping_value %}
+
+<style>
+    .progress-bar__wrapper {
+    padding: 1.5rem 1rem;
+    background: #FFFFFF;
+    border-bottom: 0.1rem solid rgba(var(--color-foreground), 0.2);
+    }
+
+    .progress-bar__remaining {
+        font-weight: 600;
+    }
+
+    .progress-bar__text {
+        margin-block: .5rem;
+        text-align: center;
+    }
+    .border-full {
+        border-radius: 9999px
+    }
+
+    .progress-bar, .progress-bar__fill {
+        height: {{ settings.progress_bar_height }}px;
+    }
+
+    .progress-bar {
+        background-color: {{ settings.progress_bar_color }};
+        max-width: 352px;
+        /* text-align: center; */
+        margin: 0 auto;
+    }
+
+    .progress-bar__fill{
+        background-color: {{ settings.progress_bar_fill_color }};
+        width: {{ percentFilled }}%;
+        max-width: 100%;
+    }
+
+</style>
+<div class="progress-bar__wrapper">
+    <p class="progress-bar__text">
+    {% if shipping_value_left > 0 %}
+        {{ settings.free_shipping_text_before }}<span class="progress-bar__remaining"> {{ shipping_value_left | money}} </span>{{ settings.free_shipping_text_after }}
+    {% else %}
+        {{ settings.free_shipping_text_reached }}
+    {% endif %}
+    </p>
+    <div class="progress-bar border-full">
+        <div class="progress-bar__fill border-full">
+        </div>
+    </div>
+</div>

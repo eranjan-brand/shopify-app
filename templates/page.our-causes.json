@@ -1,0 +1,704 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "360e81c7-127d-4a98-823b-81d804fb0172": {
+      "type": "rich-text",
+      "blocks": {
+        "template--18685375217945__360e81c7-127d-4a98-823b-81d804fb0172-168257948254368863-0": {
+          "type": "heading",
+          "disabled": true,
+          "settings": {
+            "heading": "",
+            "heading_size": "h1"
+          }
+        },
+        "template--18685375217945__360e81c7-127d-4a98-823b-81d804fb0172-168257948254368863-1": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "text": ""
+          }
+        },
+        "template--18685375217945__360e81c7-127d-4a98-823b-81d804fb0172-168257948254368863-2": {
+          "type": "button",
+          "disabled": true,
+          "settings": {
+            "button_label": "",
+            "button_link": "",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "template--18685375217945__360e81c7-127d-4a98-823b-81d804fb0172-168257948254368863-0",
+        "template--18685375217945__360e81c7-127d-4a98-823b-81d804fb0172-168257948254368863-1",
+        "template--18685375217945__360e81c7-127d-4a98-823b-81d804fb0172-168257948254368863-2"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "background-1",
+        "full_width": true,
+        "padding_top": 0,
+        "padding_bottom": 24
+      }
+    },
+    "0a603687-f467-4b8b-930d-e5060f939a4d": {
+      "type": "image-banner-hp",
+      "blocks": {
+        "template--18685375217945__0a603687-f467-4b8b-930d-e5060f939a4d-1682576800e22dd9b8-0": {
+          "type": "heading",
+          "disabled": true,
+          "settings": {
+            "heading": "Image banner",
+            "timer_after_heading": "Test heading",
+            "heading_size": "h1",
+            "heading_color": "#000000"
+          }
+        },
+        "template--18685375217945__0a603687-f467-4b8b-930d-e5060f939a4d-1682576800e22dd9b8-2": {
+          "type": "buttons",
+          "disabled": true,
+          "settings": {
+            "button_label_1": "Button label",
+            "button_link_1": "",
+            "button_style_secondary_1": false,
+            "button_label_2": "Button label",
+            "button_link_2": "",
+            "button_style_secondary_2": false,
+            "button_label_3": "Button label 3",
+            "button_link_3": "",
+            "button_label_4": "Button label 4",
+            "button_link_4": "",
+            "btn_color": "#000000",
+            "btn_color_hover": "#000000",
+            "btn_text_color": "#000000"
+          }
+        }
+      },
+      "block_order": [
+        "template--18685375217945__0a603687-f467-4b8b-930d-e5060f939a4d-1682576800e22dd9b8-0",
+        "template--18685375217945__0a603687-f467-4b8b-930d-e5060f939a4d-1682576800e22dd9b8-2"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/Untitled_5000_x_1080px_6000_x_1080px_6000_x_600px.png",
+        "image_mobile": "shopify:\/\/shop_images\/Untitled_5000_x_1080px_6000_x_1080px_6000_x_600px_e28b4e06-06e2-41e2-a5c9-cdc91efc2f38.png",
+        "img_link": "",
+        "clickable_img": false,
+        "show_text_box": false,
+        "text_box_color": "#ffffff",
+        "desktop_content_position": "middle-center",
+        "desktop_content_alignment": "center",
+        "color_scheme": "background-1",
+        "mobile_below_image": false,
+        "mobile_img_padding_bottom": 70,
+        "mobile_top": 50,
+        "mobile_left": 50,
+        "mobile_content_alignment": "center"
+      }
+    },
+    "4c5bd46b-e88d-4663-ba2b-c405fa4b8e82": {
+      "type": "image-banner",
+      "disabled": true,
+      "settings": {
+        "image": "shopify:\/\/shop_images\/Untitled_5000_x_1080px_6000_x_1080px_6000_x_600px.png",
+        "image_overlay_opacity": 0,
+        "image_height": "small",
+        "adapt_height_first_image": true,
+        "desktop_content_position": "middle-center",
+        "show_text_box": true,
+        "desktop_content_alignment": "center",
+        "color_scheme": "background-1",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": true,
+        "show_text_below": true
+      }
+    },
+    "1ca61dcc-891c-4eaf-a5bf-51008e32f48c": {
+      "type": "rich-text",
+      "blocks": {
+        "template--18685375217945__1ca61dcc-891c-4eaf-a5bf-51008e32f48c-1682479634d1e8e0dd-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p><strong>We are proud to partner with charities and<br\/>organisations that want to be better and do better.<\/strong><\/p>",
+            "heading_size": "h1"
+          }
+        }
+      },
+      "block_order": [
+        "template--18685375217945__1ca61dcc-891c-4eaf-a5bf-51008e32f48c-1682479634d1e8e0dd-0"
+      ],
+      "custom_css": [
+        "h2 {font-family: \"Basset-Bold-hp\"; font-size: 35px;}"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "background-1",
+        "full_width": true,
+        "padding_top": 16,
+        "padding_bottom": 20
+      }
+    },
+    "719beb09-5abd-42b7-aebe-96c80799754d": {
+      "type": "image-with-text",
+      "blocks": {
+        "40852160-dc40-4781-a048-c229622eab40": {
+          "type": "heading",
+          "settings": {
+            "heading": "RSPCA Victoria",
+            "heading_size": "h2"
+          }
+        },
+        "642d94e2-e8fe-4c1f-87c4-be2fd3cfcd9c": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Our team at Hush Puppies is passionate about animal welfare. We are proud to support the RSPCA Victoria in its efforts to end cruelty to all animals and provide care when they are most in need. Through our partnership, we support donations and fundraising to help them achieve this goal. Every year, Hush Puppies participate in the Million Paws Walk, match your donations at Give to Get Them Home, and raise additional funds through sale of tote bags in our retail stores.<\/p>",
+            "text_style": "body"
+          }
+        },
+        "1236f762-acb0-4a86-881b-65c8c537b199": {
+          "type": "button",
+          "settings": {
+            "button_label": "LEARN MORE",
+            "button_link": "https:\/\/rspcavic.org\/"
+          }
+        }
+      },
+      "block_order": [
+        "40852160-dc40-4781-a048-c229622eab40",
+        "642d94e2-e8fe-4c1f-87c4-be2fd3cfcd9c",
+        "1236f762-acb0-4a86-881b-65c8c537b199"
+      ],
+      "custom_css": [
+        "h2 {font-family: Basset-Bold-Hp;}"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/rspca_edit3.jpg",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "overlap",
+        "color_scheme": "accent-1",
+        "mobile_content_alignment": "left",
+        "padding_top": 24,
+        "padding_bottom": 24
+      }
+    },
+    "07e9e3da-77b8-4bb5-826e-a499bc1a7ce7": {
+      "type": "multicolumn-hp",
+      "disabled": true,
+      "blocks": {
+        "template--18685375217945__07e9e3da-77b8-4bb5-826e-a499bc1a7ce7-1682589467b0674503-0": {
+          "type": "column",
+          "settings": {
+            "clickable": false,
+            "title": "Column",
+            "bold_card_title": true,
+            "title_size": "regular",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "link_label": "",
+            "link": "",
+            "outline_button": true
+          }
+        },
+        "template--18685375217945__07e9e3da-77b8-4bb5-826e-a499bc1a7ce7-1682589467b0674503-1": {
+          "type": "column",
+          "settings": {
+            "clickable": false,
+            "title": "Column",
+            "bold_card_title": true,
+            "title_size": "regular",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "link_label": "",
+            "link": "",
+            "outline_button": true
+          }
+        },
+        "template--18685375217945__07e9e3da-77b8-4bb5-826e-a499bc1a7ce7-1682589467b0674503-2": {
+          "type": "column",
+          "settings": {
+            "clickable": false,
+            "title": "Column",
+            "bold_card_title": true,
+            "title_size": "regular",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "link_label": "",
+            "link": "",
+            "outline_button": true
+          }
+        }
+      },
+      "block_order": [
+        "template--18685375217945__07e9e3da-77b8-4bb5-826e-a499bc1a7ce7-1682589467b0674503-0",
+        "template--18685375217945__07e9e3da-77b8-4bb5-826e-a499bc1a7ce7-1682589467b0674503-1",
+        "template--18685375217945__07e9e3da-77b8-4bb5-826e-a499bc1a7ce7-1682589467b0674503-2"
+      ],
+      "settings": {
+        "title": "Multicolumn",
+        "heading_size": "h1",
+        "bold_section_title": true,
+        "heading_alignment": "left",
+        "heading_color": "#000000",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "card-shadow": "1",
+        "columns_desktop": 3,
+        "column_alignment": "left",
+        "background_style": "primary",
+        "button_label": "Button label",
+        "button_link": "",
+        "color_scheme": "background-1",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "f910a359-c832-41cf-ae40-863f1c0b171a": {
+      "type": "multicolumn",
+      "disabled": true,
+      "blocks": {
+        "template--18685375217945__f910a359-c832-41cf-ae40-863f1c0b171a-16824836776d85f2b3-0": {
+          "type": "column",
+          "settings": {
+            "title": "Million Paws Walk",
+            "text": "<p>Walk to fight animal cruelty at one of RSPCA’s exciting events of the year!<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "template--18685375217945__f910a359-c832-41cf-ae40-863f1c0b171a-16824836776d85f2b3-1": {
+          "type": "column",
+          "settings": {
+            "title": "Give to Get Them Home",
+            "text": "<p>We are proud to support our friends at RSCPA Victoria by matching community donations. <\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "template--18685375217945__f910a359-c832-41cf-ae40-863f1c0b171a-16824836776d85f2b3-2": {
+          "type": "column",
+          "settings": {
+            "title": "Tote Bags",
+            "text": "<p>Our retail stores also sell Tote Bags to raise<br\/>additional funds. Sale proceeds go to RSPCA Victoria.  <\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--18685375217945__f910a359-c832-41cf-ae40-863f1c0b171a-16824836776d85f2b3-0",
+        "template--18685375217945__f910a359-c832-41cf-ae40-863f1c0b171a-16824836776d85f2b3-1",
+        "template--18685375217945__f910a359-c832-41cf-ae40-863f1c0b171a-16824836776d85f2b3-2"
+      ],
+      "settings": {
+        "title": "",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "columns_desktop": 3,
+        "column_alignment": "left",
+        "background_style": "primary",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "background-1",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 24,
+        "padding_bottom": 24
+      }
+    },
+    "4f683d0f-de0d-4c49-99cd-562483ab3824": {
+      "type": "image-with-text",
+      "blocks": {
+        "template--18685375217945__4f683d0f-de0d-4c49-99cd-562483ab3824-16825911468ea2ac1e-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "Happy Boxes  Project",
+            "heading_size": "h2"
+          }
+        },
+        "template--18685375217945__4f683d0f-de0d-4c49-99cd-562483ab3824-16825911468ea2ac1e-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Women in our own backyard are going without basic toiletries. Accessibility to simple items like deodorant, shampoo and soap prove challenging when the closest store can be up to 1000km away. Some communities are at the end of 750km of harsh, red dirt roads. Others can be cut off by flood waters for months at a time. In partnership with the Happy Boxes project, we are alleviating the barriers of accessing basic needs by encouraging the sending of self-care items to women in remote corners of Australia in our Hush Puppies shoe boxes.<\/p>",
+            "text_style": "body"
+          }
+        },
+        "template--18685375217945__4f683d0f-de0d-4c49-99cd-562483ab3824-16825911468ea2ac1e-2": {
+          "type": "button",
+          "settings": {
+            "button_label": "LEARN MORE",
+            "button_link": "https:\/\/happyboxesproject.com\/"
+          }
+        }
+      },
+      "block_order": [
+        "template--18685375217945__4f683d0f-de0d-4c49-99cd-562483ab3824-16825911468ea2ac1e-0",
+        "template--18685375217945__4f683d0f-de0d-4c49-99cd-562483ab3824-16825911468ea2ac1e-1",
+        "template--18685375217945__4f683d0f-de0d-4c49-99cd-562483ab3824-16825911468ea2ac1e-2"
+      ],
+      "custom_css": [
+        "h2 {font-family: Basset-Bold-Hp;}"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/hp-homepage-tiles-happy-projects-200721.jpg",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "text_first",
+        "desktop_content_position": "bottom",
+        "desktop_content_alignment": "left",
+        "content_layout": "overlap",
+        "color_scheme": "background-2",
+        "mobile_content_alignment": "left",
+        "padding_top": 0,
+        "padding_bottom": 36
+      }
+    },
+    "e44224db-0ac8-47a6-ac56-516321e53e5e": {
+      "type": "image-with-text",
+      "disabled": true,
+      "blocks": {
+        "template--18685375217945__e44224db-0ac8-47a6-ac56-516321e53e5e-1682473287c383f296-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "HAPPY BOXES PROJECT",
+            "heading_size": "h2"
+          }
+        },
+        "template--18685375217945__e44224db-0ac8-47a6-ac56-516321e53e5e-1682473287c383f296-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Women in our own backyard are going without basic toiletries. Accessibility to simple items like deodorant, shampoo and soap prove challenging when the closest store can be up to 1000km away. Some communities are at the end of 750km of harsh, red<br\/>dirt roads. Others can be cut off by flood waters for months at a time.<\/p><p>In partnership with the Happy Boxes project, we are alleviating the barriers of accessing basic needs by encouraging the sending of self-care items to women in remote corners of Australia in our Hush Puppies shoe boxes.<\/p>",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "template--18685375217945__e44224db-0ac8-47a6-ac56-516321e53e5e-1682473287c383f296-0",
+        "template--18685375217945__e44224db-0ac8-47a6-ac56-516321e53e5e-1682473287c383f296-1"
+      ],
+      "custom_css": [
+        "div {background-color: #d2c5dd;}"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/hp-homepage-tiles-happy-projects-200721.jpg",
+        "height": "small",
+        "desktop_image_width": "small",
+        "layout": "text_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "overlap",
+        "color_scheme": "background-1",
+        "mobile_content_alignment": "left",
+        "padding_top": 24,
+        "padding_bottom": 24
+      }
+    },
+    "c8e18471-d389-41fb-8320-92dd60287718": {
+      "type": "image-with-text",
+      "blocks": {
+        "8db89b6c-28c6-4bfe-8406-288108f6f094": {
+          "type": "heading",
+          "settings": {
+            "heading": "Tread Lightly",
+            "heading_size": "h2"
+          }
+        },
+        "3d8faaf9-de8a-4ceb-9d90-9ee728aff8be": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Each year, Australians buy more than 25 million pairs of new shoes but less than 2% of old pairs are recycled – it’s just not acceptable and we need to do better. <\/p><p><\/p><p>In partnership with Tread Lightly, we’re collecting pre-loved shoes and recycling them into rubber mats. Look for the designated box at any Hush Puppies store and donate your pre-loved shoes today! <\/p>",
+            "text_style": "body"
+          }
+        },
+        "871c8293-5efd-4198-8a43-50621aeee556": {
+          "type": "button",
+          "settings": {
+            "button_label": "LEARN MORE",
+            "button_link": "https:\/\/treadlightly.asga.com.au\/"
+          }
+        }
+      },
+      "block_order": [
+        "8db89b6c-28c6-4bfe-8406-288108f6f094",
+        "3d8faaf9-de8a-4ceb-9d90-9ee728aff8be",
+        "871c8293-5efd-4198-8a43-50621aeee556"
+      ],
+      "custom_css": [
+        "h2 {font-family: Basset-Bold-Hp;}"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/210922_RecycledMats_ASGA_0030.jpg",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "overlap",
+        "color_scheme": "accent-1",
+        "mobile_content_alignment": "left",
+        "padding_top": 0,
+        "padding_bottom": 24
+      }
+    },
+    "6f7b4765-47ca-4724-87db-047bd20ba469": {
+      "type": "image-with-text",
+      "disabled": true,
+      "blocks": {
+        "3539026c-83d5-4c44-9921-956a92507d56": {
+          "type": "heading",
+          "settings": {
+            "heading": "GREENFLEET",
+            "heading_size": "h2"
+          }
+        },
+        "0fe7522b-cc2a-4d77-9021-a54056af751e": {
+          "type": "text",
+          "settings": {
+            "text": "<p>We all leave an impact on the planet, and we are committed in cleaning up our footprint to ensure a more promising climate future for generations to come.<br\/><\/p><p>We’ve partnered with Greenfleet to offset 576 tonnes of carbon emissions in 2022-23 and to restore forests by planting thousands of native species in Australia.  <br\/><\/p><p>Reforestation has positive impacts on ecosystems and our planet. It helps reduce carbon dioxide levels, mitigating the effect of climate change.<br\/><\/p>",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "3539026c-83d5-4c44-9921-956a92507d56",
+        "0fe7522b-cc2a-4d77-9021-a54056af751e"
+      ],
+      "custom_css": [
+        "div {background-color: #a0d5b0;}"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/PlantingSeedlings_0c924ddf-c9ab-4669-95c3-18d5e3a792f7.jpg",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "text_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "color_scheme": "background-1",
+        "mobile_content_alignment": "left",
+        "padding_top": 24,
+        "padding_bottom": 24
+      }
+    },
+    "ce902dbb-5ceb-4ed0-8b86-457ef7cffdc6": {
+      "type": "image-with-text",
+      "blocks": {
+        "template--18685375217945__ce902dbb-5ceb-4ed0-8b86-457ef7cffdc6-16825911468ea2ac1e-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "Greenfleet",
+            "heading_size": "h2"
+          }
+        },
+        "template--18685375217945__ce902dbb-5ceb-4ed0-8b86-457ef7cffdc6-16825911468ea2ac1e-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>We all leave an impact on the planet, and we are committed in cleaning up our footprint to ensure a more promising climate future for generations to come. That's why we've partnered with Greenfleet to offset 576 tonnes of carbon emissions in 2022-23 and to restore forests by planting thousands of native species in Australia.   <\/p><p>Since 1997, Greenfleet has planted over 9.4 million trees across 500 forests in Australia and New Zealand.<br\/><\/p>",
+            "text_style": "body"
+          }
+        },
+        "template--18685375217945__ce902dbb-5ceb-4ed0-8b86-457ef7cffdc6-16825911468ea2ac1e-2": {
+          "type": "button",
+          "settings": {
+            "button_label": "LEARN MORE",
+            "button_link": "https:\/\/www.greenfleet.com.au\/"
+          }
+        }
+      },
+      "block_order": [
+        "template--18685375217945__ce902dbb-5ceb-4ed0-8b86-457ef7cffdc6-16825911468ea2ac1e-0",
+        "template--18685375217945__ce902dbb-5ceb-4ed0-8b86-457ef7cffdc6-16825911468ea2ac1e-1",
+        "template--18685375217945__ce902dbb-5ceb-4ed0-8b86-457ef7cffdc6-16825911468ea2ac1e-2"
+      ],
+      "custom_css": [
+        "h2 {font-family: Basset-Bold-Hp;}"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/PlantingSeedlings_0c924ddf-c9ab-4669-95c3-18d5e3a792f7.jpg",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "text_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "overlap",
+        "color_scheme": "background-2",
+        "mobile_content_alignment": "left",
+        "padding_top": 0,
+        "padding_bottom": 36
+      }
+    },
+    "3a244182-db7d-4bd0-93e3-c3a7c8c335fa": {
+      "type": "image-with-text",
+      "disabled": true,
+      "blocks": {
+        "4b23ee48-8c6f-4fb4-9d86-0e613e793ad4": {
+          "type": "heading",
+          "settings": {
+            "heading": "About Greenfleet",
+            "heading_size": "h2"
+          }
+        },
+        "e05298e3-04ef-45a7-8b6f-f1cf30a728a4": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Greenfleet is a leading not-for-profit environmental organisation committed to protecting our climate by restoring our forests. <br\/><\/p><p>Greenfleet plants native biodiverse forests to capture carbon emissions and help fight the impacts of climate change. Since 1997, Greenfleet has planted over 9.4 million trees across 500 forests in Australia and New Zealand.<br\/><\/p><p><a href=\"http:\/\/www.greenfleet.com.au\/\" title=\"http:\/\/www.greenfleet.com.au\/\">Learn more about Greenfleet here.<\/a><br\/><\/p>",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "4b23ee48-8c6f-4fb4-9d86-0e613e793ad4",
+        "e05298e3-04ef-45a7-8b6f-f1cf30a728a4"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/GreenfleetLogo_1_d12bf472-817a-423c-b795-06f23242b4cd.jpg",
+        "height": "small",
+        "desktop_image_width": "small",
+        "layout": "text_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "color_scheme": "background-1",
+        "mobile_content_alignment": "left",
+        "padding_top": 24,
+        "padding_bottom": 24
+      }
+    },
+    "633c2df2-a0cd-441b-abba-0c1072d4bfc8": {
+      "type": "rich-text",
+      "blocks": {
+        "a36f4ed6-35f4-4d5a-b3b6-fed520f2d119": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p><strong>Here’s how you can help.<\/strong><\/p>",
+            "heading_size": "h1"
+          }
+        },
+        "426e0ae3-1195-4379-a333-fb1be8fb6d49": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Small actions can make a big impact on Earth. Together, let’s take steps toward sustainability. <br\/>Join the movement #MakeADifference<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "a36f4ed6-35f4-4d5a-b3b6-fed520f2d119",
+        "426e0ae3-1195-4379-a333-fb1be8fb6d49"
+      ],
+      "custom_css": [
+        "h2 {font-family: \"Basset-Bold-hp\"; font-size: 35px;}"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "background-1",
+        "full_width": true,
+        "padding_top": 28,
+        "padding_bottom": 24
+      }
+    },
+    "9ae79590-1220-412d-a16a-01d02131d034": {
+      "type": "multicolumn",
+      "blocks": {
+        "f1467ee5-b7bb-43d0-983f-ca62973dd4c5": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Untitled-1_03.png",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "8965f955-1f78-408c-a13e-1b59a01246fa": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Untitled-1_05.gif",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "67e36f76-b6c1-4e55-9565-5d804bce7f51": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Untitled-1_07.gif",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "98459dc6-958b-4826-8fed-fbfb05dae26d": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Untitled-1_09.png",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "f1467ee5-b7bb-43d0-983f-ca62973dd4c5",
+        "8965f955-1f78-408c-a13e-1b59a01246fa",
+        "67e36f76-b6c1-4e55-9565-5d804bce7f51",
+        "98459dc6-958b-4826-8fed-fbfb05dae26d"
+      ],
+      "custom_css": [
+        "h2 {font-family: \"Basset-Bold-hp\"; font-size: 40px;}"
+      ],
+      "settings": {
+        "title": "",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "columns_desktop": 4,
+        "column_alignment": "center",
+        "background_style": "primary",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "background-1",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 0,
+        "padding_bottom": 48
+      }
+    }
+  },
+  "order": [
+    "main",
+    "360e81c7-127d-4a98-823b-81d804fb0172",
+    "0a603687-f467-4b8b-930d-e5060f939a4d",
+    "4c5bd46b-e88d-4663-ba2b-c405fa4b8e82",
+    "1ca61dcc-891c-4eaf-a5bf-51008e32f48c",
+    "719beb09-5abd-42b7-aebe-96c80799754d",
+    "07e9e3da-77b8-4bb5-826e-a499bc1a7ce7",
+    "f910a359-c832-41cf-ae40-863f1c0b171a",
+    "4f683d0f-de0d-4c49-99cd-562483ab3824",
+    "e44224db-0ac8-47a6-ac56-516321e53e5e",
+    "c8e18471-d389-41fb-8320-92dd60287718",
+    "6f7b4765-47ca-4724-87db-047bd20ba469",
+    "ce902dbb-5ceb-4ed0-8b86-457ef7cffdc6",
+    "3a244182-db7d-4bd0-93e3-c3a7c8c335fa",
+    "633c2df2-a0cd-441b-abba-0c1072d4bfc8",
+    "9ae79590-1220-412d-a16a-01d02131d034"
+  ]
+}

@@ -1,0 +1,37 @@
+<style type="text/css">
+  .template-404 .title + * {
+    margin-top: 1rem;
+  }
+
+  .template-404 .button {
+    border: 1px solid #737373;
+    background: white;
+  }
+  .template-404 .button::after {
+    box-shadow: none;
+  }
+
+  .template-404 .title {
+    font-weight: 700;
+    font-size: 30px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .template-404 .title + * {
+      margin-top: 2rem;
+    }
+  }
+</style>
+
+<div class="template-404 page-width page-margin center">
+  {% comment %} <p>
+    {{ 'templates.404.subtext' | t }}
+  </p> {% endcomment %}
+  <h1 class="title">
+    {{ 'templates.404.title' | t }}
+  </h1>
+  <p>We can’t seem to find the page you’re looking for.</p>
+  <a href="{{ routes.all_products_collection_url }}" class="button">
+    Back to home
+  </a>
+</div>

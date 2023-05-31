@@ -1,0 +1,270 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-product-hp",
+      "blocks": {
+        "vendor": {
+          "type": "text",
+          "settings": {
+            "text": "",
+            "text_style": "uppercase"
+          }
+        },
+        "title": {
+          "type": "title",
+          "settings": {
+          }
+        },
+        "caption": {
+          "type": "text",
+          "settings": {
+            "text": "{{ product.metafields.descriptors.subtitle.value }}",
+            "text_style": "subtitle"
+          }
+        },
+        "price": {
+          "type": "price",
+          "settings": {
+          }
+        },
+        "d12a65e1-e0f3-45c2-9e3b-3f7fadbab0d7": {
+          "type": "shopify:\/\/apps\/bazaarvoice-reviews-photos\/blocks\/rating-summary-block\/766ed9d3-b120-48f3-8444-448f45152f47",
+          "settings": {
+          }
+        },
+        "6cd1211e-1dec-4981-b51f-b73aeef0e8e4": {
+          "type": "promoline",
+          "settings": {
+          }
+        },
+        "e5c5263b-356b-4a32-a3ae-6b02dab770f0": {
+          "type": "additional_colours",
+          "settings": {
+            "additional-colours-gap": 10,
+            "additional-colours-size": 96
+          }
+        },
+        "9b97b7c9-bd51-479b-928b-7220fc88f51a": {
+          "type": "size_guide",
+          "settings": {
+            "size-guide-heading-alignment": "center",
+            "size-guide-subheading-alignment": "center",
+            "size-guide-note": "Please use this chart as a guide only. Sizes are approximate."
+          }
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "button"
+          }
+        },
+        "quantity_selector": {
+          "type": "quantity_selector",
+          "settings": {
+          }
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": true
+          }
+        },
+        "3bd54a2a-63bb-4a91-ba30-d0a5dc76747c": {
+          "type": "payment_options",
+          "settings": {
+            "afterpay": true,
+            "zippay": true,
+            "openpay": false,
+            "paypal": true
+          }
+        },
+        "bc24b15c-acff-429b-a282-195f5514ae48": {
+          "type": "feature_badges",
+          "settings": {
+            "feature_badges_trigger": "section"
+          }
+        },
+        "description": {
+          "type": "description",
+          "settings": {
+            "heading": "Description"
+          }
+        },
+        "collapsible-row-0": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Materials & Details",
+            "icon": "none",
+            "content": "<p>Product Code: {{ product.metafields.utopia.colour_code.value }}<\/p><p>Sole Material: {{ product.metafields.utopia.sole_material.value }}<\/p><p>Sock Material: {{ product.metafields.utopia.sock_material.value }}<\/p><p>Lining Material: {{ product.metafields.utopia.lining_material.value }}<\/p><p>Upper Material: {{ product.metafields.utopia.upout_material.value }}<\/p><p>Country Of Origin: {{ product.metafields.utopia.coo.value }}<\/p><p><\/p>",
+            "page": ""
+          }
+        },
+        "collapsible-row-1": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Shipping & Delivery",
+            "icon": "none",
+            "content": "<p><strong>Returns<\/strong><\/p><p>Free returns over $60. Returns below this value will be subject to standard Australia Post fees. <br\/>All returns should be lodged through our <a href=\"\/pages\/return-centre\" target=\"_blank\" title=\"Return Centre\">Online returns portal here.<\/a> <br\/>Items below $49 are Final sale and not eligible for return or exchange due to change of mind.<br\/>See our full <a href=\"\/policies\/refund-policy\" target=\"_blank\" title=\"Refund Policy\">returns policy here. <\/a><\/p><p><strong>Delivery <\/strong><\/p><p>Free standard shipping for all orders over $99!<br\/>Flat rate of $9.95 for standard shipping on orders below $99. Flat rate of $14.95 for Express shipping for any order total. All orders are shipped using Australia Post. <\/p><p>Most orders are dispatched within 2-4 Business days. Some orders may take longer during busy trading period and public holidays. <\/p><p>Once dispatched with Australia Post, expected delivery times for each region are as follows:<\/p><p>Location<\/p><p>Standard Shipping<\/p><p>Express Shipping<\/p><p>Victoria<\/p><p>1-3 Business days<\/p><p>1-2 Business days<\/p><p>NSW, ACT, SA & QLD Metro<\/p><p>2-6 Business days<\/p><p>1-3 Business days<\/p><p>WA, NT, Tasmania & regional areas <\/p><p>3-10+ Business days <\/p><p>2-5 Business days<\/p><p>Note: The above times are average estimates only. For the most up to date information please see <a href=\"https:\/\/auspost.com.au\/service-updates\/domestic-delivery-times\"><span style=\"text-decoration:underline\">Australia Post domestic delivery times here. <\/span><\/a><\/p>",
+            "page": "shipping-delivery"
+          }
+        },
+        "collapsible-row-2": {
+          "type": "collapsible_tab",
+          "disabled": true,
+          "settings": {
+            "heading": "Dimensions",
+            "icon": "ruler",
+            "content": "",
+            "page": ""
+          }
+        },
+        "collapsible-row-3": {
+          "type": "collapsible_tab",
+          "disabled": true,
+          "settings": {
+            "heading": "Care Instructions",
+            "icon": "heart",
+            "content": "",
+            "page": ""
+          }
+        },
+        "share": {
+          "type": "share",
+          "settings": {
+            "share_label": "Share"
+          }
+        }
+      },
+      "block_order": [
+        "vendor",
+        "title",
+        "caption",
+        "price",
+        "d12a65e1-e0f3-45c2-9e3b-3f7fadbab0d7",
+        "6cd1211e-1dec-4981-b51f-b73aeef0e8e4",
+        "e5c5263b-356b-4a32-a3ae-6b02dab770f0",
+        "9b97b7c9-bd51-479b-928b-7220fc88f51a",
+        "variant_picker",
+        "quantity_selector",
+        "buy_buttons",
+        "3bd54a2a-63bb-4a91-ba30-d0a5dc76747c",
+        "bc24b15c-acff-429b-a282-195f5514ae48",
+        "description",
+        "collapsible-row-0",
+        "collapsible-row-1",
+        "collapsible-row-2",
+        "collapsible-row-3",
+        "share"
+      ],
+      "settings": {
+        "enable_sticky_info": true,
+        "show_shipping": false,
+        "gallery_layout": "stacked",
+        "media_size": "large",
+        "mobile_thumbnails": "hide",
+        "hide_variants": true,
+        "enable_video_looping": false,
+        "padding_top": 36,
+        "padding_bottom": 12
+      }
+    },
+    "multicolumn": {
+      "type": "multicolumn",
+      "disabled": true,
+      "blocks": {
+        "column-0": {
+          "type": "column",
+          "settings": {
+            "title": "Free Shipping",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column-1": {
+          "type": "column",
+          "settings": {
+            "title": "Hassle-Free Exchanges",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column-0",
+        "column-1"
+      ],
+      "settings": {
+        "title": "",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "columns_desktop": 2,
+        "column_alignment": "left",
+        "background_style": "none",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "background-1",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "product-recommendations": {
+      "type": "product-recommendations",
+      "settings": {
+        "heading": "You may also like",
+        "heading_size": "h2",
+        "products_to_show": 4,
+        "columns_desktop": 4,
+        "color_scheme": "background-1",
+        "image_ratio": "adapt",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "columns_mobile": "2",
+        "padding_top": 36,
+        "padding_bottom": 28
+      }
+    },
+    "1681356694b69022e2": {
+      "type": "apps",
+      "blocks": {
+        "8084338f-acfe-4c4b-8995-8ab16d3851e8": {
+          "type": "shopify:\/\/apps\/bazaarvoice-reviews-photos\/blocks\/reviews-block\/766ed9d3-b120-48f3-8444-448f45152f47",
+          "settings": {
+          }
+        },
+        "ec1d4441-4094-4988-922f-7e2d37fa999d": {
+          "type": "shopify:\/\/apps\/bazaarvoice-reviews-photos\/blocks\/questions_and_answers_block\/766ed9d3-b120-48f3-8444-448f45152f47",
+          "settings": {
+          }
+        }
+      },
+      "block_order": [
+        "8084338f-acfe-4c4b-8995-8ab16d3851e8",
+        "ec1d4441-4094-4988-922f-7e2d37fa999d"
+      ],
+      "settings": {
+        "include_margins": true
+      }
+    },
+    "feature-badge-desc": {
+      "type": "feature-badge-section",
+      "settings": {
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "badge_content_header-align": "left"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "multicolumn",
+    "product-recommendations",
+    "1681356694b69022e2",
+    "feature-badge-desc"
+  ]
+}

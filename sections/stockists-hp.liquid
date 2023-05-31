@@ -1,0 +1,231 @@
+{{ 'section-stockists.css' | asset_url | stylesheet_tag }}
+
+<style type="text/css">
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .info-menu {
+      margin-top: {{ section.settings.margin_top }}px;
+    }
+
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+</style>
+
+{% if section.settings.title != blank %}
+  <div class="page-width section-{{ section.id }}-padding">
+    <div class="title-holder">
+      <h2>{{ section.settings.title | escape }}</h2>
+    </div>
+  </div>
+{% endif %}
+
+<div
+  class="stockists {% if section.settings.title == blank %}section-{{ section.id }}-padding{% endif %}"
+  data-section-id="{{ section.id }}"
+>
+  {% if section.blocks.size > 0 %}
+    {% for i in (1..4) %}
+      {% assign hasContent = false %}
+      {% for block in section.blocks %}
+        {% assign group = block.settings.group | plus: 0 %}
+        {% if group == i %}
+          {% assign hasContent = true %}
+        {% endif %}
+      {% endfor %}
+      {% if hasContent %}
+        {% assign activeNav = true %}
+        {% assign activeTab = true %}
+        <div class="tabs">
+          <ul class="tab-links">
+            {% for block in section.blocks %}
+              {% assign group = block.settings.group | plus: 0 %}
+              {% if group == i %}
+                <li
+                  {% if activeNav %}
+                    class="active"{% assign activeNav = false -%}
+                  {% endif %}
+                >
+                  <a href="#{{ block.settings.title }}">
+                    {{- block.settings.title }}
+                    <p>{{ block.settings.description }}</p>
+                  </a>
+                </li>
+              {% endif %}
+            {% endfor %}
+          </ul>
+          {% if section.settings.subtitle != blank %}
+            <p class="faq-subtitle">{{ section.settings.subtitle }}</p>
+          {% endif %}
+          <div class="tab-content">
+            {% for block in section.blocks %}
+              {% assign group = block.settings.group | plus: 0 %}
+              {% if group == i %}
+                <div
+                  id="{{ block.settings.title }}"
+                  class="tab {% if activeTab %}active{% assign activeTab = false %}{% endif %}"
+                >
+                  {{ block.settings.page.content }}
+                </div>
+              {% endif %}
+            {% endfor %}
+          </div>
+        </div>
+      {% endif %}
+    {% endfor %}
+
+    {% for block in section.blocks %}
+      {% if block.settings.group == 'none' %}
+        <div class="size-guide__container">
+            <h3>{{ block.settings.title }}</h3>
+            <p>{{ block.settings.description }}</p>
+            {{ block.settings.page.content }}
+        </div>
+      {% endif %}
+    {% endfor %}
+  {% endif %}
+
+  {% if section.settings.sizeguide_footer_title != blank %}
+    <div class="faq-footer-title">
+      <h3>{{ section.settings.sizeguide_footer_title }}</h3>
+    </div>
+  {% endif %}
+</div>
+
+<script>
+  const tabs = document.querySelectorAll('.tabs');
+
+  tabs.forEach((tab) => {
+    var tabLinks = tab.querySelectorAll('.tab-links li');
+    var tabContent = tab.querySelectorAll('.tab-content .tab');
+
+    // loop through all tab link elements
+    for (var i = 0; i < tabLinks.length; i++) {
+      var link = tabLinks[i].querySelector('a');
+      link.addEventListener('click', function (e) {
+        e.preventDefault();
+        var target = this.getAttribute('href');
+
+        // hide all tab content elements
+        for (var j = 0; j < tabContent.length; j++) {
+          tabContent[j].classList.remove('active');
+        }
+
+        // show the selected tab content element
+        tab.querySelector(target).classList.add('active');
+
+        // remove active class from all tab link elements
+        for (var k = 0; k < tabLinks.length; k++) {
+          tabLinks[k].classList.remove('active');
+        }
+
+        // add active class to the selected tab link element
+        this.parentElement.classList.add('active');
+      });
+    }
+  });
+</script>
+
+{% schema %}
+{
+  "name": "Stockists",
+  "class": "index-section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Stockists Heading",
+      "default": "Stockists"
+    },
+    {
+      "type": "text",
+      "id": "subtitle",
+      "label": "Stockists subtitle",
+      "default": "Stockists Subtitle"
+    },
+    {
+      "type": "text",
+      "id": "sizeguide_footer_title",
+      "label": "Footer title",
+      "default": "If you can’t find answer for your quesion, contact us"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "chart",
+      "name": "Chart",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title",
+          "default": "VIC"
+        },
+        {
+          "type": "text",
+          "id": "description",
+          "label": "Description"
+        },
+        {
+          "type": "page",
+          "id": "page",
+          "label": "Stockist Page",
+          "info": "Shopify page that contains the Stockist table for this state"
+        },
+        {
+          "type": "select",
+          "id": "group",
+          "options": [
+            {
+              "value": "1",
+              "label": "1"
+            },
+            {
+              "value": "2",
+              "label": "2"
+            },
+            {
+              "value": "3",
+              "label": "3"
+            },
+            {
+              "value": "4",
+              "label": "4"
+            },
+            {
+              "value": "none",
+              "label": "No Table"
+            }
+          ],
+          "default": "1",
+          "label": "Table group",
+          "info": "Determines which table the stockist belongs to"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Stockists",
+      "category": "Text",
+      "blocks": [
+        {
+          "type": "chart"
+        },
+        {
+          "type": "chart"
+        },
+        {
+          "type": "chart"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

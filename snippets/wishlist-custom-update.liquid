@@ -1,0 +1,60 @@
+<script defer>
+    const fetchCartSections = (productData, cartElement) => {
+      function handleResponse() {
+        const renderData = {sections: JSON.parse(this.responseText)};
+        renderData.id = productData.id
+        
+        cartElement.classList.remove('is-empty')
+        cartElement.renderContents(renderData)
+      }
+  
+      const request = new XMLHttpRequest();
+      request.addEventListener('load', handleResponse);
+      request.open('GET', '/?sections=cart-drawer,cart-icon-bubble', true);
+      request.send();
+    }
+  
+  
+    window.SwymCallbacks = window.SwymCallbacks || [];
+    window.SwymCallbacks.push(function(swat) {
+      swat.evtLayer.addEventListener('sw:addedtocart', function(e) {
+        const data = e.detail.d.productData;
+        const cartItems = document.querySelector('cart-drawer')
+        if (cartItems) {
+          fetchCartSections(data, cartItems)
+        }
+      });
+    });
+    
+
+
+{% comment %} Function for toggling wishlist popup on added to wishlist event {% endcomment %}
+    (function(){
+        var startListening = function(){
+          window._swat.evtLayer.addEventListener(SwymTracker.JSEvents.addedToWishlist, function(e){
+            var evtData = e.detail.d;
+            const popup = document.querySelector('.swym-added-notification')
+            const productName = evtData.dt
+            const productElement = popup.querySelector('#wishlist-product-name')
+            productElement.textContent = productName
+            popup.classList.remove('slide-out')
+            popup.classList.add('slide-in')
+            console.log(evtData.dt)
+            setTimeout(() => {
+                popup.classList.remove('slide-in')
+                popup.classList.add('slide-out')
+            }, 3000)
+          });
+        };
+        if(!window._swat){
+          if(!window.SwymCallbacks){
+            window.SwymCallbacks = [];
+          }
+          window.SwymCallbacks.push(startListening);
+        }else{
+          startListening();
+        }
+       })();
+  </script>
+{% comment %} Wishlist popup element {% endcomment %}
+  <div class="swym-added-notification"><span id="wishlist-product-name"></span> Added to Wishlist</div>

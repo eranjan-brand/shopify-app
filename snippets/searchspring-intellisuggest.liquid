@@ -1,0 +1,122 @@
+
+<script type="text/javascript" src="//cdn.searchspring.net/intellisuggest/is.min.js" async></script>
+
+
+<script>
+    window.cartArray = window.cartArray || []
+    window.onload = function() {
+        
+        {% if template.name == 'product' %}
+            try{
+                var product_code = "{{ product.metafields.utopia.colour_code.value }}";
+                IntelliSuggest.init({siteId: window.siteId, context:"Product/" + product_code, seed:product_code});
+    
+                {% if customer %}
+                    IntelliSuggest.setShopperId(`{{ customer.id }}`);
+                {% endif %}
+    
+                IntelliSuggest.viewItem({sku:product_code});
+                
+            } catch(err) {}
+    
+            {% comment %} 5 Previously looked at PDPs {% endcomment %}
+            const viewedProducts = window.localStorage.getItem('ss-v-prods');
+            const currentProduct = '{{ product.metafields.utopia.colour_code }}'
+            if (viewedProducts !== null) {
+    
+            const productArray = JSON.parse(viewedProducts);
+            if (productArray.length >= 5) {
+                productArray.shift()
+            }
+            if (!productArray.includes(currentProduct)) {
+                productArray.push('{{ product.metafields.utopia.colour_code }}')
+    
+            }
+            window.localStorage.setItem('ss-v-prods', JSON.stringify(productArray));
+            } else {
+            window.localStorage.setItem('ss-v-prods', JSON.stringify([currentProduct]));
+            }   
+            {% comment %}END 5 Previously looked at PDPs {% endcomment %}    
+        {% endif %}
+    
+        {% comment %} Cart tracking {% endcomment %}
+        {% if cart.item_count > 0 %}
+            
+            window.cartArray = [];
+            {% for item in cart.items %}
+                window.cartArray.push(
+                    {
+                        sku: "{{ item.sku }}", 
+                        qty:{{ item.quantity }}, 
+                        price:{{ item.final_price | money_without_currency }}
+                    }
+                )
+            {% endfor %}
+            
+            basketEvent()
+        {% endif %}
+        {% comment %}END Cart tracking {% endcomment %}
+    }
+
+    document.addEventListener('cart-updated', function(event){
+        {% comment %} 
+            cart-updated event fired some analytics.liquid on add/remove events
+            window.cartDrawerOpen set in cart-drawer.js to detect cart open status. 
+            This is needed to prevent duplicate events firing where the add-to-cart also opens the cart drawer
+        {% endcomment %}
+        if (window.cartDrawerOpen) {
+            basketEvent();
+        }
+    })
+
+    function basketEvent() {
+        {% comment %} 
+            window.cartArray set in analytics.liquid which stores the most recent cart item objects
+            basketEvent function builds the required tracking objects for intellisuggest tracking and fires the inBasket event.
+        {% endcomment %}
+        cartItems = window.cartArray;
+        try{ 
+            var seed = [];
+            cartItems.forEach(item => {
+                seed.push(item.sku.split("_").slice(0,2).join("_"));
+            })
+            {% if customer %}
+                IntelliSuggest.init({siteId: window.siteId, context:"Basket", seed:seed });    
+            {% endif %}
+            IntelliSuggest.setShopperId({{ customer.id }});
+        
+            let itemArr = []
+            cartItems.forEach(item => {
+                itemArr.push({sku: item.sku.split("_").slice(0,2).join("_"), childSku: item.sku, qty: item.qty, price: item.price})
+            })
+
+            itemArr.forEach( item => {
+                IntelliSuggest.haveItem(item);
+            })
+            
+            IntelliSuggest.inBasket({});
+        } catch(err) {}
+    }
+
+    {% comment %} basketEvent function stored in the window object to be access in cart-drawer.js for triggering on cart drawer open {% endcomment %}
+    window.triggerBasket = basketEvent;
+
+    function intellisuggestTrackClick(element, data, signature) {
+        var escapeFn = encodeURIComponent || escape; 
+        const anchorTag = element.querySelector('a')
+        if(document.images) {
+            if ('https:' == location.protocol) {
+                var api_url = `https://${window.siteId}.a.searchspring.io/api/`;
+            } else {
+                var api_url = `http://${window.siteId}.a.searchspring.io/api/`;
+            }
+            var imgTag = new Image;
+            imgTag.src= api_url+'track/track.json?d='+data+'&s='+signature+'&u='+escapeFn(anchorTag.href)+'&r='+escapeFn(document.referrer);
+        }
+        return true;
+    }
+</script>
+
+
+
+

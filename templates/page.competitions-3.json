@@ -1,0 +1,127 @@
+{
+  "wrapper": "div#info-page__wrapper.page-width",
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "e6053cb1-7c27-4ab5-81a3-58e489d080f2": {
+      "type": "breadcrumb-section",
+      "settings": {
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "2b0fea8d-df5e-4170-889e-a2bb18c67a87": {
+      "type": "info-menu",
+      "blocks": {
+        "1ac1f800-16d3-47f1-991a-e38873f7bad7": {
+          "type": "link_list",
+          "settings": {
+            "heading": "Quick links",
+            "menu": "info-menu"
+          }
+        }
+      },
+      "block_order": [
+        "1ac1f800-16d3-47f1-991a-e38873f7bad7"
+      ],
+      "settings": {
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "cf9ab64e-153c-482d-96fb-ae12822fc0a5": {
+      "type": "faq-hp",
+      "blocks": {
+        "ebc11b13-f440-40a9-9496-e94cad176763": {
+          "type": "subheading",
+          "settings": {
+            "text": "Orders & Delivery"
+          }
+        },
+        "template--16687490892027__cf9ab64e-153c-482d-96fb-ae12822fc0a5-1675113294682c4214-0": {
+          "type": "text_block",
+          "settings": {
+            "question": "How do I write a product review?",
+            "answer": "<p>Add Answer<\/p>"
+          }
+        },
+        "template--16687490892027__cf9ab64e-153c-482d-96fb-ae12822fc0a5-1675113294682c4214-1": {
+          "type": "text_block",
+          "settings": {
+            "question": "Can I buy a single shoe?",
+            "answer": "<p>Add Answer<\/p>"
+          }
+        },
+        "template--16687490892027__cf9ab64e-153c-482d-96fb-ae12822fc0a5-1675113294682c4214-2": {
+          "type": "text_block",
+          "settings": {
+            "question": "How do I clean my footwear?",
+            "answer": "<p>Add Answer<\/p>"
+          }
+        },
+        "63f0ef9f-993a-40ac-8106-4551fd3763b1": {
+          "type": "text_block",
+          "settings": {
+            "question": "The style I want is out of stock, when will you get more?",
+            "answer": "<p>Add Answer<\/p>"
+          }
+        },
+        "b81dd2a8-846b-4f92-90f0-f0019e39af92": {
+          "type": "subheading",
+          "settings": {
+            "text": "Shopping"
+          }
+        },
+        "ccc416b3-2f37-48ba-a951-98d98bd99400": {
+          "type": "text_block",
+          "settings": {
+            "question": "Add Question",
+            "answer": "<p>Add Answer<\/p>"
+          }
+        },
+        "05f7dd73-95c3-4af0-8ca1-82a7a594f2af": {
+          "type": "text_block",
+          "settings": {
+            "question": "Add Question",
+            "answer": "<p>Add Answer<\/p>"
+          }
+        },
+        "51006c39-0e80-4b5f-83da-8fb703bd54a4": {
+          "type": "text_block",
+          "settings": {
+            "question": "Add Question",
+            "answer": "<p>Add Answer<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "ebc11b13-f440-40a9-9496-e94cad176763",
+        "template--16687490892027__cf9ab64e-153c-482d-96fb-ae12822fc0a5-1675113294682c4214-0",
+        "template--16687490892027__cf9ab64e-153c-482d-96fb-ae12822fc0a5-1675113294682c4214-1",
+        "template--16687490892027__cf9ab64e-153c-482d-96fb-ae12822fc0a5-1675113294682c4214-2",
+        "63f0ef9f-993a-40ac-8106-4551fd3763b1",
+        "b81dd2a8-846b-4f92-90f0-f0019e39af92",
+        "ccc416b3-2f37-48ba-a951-98d98bd99400",
+        "05f7dd73-95c3-4af0-8ca1-82a7a594f2af",
+        "51006c39-0e80-4b5f-83da-8fb703bd54a4"
+      ],
+      "settings": {
+        "title": "FAQ",
+        "subtitle": "Have a question? We've got answers!",
+        "faq_footer_title": ""
+      }
+    }
+  },
+  "order": [
+    "main",
+    "e6053cb1-7c27-4ab5-81a3-58e489d080f2",
+    "2b0fea8d-df5e-4170-889e-a2bb18c67a87",
+    "cf9ab64e-153c-482d-96fb-ae12822fc0a5"
+  ]
+}

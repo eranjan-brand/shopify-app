@@ -1,0 +1,144 @@
+<link rel="stylesheet" href="{{ 'component-size-guide-hp.css' | asset_url }}">
+{% liquid 
+    if product.metafields.utopia.universal_size_map.value[0]['Age Group'] != blank
+        if product.metafields.utopia.gender == "Womens"
+            assign tableTitle = "Womens" 
+            else 
+            assign tableTitle = "Mens"
+        endif
+    endif
+%}
+
+
+ <style>
+
+    .size-guide__heading {
+        text-align: {{ sizeSettings.settings.size-guide-heading-alignment }};
+    }
+    
+    .size-guide__heading--note {
+        text-align: {{ sizeSettings.settings.size-guide-subheading-alignment }};
+    }
+
+    {% if tableTitle == "Womens" %}
+        @media screen and (max-width:750px){
+            .size-guide__table--wrapper {
+                height: fit-content;
+            }
+        }
+        {% else %}
+        @media screen and (max-width:750px){
+            .size-guide__table--wrapper {
+                height: 65vh;
+            }
+        }
+    {% endif%}
+        
+
+    
+</style> 
+
+
+<div class="">
+    <div class="size-guide__header--wrapper">
+        
+        <h2 class="size-guide__heading">Size Guide</h2>
+        
+            <p class="size-guide__heading--note">{{ sizeSettings.settings.size-guide-note }}</p>
+    </div>
+    <p class="size-guide__gender">{{ tableTitle }}</p>
+        <div class="size-guide__table--wrapper">
+            <table class="size-guide__table">
+                <tbody class="size-guide__body">
+                    
+                    {% if tableTitle == "Womens" %}
+                        {% if product.metafields.utopia.universal_size_map.value[0]['WOMEN US'] != blank %}
+                            <tr class="size-guide__row">
+                                <td class="size-guide__row--title">US</td>
+                                {%- for sizeGroup in product.metafields.utopia.universal_size_map.value -%}
+                                    <td class="size-guide__row--data">
+                                        {{ sizeGroup['WOMEN US'] }}
+                                    </td>
+                                {% endfor %}
+                            </tr>
+                        {% endif %}
+                        {% if product.metafields.utopia.universal_size_map.value[0]['WOMEN UK'] != blank %}
+                            <tr class="size-guide__row">
+                                <td class="size-guide__row--title">UK</td>
+                                {%- for sizeGroup in product.metafields.utopia.universal_size_map.value -%}
+                                    <td class="size-guide__row--data">
+                                        {{ sizeGroup['WOMEN UK'] }}
+                                    </td>
+                                {% endfor %}
+                            </tr>
+                        {% endif %}
+                    {% endif %}
+                    {% if tableTitle == "Mens" %}
+                        {% if product.metafields.utopia.universal_size_map.value[0]['MEN US'] != blank %}
+                            <tr class="size-guide__row">
+                                <td class="size-guide__row--title">US</td>
+                                {%- for sizeGroup in product.metafields.utopia.universal_size_map.value -%}
+                                    <td class="size-guide__row--data">
+                                        {{ sizeGroup['MEN US'] }}
+                                    </td>
+                                {% endfor %}
+                            </tr>
+                        {% endif %}
+                        {% if product.metafields.utopia.universal_size_map.value[0]['MEN UK'] != blank %}
+                            <tr class="size-guide__row">
+                                <td class="size-guide__row--title">UK</td>
+                                {%- for sizeGroup in product.metafields.utopia.universal_size_map.value -%}
+                                    <td class="size-guide__row--data">
+                                        {{ sizeGroup['MEN UK'] }}
+                                    </td>
+                                {% endfor %}
+                            </tr>
+                        {% endif %}
+                    {% endif %}
+
+                    
+                    
+                    {% if product.metafields.utopia.universal_size_map.value[0]['KIDS US'] != blank %}
+                        <tr class="size-guide__row">
+                            <td class="size-guide__row--title">US (Kids)</td>
+                            {%- for sizeGroup in product.metafields.utopia.universal_size_map.value -%}
+                                <td class="size-guide__row--data">
+                                    {{ sizeGroup['KIDS US'] }}
+                                </td>
+                            {% endfor %}
+                        </tr>
+                    {% endif %}
+                    {% if product.metafields.utopia.universal_size_map.value[0]['KIDS UK'] != blank %}
+                        <tr class="size-guide__row">
+                            <td class="size-guide__row--title">UK (Kids)</td>
+                            {%- for sizeGroup in product.metafields.utopia.universal_size_map.value -%}
+                                <td class="size-guide__row--data">
+                                    {{ sizeGroup['KIDS UK'] }}
+                                </td>
+                            {% endfor %}
+                        </tr>
+                    {% endif %}
+                    {% if product.metafields.utopia.universal_size_map.value[0]['EURO'] != blank %}
+                        <tr class="size-guide__row">
+                            <td class="size-guide__row--title">EU</td>
+                            {%- for sizeGroup in product.metafields.utopia.universal_size_map.value -%}
+                                <td class="size-guide__row--data">
+                                    {{ sizeGroup['EURO'] }}
+                                </td>
+                            {% endfor %}
+                        </tr>
+                    {% endif %}
+                    {% if product.metafields.utopia.universal_size_map.value[0]['CM'] != blank %}
+                        <tr class="size-guide__row">
+                            <td class="size-guide__row--title">CM</td>
+                            {%- for sizeGroup in product.metafields.utopia.universal_size_map.value -%}
+                                <td class="size-guide__row--data">
+                                    {{ sizeGroup['CM'] }}
+                                </td>
+                            {% endfor %}
+                        </tr>
+                    {% endif %}
+                </tbody>
+            </table>
+        </div>
+</div>

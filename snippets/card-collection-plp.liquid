@@ -1,0 +1,120 @@
+{% comment %}
+    Renders a collection card
+
+    Accepts:
+    - card_collection: {Object} Collection Liquid object
+    - media_aspect_ratio: {String} Size of the product image card. Values are "square" and "portrait". Default is "square" (optional)
+    - columns: {Number} 
+    - extend_height: {Boolean} Card height extends to available container space. Default: false (optional)
+    - collection_title: {String} Title for overriding collections default title
+    - collection_link: {String} Link for overriding collections default link
+    Usage:
+    {% render 'card-collection' %}
+{% endcomment %}
+
+{% liquid
+  assign title = ""
+  if collection_title != blank
+    assign title = collection_title | escape
+  else
+   if card_collection.title != blank 
+    assign title = card_collection.title | escape
+   else 
+    assign title = 'onboarding.collection_title' | t
+   endif 
+  endif 
+
+  
+  assign displayImage = card_collection.featured_image
+  if product_override != blank
+    if product_override.featured_media
+      assign displayImage = product_override.featured_media
+    else
+        assign displayImage = product_override.media[1]
+    endif
+  elsif collection_image
+    assign displayImage = collection_image
+  endif 
+
+  assign link = card_collection.url
+  if product_override != blank
+    assign link = product_override.url
+  elsif collection_link != blank
+    assign link = collection_link
+  endif 
+
+%}
+
+{%- liquid
+  assign ratio = 1
+  if displayImage and media_aspect_ratio == 'portrait'
+    assign ratio = 0.8
+  elsif displayImage and media_aspect_ratio == 'adapt'
+    assign ratio = displayImage.aspect_ratio
+  endif
+  if ratio == 0 or ratio == nil
+    assign ratio = 1
+  endif
+-%}
+
+<div class="card-wrapper animate-arrow">
+  <div class="card
+    card--{{ settings.card_style }}
+    {% if displayImage %} card--media{% else %} card--text{% endif %}
+    {% if settings.card_style == 'card' %} color-{{ settings.card_color_scheme }} gradient{% endif %}
+    {% if extend_height %} card--extend-height{% endif %}
+    {% if displayImage == nil and settings.card_style == 'card' %} ratio{% endif %}"
+    style="--ratio-percent: {{ 1 | divided_by: ratio | times: 100 }}%;"
+  >
+    <div class="card__inner {% if settings.card_style == 'standard' %}color-{{ settings.card_color_scheme }} gradient{% endif %}{% if displayImage or settings.card_style == 'standard' %} ratio{% endif %}" style="--ratio-percent: {{ 1 | divided_by: ratio | times: 100 }}%;">
+      {%- if displayImage -%}
+        <div class="card__media">
+          <div class="media media--transparent media--hover-effect">
+            <img
+              srcset="{%- if displayImage.width >= 165 -%}{{ displayImage | image_url: width: 165 }} 165w,{%- endif -%}
+                {%- if displayImage.width >= 330 -%}{{ displayImage | image_url: width: 330 }} 330w,{%- endif -%}
+                {%- if displayImage.width >= 535 -%}{{ displayImage | image_url: width: 535 }} 535w,{%- endif -%}
+                {%- if displayImage.width >= 750 -%}{{ displayImage | image_url: width: 750 }} 750w,{%- endif -%}
+                {%- if displayImage.width >= 1000 -%}{{ displayImage | image_url: width: 1000 }} 1000w,{%- endif -%}
+                {%- if displayImage.width >= 1500 -%}{{ displayImage | image_url: width: 1500 }} 1500w,{%- endif -%}
+                {%- if displayImage.width >= 3000 -%}{{ displayImage | image_url: width: 3000 }} 3000w,{%- endif -%}
+                {{ displayImage | image_url }} {{ displayImage.width }}w"
+              src="{{ displayImage | image_url: width: 1500 }}"
+              sizes="
+              (min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 100 | divided_by: columns }}px,
+              (min-width: 750px) {% if columns > 1 %}calc((100vw - 10rem) / 2){% else %}calc(100vw - 10rem){% endif %},
+              calc(100vw - 3rem)"
+              alt=""
+              height="{{ displayImage.height }}"
+              width="{{ displayImage.width }}"
+              loading="lazy"
+              class="motion-reduce"
+            >
+          </div>
+        </div>
+      {%- endif -%}
+      <div class="card__content">
+        <div class="card__information">
+          <h3 class="card__heading">
+            <a href="{{ link }}" class="full-unstyled-link">
+              {{ title }}
+            </a>
+          </h3>
+          
+        </div>   
+      </div>
+    </div>
+    {% if settings.card_style == 'card' or displayImage %} 
+      <div class="card__content">
+        <div class="card__information">
+          <h3 class="card__heading">
+            <a href="{{ link }}" class="full-unstyled-link">
+              {{ title }}
+            </a>
+          </h3>
+          
+        </div>
+      </div>
+    {% endif %} 
+  </div>
+</div>

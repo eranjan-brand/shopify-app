@@ -1,0 +1,78 @@
+<style>
+    .feature-badges-sections h3 {
+        text-align: {{ section.settings.badge_content_header-align }};
+    }
+
+    .feature-badges-sections {
+        padding-top: {{ section.settings.padding_top }}px;
+        padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+
+</style>
+
+
+
+<div class="feature-badges-sections page-width">
+      
+    {% for badge in product.metafields.utopia.features.value %}
+      {% assign page_title = badge | downcase %}
+      <div id="section_feature-{{ badge }}" >
+        <h3>{{ badge }}</h3>
+        {{ pages[page_title].content }}
+      </div>
+    {% endfor %}
+    
+  </div>
+  
+  {% schema %}
+  {
+    "name": "Feature Badge Section",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Feature Badge Seciton Settings"
+      },
+      {
+        "type": "range",
+        "id": "padding_top",
+        "min": 0,
+        "max": 100,
+        "step": 4,
+        "unit": "px",
+        "label": "t:sections.all.padding.padding_top",
+        "default": 36
+      },
+      {
+        "type": "range",
+        "id": "padding_bottom",
+        "min": 0,
+        "max": 100,
+        "step": 4,
+        "unit": "px",
+        "label": "t:sections.all.padding.padding_bottom",
+        "default": 36
+      },
+      {
+        "type": "select",
+        "id": "badge_content_header-align",
+        "label": "Header Alignment",
+        "options": [
+          {
+            "value": "left",
+            "label": "Left"
+          },
+          {
+            "value": "center",
+            "label": "Center"
+          },
+          {
+            "value": "right",
+            "label": "Right"
+          }
+        ],
+        "default": "center"
+      }
+    ]
+  }
+  {% endschema %}
+

@@ -1,0 +1,454 @@
+{
+  "wrapper": "div#info-page__wrapper.page-width",
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "e6053cb1-7c27-4ab5-81a3-58e489d080f2": {
+      "type": "breadcrumb-section",
+      "settings": {
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "2b0fea8d-df5e-4170-889e-a2bb18c67a87": {
+      "type": "info-menu",
+      "blocks": {
+        "1ac1f800-16d3-47f1-991a-e38873f7bad7": {
+          "type": "link_list",
+          "settings": {
+            "heading": "Quick links",
+            "menu": "info-menu"
+          }
+        }
+      },
+      "block_order": [
+        "1ac1f800-16d3-47f1-991a-e38873f7bad7"
+      ],
+      "settings": {
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "cf9ab64e-153c-482d-96fb-ae12822fc0a5": {
+      "type": "faq-hp",
+      "blocks": {
+        "ebc11b13-f440-40a9-9496-e94cad176763": {
+          "type": "subheading",
+          "settings": {
+            "text": "Orders & Delivery"
+          }
+        },
+        "template--16687490892027__cf9ab64e-153c-482d-96fb-ae12822fc0a5-1675113294682c4214-0": {
+          "type": "text_block",
+          "settings": {
+            "question": "How much does shipping cost and how long will it take for my order to arrive?",
+            "answer": "<p>We offer free standard shipping on all orders over $99.00; orders below this value are charged at a flat rate of $9.95. Express shipping is available at a flat rate of $14.95. Your products are shipped from our warehouse in Victoria and our standard shipping option delivers in 2-6 business days for most Metro and inner-regional postcodes, excluding WA. In busy trading periods, orders may take longer due to high volumes.<br\/><br\/>Dispatch times are between 1 and 4 business days on average. Note these times will extend during peak trading periods. <\/p><p>Once dispatched with Australia Post, expected delivery times for each region are as follows:<br\/><br\/><strong>Express Shipping<\/strong><\/p><ul><li>1-2 business days - Victoria<\/li><li>1-3 business days NSW, ACT, SA & QLD metro and most regional areas*<\/li><li>2-5 business days WA, NT, Tasmania*<br\/><br\/><strong>Standard Shipping<\/strong><\/li><li>1-3 business days Victoria -<\/li><li>2-6 business days NSW, ACT, SA & QLD metro and most regional areas*<\/li><li>3-10 business days WA, NT, Tasmania*<br\/><br\/><em>*Outer-regional areas may experience slightly longer shipping times<\/em><\/li><\/ul>"
+          }
+        },
+        "template--16687490892027__cf9ab64e-153c-482d-96fb-ae12822fc0a5-1675113294682c4214-1": {
+          "type": "text_block",
+          "settings": {
+            "question": "Do you have Click & Collect?",
+            "answer": "<p>At this time our Click and Collect service is temporarily unavailable. We are working to get it up and running as soon as possible!<\/p>"
+          }
+        },
+        "template--16687490892027__cf9ab64e-153c-482d-96fb-ae12822fc0a5-1675113294682c4214-2": {
+          "type": "text_block",
+          "settings": {
+            "question": "How do I track my online order shipment?",
+            "answer": "<p>You will receive a shipping confirmation email to let you know you order is on its way to you! This will contain a click through link to your tracking details with Australia Post, as well as your tracking ID. Please kindly note it may take up to 24 hours for your tracking to be valid with Australia Post.<\/p>"
+          }
+        },
+        "63f0ef9f-993a-40ac-8106-4551fd3763b1": {
+          "type": "text_block",
+          "settings": {
+            "question": "I have not received my online tracking. What should I do?",
+            "answer": "<p>You will receive an order tracking confirmation email once your parcel is on its way to you. This will be emailed to the email address used on your order. Please check your junk mail folder in case it accidently ends up there. If you have not received your tracking email or are having issues accessing the link, please contact our support team at support@hushpuppies.com.au for further assistance.<\/p>"
+          }
+        },
+        "44c4ecc5-3db9-4c08-8c20-673cf4572cec": {
+          "type": "text_block",
+          "settings": {
+            "question": "Can I send an order to another address?",
+            "answer": "<p>Yes, you can send your order to another address other than your registered address, which is useful if you're sending gifts.<\/p>"
+          }
+        },
+        "efe7dadf-7fe3-4911-95f0-1e043a6c41b0": {
+          "type": "text_block",
+          "settings": {
+            "question": "I have not yet received my online order. Where is it?",
+            "answer": "<p>Please be patient, orders can take some time to be delivered depending on your location and any current delays with Australia Post. You can track your parcel using the tracking link provided to you via email.<\/p>"
+          }
+        },
+        "bbbe23bb-742e-43ca-9521-61d107091938": {
+          "type": "text_block",
+          "settings": {
+            "question": "I only received part of my order, where are the rest of my items?",
+            "answer": "<p>Sometimes our orders are shipped in multiple packages. Make sure to check your email as we may send multiple dispatch notifications with additional tracking information. <\/p><p>If it has been over 10 days since your first delivery, or your order was not sent in multiple parcels and you are missing items, please contact our customer service team <a href=\"\/pages\/contact\" title=\"Contact\">here. <\/a><\/p>"
+          }
+        },
+        "8387c576-c752-414d-ac2d-07c8705c3787": {
+          "type": "text_block",
+          "settings": {
+            "question": "Can I change or cancel my order after it has been placed?",
+            "answer": "<p>Unfortunately, once an order has been submitted, we are unable to make any cancellations or amendments. We apologise for any inconvenience this may cause. If you would like to request a return for your order, you can do so <a href=\"\/pages\/return-centre\" target=\"_blank\" title=\"Return Centre\">here<\/a>.<\/p>"
+          }
+        },
+        "cf116e67-038f-4a0d-ab3c-be92630386f8": {
+          "type": "text_block",
+          "settings": {
+            "question": "Can I update my delivery address after my order has been placed?",
+            "answer": "<p>Unfortunately, we are unable to make any changes to delivery addresses once the order has been placed. Once you receive your tracking information for your order, you can request a redirection to a new address with the Australia Post website.<\/p>"
+          }
+        },
+        "93895b6e-3cf9-445e-9f01-834d06fd9274": {
+          "type": "text_block",
+          "settings": {
+            "question": "I'm not sure if I've successfully completed my order?",
+            "answer": "<p>When you have successfully completed your order, you will receive a confirmation email within 15 - 30 minutes. If you don't receive an email, <a href=\"\/pages\/contact\" title=\"Contact\">please get in touch with our customer service team.<\/a> Be sure to check your spam\/junk folder first.<\/p>"
+          }
+        },
+        "d7ebd1b4-7db3-491d-81af-757714286b19": {
+          "type": "text_block",
+          "settings": {
+            "question": "What if I am not home when my Online order arrives?",
+            "answer": "<p>All of our parcels are sent with Authority to leave. Australia Post will determine if there is a safe and secure location to leave your parcel at the delivery address. If they deem that there is not a safe spot to leave the parcel, they will deliver the parcel to the nearest Post Office and leave a collection card of attempted delivery. You will then need to visit the declared post shop to collect your parcel. Please take your ID and the collection card with you. Please also check your tracking details (provided in your shipping confirmation emailed to you) for further updates.<\/p>"
+          }
+        },
+        "7df6445f-5286-49e8-a737-dd8fec663d1d": {
+          "type": "text_block",
+          "settings": {
+            "question": "My parcel has been declared return to sender. How can I resolve this and find out where my parcel is?",
+            "answer": "<p>If you notice that Australia Post have been unable to deliver your parcel as declared \"return to sender\" on your tracking information (this can occur from time to time if the address is invalid, the person is unknown at the address or if the delivery driver has been unable to access the premises), please contact our online support team at support@hushpuppies.com.au for a resolution process.<\/p>"
+          }
+        },
+        "f31eb79b-1f0b-44f4-9256-608528d6051e": {
+          "type": "text_block",
+          "settings": {
+            "question": "Can I leave special delivery instructions for my online order?",
+            "answer": "<p>Unfortunately, we are unable to process any special delivery requests for online orders. Once you receive your tracking information, you will be able to specify any additional delivery instructions via the Australia Post website.<\/p>"
+          }
+        },
+        "e48e5c46-a4e0-499b-b874-9ae36c9a0e81": {
+          "type": "text_block",
+          "settings": {
+            "question": "Do you deliver to PO Boxes and Parcel Lockers?",
+            "answer": "<p>Yes, we do deliver to PO Boxes and Parcel Locker with Australia Post. Please ensure to also enter the valid street address of the PO BOX or Parcel Locker at the checkout.<\/p>"
+          }
+        },
+        "07f36b3a-da6c-405e-b40d-1baf1041d8cd": {
+          "type": "text_block",
+          "settings": {
+            "question": "Do you ship internationally?",
+            "answer": "<p>We currently offer shipping Australia-wide. We are unable to offer international shipping.<\/p>"
+          }
+        },
+        "2204b6fc-83fa-4cd0-9dfa-0d7f0b0bbf88": {
+          "type": "text_block",
+          "settings": {
+            "question": "Where can I purchase Hush Puppies in store?",
+            "answer": "<p>You can find your nearest Hush Puppies branded retail store using our <a href=\"\/pages\/store-locator\" target=\"_blank\" title=\"Store Locator - Hush Puppies AU\">store locator<\/a>.Otherwise you can find our full list of stockists <a href=\"\/pages\/stockists\" target=\"_blank\" title=\"Stockists\">here<\/a>.<\/p>"
+          }
+        },
+        "b81dd2a8-846b-4f92-90f0-f0019e39af92": {
+          "type": "subheading",
+          "settings": {
+            "text": "Product Information"
+          }
+        },
+        "ccc416b3-2f37-48ba-a951-98d98bd99400": {
+          "type": "text_block",
+          "settings": {
+            "question": "What are Hush Puppies Shoes made from?",
+            "answer": "<p>Our product materials vary depending on the style. All of our products have a “Materials & Details” section on the product page which lists all the materials used for that specific style.<br\/>Wherever leather is mentioned, this refers to cow hide leather.<\/p>"
+          }
+        },
+        "05f7dd73-95c3-4af0-8ca1-82a7a594f2af": {
+          "type": "text_block",
+          "settings": {
+            "question": "I missed out on my size, when will it be back in stock?",
+            "answer": "<p>Many of our styles are seasonal and only available for a limited time! Others of our classic full priced favourites will be restocked as needed. All of our currently in stock sizes and styles are available for purchase through our website. <\/p><p>The best way to keep up to date is to join as a VIP member with us to be notified when new styles are available.<\/p>"
+          }
+        },
+        "51006c39-0e80-4b5f-83da-8fb703bd54a4": {
+          "type": "text_block",
+          "settings": {
+            "question": "What size am i? Do you have a size guide\/conversion chart?",
+            "answer": "<p>We sure do! On each product page you can click through to our size conversion chart. <\/p><p>Alternatively see our full size guide <a href=\"\/pages\/size-guide\" target=\"_blank\" title=\"Size Guide\">here. <\/a><\/p>"
+          }
+        },
+        "61b62041-b0d0-458c-adec-5a5d98199471": {
+          "type": "text_block",
+          "settings": {
+            "question": "How do I care for my new Hush Puppies shoes?",
+            "answer": "<p>We know you want your favourite shoes to last for a long time, so here's some tips for taking care of them. Our Shoe Care range, available online and at Hush Puppies retail stores will keep your shoes in the best condition.<br\/><br\/>In general, we recommend the following guidelines (If you have specific questions please email us).<br\/><br\/>Protect - We suggest using our Rain and Stain repellent to protect your leather, Suede and Nubuck from dirt and moisture.<br\/><br\/>Cleaning - Use our Cleaner and Conditioner to prolong the life of smooth, oiled leather. On a regular basis, brush away any surface dirt with a soft brush. After extended, rugged use, wash with mild soap and warm water. Be sure to rinse all soap off as it is hydrophilic. Our Tough Spot Remover can be used if you accidently get ink on your shoes.<br\/><br\/>Drying - Open footwear fully, remove the insole and laces and dry at room temperature. Never expose to heat!<br\/><br\/>Conditioning - Recommended treatment depends on construction and materials of the footwear (most treatments do alter colour and appearance).<br\/><br\/>Restore - Our Oiled Leather Sponge or Cream Polish will bring the shine on your shoes up to its very best. If your suede or nubuck shoes need restoring, our Suede and Nubuck Block and Brush Kit will do the trick.<\/p>"
+          }
+        },
+        "a4ea9ae3-2041-4b76-b583-b19b3d6756b3": {
+          "type": "text_block",
+          "settings": {
+            "question": "How should I store my shoes?",
+            "answer": "<p>Shoes are made to be worn! Storing your shoes for an extended amount of time can result in a condition known as hydrolysis. Factors beyond our control, such as humidity, temperature and moisture can cause polyurethane soles to break down. This is not a condition that is exclusive to Hush Puppies, it affects a wide range of shoe brands.<\/p><p>If you do need to store them - make sure to wear\/air out on a regular basis. <\/p>"
+          }
+        },
+        "65d86d08-d346-435c-9bc1-92fb9ac1c542": {
+          "type": "subheading",
+          "settings": {
+            "text": "Exchanges, Returns and Refunds?"
+          }
+        },
+        "98c0a5b1-efd1-4d64-ac8a-2cbc6d4af2ea": {
+          "type": "text_block",
+          "settings": {
+            "question": "What is the returns policy for my Online order?",
+            "answer": "<p>Hush Puppies is confident that you will be happy with your purchase. If for any reason this is not the case, we offer FREE RETURNS within 28 days of the order date. Hush Puppies will not take responsibility for returned items not received if registered post is not used. We have 4 conditions of return for change of mind, item(s) must be returned:<br\/><br\/><\/p><ol><li>Within 28 days of the order date<\/li><li>Item must be unworn with the original tags still attached - we are unable to accept shoes with dirty marks or damaged soles<\/li><li>Items must be returned in the original shoe box which must be in the original condition.<\/li><li>Postage is non-refundable<\/li><\/ol><p>Hush Puppies reserves the right to refuse the return if these conditions are not adhered to.<br\/>You can find our full returns policy <a href=\"\/policies\/refund-policy\" title=\"Refund Policy\">here!<\/a><\/p>"
+          }
+        },
+        "f3537692-7967-4e7e-a6ae-407d1fc07b80": {
+          "type": "text_block",
+          "settings": {
+            "question": "How do I return my Online order?",
+            "answer": "<p>You can request a return <a href=\"\/pages\/return-centre\" title=\"Return Centre\">here<\/a>. <\/p><p>Enter your order number and email address, then click Create New Return and follow the instructions.<\/p><p>You can also find out full returns policy <a href=\"\/policies\/refund-policy\" target=\"_blank\" title=\"Refund Policy\">here. <\/a><\/p>"
+          }
+        },
+        "987490cf-0576-4437-b2e4-7443f892894d": {
+          "type": "text_block",
+          "settings": {
+            "question": "How can I exchange my online order?",
+            "answer": "<p>We currently don't provide exchanges of styles\/sizes, you can however submit a return and re-order a replacement product. You can request a return <a href=\"\/policies\/refund-policy\" title=\"Refund Policy\">here<\/a><\/p>"
+          }
+        },
+        "8b5116ff-7254-45d5-9f71-907479bb6cce": {
+          "type": "text_block",
+          "settings": {
+            "question": "Can I return or exchange my online order in a retail store?",
+            "answer": "<p>Yes, you are able to return or exchange any unworn items to our direct Hush Puppies retail stores. Please make sure the shoes are unworn and unused with the original tags still attached - we are unable to accept shoes with dirty marks or damaged soles. <\/p><p>If you wish to exchange an item, we recommend you call ahead to avoid disappointment; please use the <a href=\"\/pages\/store-locator\" target=\"_blank\" title=\"Store Locator - Hush Puppies AU\">Store Locator<\/a> to contact your preferred Hush Puppies store. <\/p><p>Proof of Purchase will be required for all exchanges or refunds, this can be in the form of a confirmation email or bank statement. If your item(s) were purchased with PayPal you will be required to show your PayPal proof of purchase.<\/p><p>Please note, items purchased online can only be exchanged at one of our branded retail stores and cannot be returned to an independent stockist.<\/p>"
+          }
+        },
+        "c7b19df3-fe81-4827-8494-08dd36b885a5": {
+          "type": "text_block",
+          "settings": {
+            "question": "How long will it take for my refund to be processed?",
+            "answer": "<p>Once your goods have been received by back at our warehouse, please allow up to 10 working days for your refund to be processed back to your original method of payment.<\/p>"
+          }
+        },
+        "dc210f38-8b37-48a4-baf0-e52a6da4777c": {
+          "type": "text_block",
+          "settings": {
+            "question": "How will my refund work if I have paid with AfterPay or ZipPay?",
+            "answer": "<p>Once a refund has been processed to your Afterpay\/Zipay account, After Pay\/Zip Pay will then contact you to confirm the refund amount depending on the amount of payments you have made. For example, if you have only paid 2 installments of your total order value, After Pay\/Zip Pay will only refund the partial amount paid with them, and then cancel the remaining outstanding amount. This may mean that you would receive a partial refund of your total order value as only that amount was captured from your linked credit card up to the refund date.<\/p>"
+          }
+        },
+        "90b907dc-8ff9-4832-bdd6-019fad32be2e": {
+          "type": "text_block",
+          "settings": {
+            "question": "Can I return my online order to any store which stocks Hush Puppies?",
+            "answer": "<p>Many retailers stock Hush Puppies shoes, but purchases from hushpuppies.com.au can only be returned to official Hush Puppies branded retail stores.<br\/>You can find the locations of these stores <a href=\"\/pages\/store-locator\" target=\"_blank\" title=\"Store Locator - Hush Puppies AU\">here.<\/a> f you cannot access one of these stores, please use our <a href=\"\/pages\/return-centre\" title=\"Return Centre\">online returns portal<\/a>.<\/p>"
+          }
+        },
+        "91cc1083-767f-4f1a-beb4-42f7da4e8dc4": {
+          "type": "subheading",
+          "settings": {
+            "text": "Payment & Promos"
+          }
+        },
+        "6e3aefd0-1653-4bb6-9daf-42cbdaef0d61": {
+          "type": "text_block",
+          "settings": {
+            "question": "What forms of payment do you accept?",
+            "answer": "<p>We accept payment via VISA, MasterCard, AMEX, Pay Pal, Afterpay and Zip Pay.<\/p>"
+          }
+        },
+        "933ae97c-076a-409b-a289-b0ddf08d6794": {
+          "type": "text_block",
+          "settings": {
+            "question": "Are my credit card details and personal information secure?",
+            "answer": "<p>We are strongly committed to protecting your privacy and providing a safe and secure online experience. We have taken measures to ensure that your credit card and personal details are kept safe at all times.<\/p><p>You can find our full privacy policy <a href=\"\/policies\/privacy-policy\" title=\"Privacy Policy\">here.<\/a><\/p>"
+          }
+        },
+        "3d3e5eff-115a-479e-bf9c-87da912ef077": {
+          "type": "text_block",
+          "settings": {
+            "question": "Do prices include GST?",
+            "answer": "<p>Yes - all prices are displayed in Australian Dollars, including GST.<\/p>"
+          }
+        },
+        "f7ba59d4-04ef-484b-b653-311ea4172b60": {
+          "type": "text_block",
+          "settings": {
+            "question": "The promotional code is not applying\/is invalid at checkout. What should I do?",
+            "answer": "<p>First, check you have entered the promotional code correctly. These are case sensitive and should not be followed by a space.<\/p><p><br\/>Second, double check our <a href=\"\/pages\/competitions-promotions\" target=\"_blank\" title=\"Competitions & Promotions\">terms and conditions<\/a>to ensure the promotion is still active and applies to the products you are looking to purchase.<\/p><p><br\/>If you are still having trouble - get in touch with our Customer service team <a href=\"\/pages\/contact\" target=\"_blank\" title=\"Contact\">here<\/a>. Make sure to include the promotion name and the product(s) you are interested in!<\/p>"
+          }
+        },
+        "117d43d8-f18a-4457-8c03-cdeaddc57aa2": {
+          "type": "text_block",
+          "settings": {
+            "question": "I forgot to add a promo code to my order. Can it still be applied?",
+            "answer": "<p>Unfortunately, no. Promo codes can only be applied in the shopping cart screen at time of purchase.<\/p>"
+          }
+        },
+        "1252e47a-bcc8-46d0-a30a-a902258fa70c": {
+          "type": "text_block",
+          "settings": {
+            "question": "Can I purchase a gift card Online?",
+            "answer": "<p>Unfortunately, we do not have gift cards available to purchase online. You can however enter a separate delivery address to your billing address if you wished to send an order as a gift. We do not include a tax invoice in the parcel. In this case, please retain you order number and order confirmation email as your invoice receipt. <\/p><p>Please note any purchase that is sent as a gift, and subsequently returned to us will refunded only to the original payment method.<\/p>"
+          }
+        },
+        "32ae74b1-69d0-45d4-8b76-0f0b74612899": {
+          "type": "text_block",
+          "settings": {
+            "question": "Can I use a gift card purchased at a Hush Puppies retail store online?",
+            "answer": "<p>No, gift cards purchased at a Hush Puppies retail store can only be used in store.<\/p><p>You can find your nearest store <a href=\"\/pages\/store-locator\" title=\"Store Locator - Hush Puppies AU\">here<\/a>. <\/p>"
+          }
+        },
+        "d992c27d-569a-428c-b132-af6ad2fc3602": {
+          "type": "subheading",
+          "settings": {
+            "text": "My Account"
+          }
+        },
+        "6606425c-2c3d-4639-81e4-225329fb9862": {
+          "type": "text_block",
+          "settings": {
+            "question": "What are the benefits of creating an Online account?",
+            "answer": "<ol><li>Check out faster when making a purchase.<\/li><li>Check the status of your orders.<\/li><li>See any of your past orders.<\/li><li>Maintain a wishlist for future purchase<\/li><li>Store any extra shipping addresses.<\/li><\/ol>"
+          }
+        },
+        "73ff6a6b-ebb6-4973-9667-bb1e337df40b": {
+          "type": "text_block",
+          "settings": {
+            "question": "I can't log into my account\/my account information is not recognized. What do I do?",
+            "answer": "<p>Hush Puppies has recently moved to a brand new website! This means that all of our customers will need to make a brand new account as well. You can do so <a href=\"\/account\/register\" title=\"\/account\/register\">here. <\/a><\/p>"
+          }
+        },
+        "ccbca21c-6f4b-4efa-9af5-3d267d8ecbd9": {
+          "type": "text_block",
+          "settings": {
+            "question": "Why can't I access and use my Online store credit?",
+            "answer": "<p>Hush Puppies has recently moved to a brand new website! Part of this process has changed how store credit works going forwards. <\/p><p>If you previously had Online store credit in your account with us, please <a href=\"\/pages\/contact\" target=\"_blank\" title=\"Contact\">contact us<\/a> at support@hushpuppies.com.au with your full name and email address from your old Hush Puppies account for further assistance. <\/p>"
+          }
+        },
+        "93f10ce4-5f25-4cef-ae72-9851b3d192e8": {
+          "type": "text_block",
+          "settings": {
+            "question": "How can I view my order status and history?",
+            "answer": "<p>If you have used an account to place your order, to view you order status and history you will need to log in and access the \"My Account\" tab. This will then allow you to view your order status and history. <\/p><p>Kindly note that Order history for orders placed prior to May 2023 will not be available. For specific Tax Invoice needs for older orders please contact our friendly customer service team <a href=\"\/pages\/contact\" title=\"Contact\">here<\/a>. <\/p>"
+          }
+        },
+        "d9d7bb39-c219-4ea4-977d-07e0587cfaf7": {
+          "type": "text_block",
+          "settings": {
+            "question": "How can I unsubscribe from the mailing list?",
+            "answer": "<p>To unsubscribe, please click the \"unsubscribe\" link at the bottom of any marketing promo email\/poster that is e-mailed to. <\/p><p>If you are still finding it difficult to unsubscribe, please do not hesitate to contact the online support team for further assistance <a href=\"\/pages\/contact\" title=\"Contact\">here<\/a>. <\/p>"
+          }
+        },
+        "47409cca-c3da-4287-b48e-ebf7ad7abc85": {
+          "type": "text_block",
+          "settings": {
+            "question": "Is my personal data safe if I create an account?",
+            "answer": "<p>Yes, your data is safe with Hush Puppies as we are fully compliant with the Privacy Act in Australia. Your account and personal details, and any order details, are protected. To access your details on our website, you need to enter the correct password. <\/p><p>Click here to view our full <a href=\"\/policies\/privacy-policy\" title=\"Privacy Policy\">Privacy Policy<\/a><\/p>"
+          }
+        },
+        "9ff1722e-e1fc-456b-ba60-20d6665a4f00": {
+          "type": "subheading",
+          "settings": {
+            "text": "Careers"
+          }
+        },
+        "ada0bfd5-f666-4576-b03a-62fe5eb63bd7": {
+          "type": "text_block",
+          "settings": {
+            "question": "How can I work for Hush Puppies?",
+            "answer": "<p>Thank you for your interest in Hush Puppies. As a Brand Collective business, Hush Puppies is always looking for qualified individuals. To find out more about career opportunities, please visit the Careers section of the Brand Collective website here: <a href=\"http:\/\/www.brandcollective.com.au\/careers\/current-opportunities\/\" target=\"_blank\">http:\/\/www.brandcollective.com.au\/careers\/current-opportunities\/ <\/a>where you will be able to view all Brand Collective job postings.<\/p>"
+          }
+        },
+        "752ac68e-6307-4d09-9c10-f469d4374549": {
+          "type": "subheading",
+          "settings": {
+            "text": "Help!"
+          }
+        },
+        "4b63c80f-bc69-4e03-9cdc-f318811a46d5": {
+          "type": "text_block",
+          "settings": {
+            "question": "I can't find the answer to my question. How can I contact customer service?",
+            "answer": "<p>You can contact us by sending an enquiry through our <a href=\"\/pages\/contact\" target=\"_blank\" title=\"Contact\">Contact page <\/a>or email us directly at support@hushpuppies.com.au.<br\/><br\/>Please ensure to include all relevant details including the below if applicable:<\/p><ol><li>Order Number<\/li><li>Your contact number and valid email address<\/li><li>Reason for Enquiry - please provide as much detail as possible<\/li><\/ol><p>Our office hours are Monday - Friday, 9am to 5pm AEST (excluding Public Holidays).<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "ebc11b13-f440-40a9-9496-e94cad176763",
+        "template--16687490892027__cf9ab64e-153c-482d-96fb-ae12822fc0a5-1675113294682c4214-0",
+        "template--16687490892027__cf9ab64e-153c-482d-96fb-ae12822fc0a5-1675113294682c4214-1",
+        "template--16687490892027__cf9ab64e-153c-482d-96fb-ae12822fc0a5-1675113294682c4214-2",
+        "63f0ef9f-993a-40ac-8106-4551fd3763b1",
+        "44c4ecc5-3db9-4c08-8c20-673cf4572cec",
+        "efe7dadf-7fe3-4911-95f0-1e043a6c41b0",
+        "bbbe23bb-742e-43ca-9521-61d107091938",
+        "8387c576-c752-414d-ac2d-07c8705c3787",
+        "cf116e67-038f-4a0d-ab3c-be92630386f8",
+        "93895b6e-3cf9-445e-9f01-834d06fd9274",
+        "d7ebd1b4-7db3-491d-81af-757714286b19",
+        "7df6445f-5286-49e8-a737-dd8fec663d1d",
+        "f31eb79b-1f0b-44f4-9256-608528d6051e",
+        "e48e5c46-a4e0-499b-b874-9ae36c9a0e81",
+        "07f36b3a-da6c-405e-b40d-1baf1041d8cd",
+        "2204b6fc-83fa-4cd0-9dfa-0d7f0b0bbf88",
+        "b81dd2a8-846b-4f92-90f0-f0019e39af92",
+        "ccc416b3-2f37-48ba-a951-98d98bd99400",
+        "05f7dd73-95c3-4af0-8ca1-82a7a594f2af",
+        "51006c39-0e80-4b5f-83da-8fb703bd54a4",
+        "61b62041-b0d0-458c-adec-5a5d98199471",
+        "a4ea9ae3-2041-4b76-b583-b19b3d6756b3",
+        "65d86d08-d346-435c-9bc1-92fb9ac1c542",
+        "98c0a5b1-efd1-4d64-ac8a-2cbc6d4af2ea",
+        "f3537692-7967-4e7e-a6ae-407d1fc07b80",
+        "987490cf-0576-4437-b2e4-7443f892894d",
+        "8b5116ff-7254-45d5-9f71-907479bb6cce",
+        "c7b19df3-fe81-4827-8494-08dd36b885a5",
+        "dc210f38-8b37-48a4-baf0-e52a6da4777c",
+        "90b907dc-8ff9-4832-bdd6-019fad32be2e",
+        "91cc1083-767f-4f1a-beb4-42f7da4e8dc4",
+        "6e3aefd0-1653-4bb6-9daf-42cbdaef0d61",
+        "933ae97c-076a-409b-a289-b0ddf08d6794",
+        "3d3e5eff-115a-479e-bf9c-87da912ef077",
+        "f7ba59d4-04ef-484b-b653-311ea4172b60",
+        "117d43d8-f18a-4457-8c03-cdeaddc57aa2",
+        "1252e47a-bcc8-46d0-a30a-a902258fa70c",
+        "32ae74b1-69d0-45d4-8b76-0f0b74612899",
+        "d992c27d-569a-428c-b132-af6ad2fc3602",
+        "6606425c-2c3d-4639-81e4-225329fb9862",
+        "73ff6a6b-ebb6-4973-9667-bb1e337df40b",
+        "ccbca21c-6f4b-4efa-9af5-3d267d8ecbd9",
+        "93f10ce4-5f25-4cef-ae72-9851b3d192e8",
+        "d9d7bb39-c219-4ea4-977d-07e0587cfaf7",
+        "47409cca-c3da-4287-b48e-ebf7ad7abc85",
+        "9ff1722e-e1fc-456b-ba60-20d6665a4f00",
+        "ada0bfd5-f666-4576-b03a-62fe5eb63bd7",
+        "752ac68e-6307-4d09-9c10-f469d4374549",
+        "4b63c80f-bc69-4e03-9cdc-f318811a46d5"
+      ],
+      "settings": {
+        "title": "FAQ",
+        "subtitle": "Find answers to frequently asked questions about Hush Puppies footwear. Get all the information you need to shop with confidence.",
+        "faq_footer_title": "",
+        "title_padding_top": 0,
+        "title_padding_bottom": 0,
+        "body_padding_top": 0,
+        "body_padding_bottom": 36
+      }
+    }
+  },
+  "order": [
+    "main",
+    "e6053cb1-7c27-4ab5-81a3-58e489d080f2",
+    "2b0fea8d-df5e-4170-889e-a2bb18c67a87",
+    "cf9ab64e-153c-482d-96fb-ae12822fc0a5"
+  ]
+}

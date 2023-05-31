@@ -1,0 +1,928 @@
+{{ 'section-image-banner.css' | asset_url | stylesheet_tag }}
+
+{%- if section.settings.image != blank -%}
+  {%- style -%}
+  @media screen and (max-width: 749px) {
+    #Banner-{{ section.id }}::before,
+    #Banner-{{ section.id }} .banner__media::before,
+    #Banner-{{ section.id }}:not(.banner--mobile-bottom) .banner__content::before {
+      /* padding-bottom: {{ 1 | divided_by: section.settings.image.aspect_ratio | times: 100 }}%; */
+      content: '';
+      display: block;
+    }
+
+    .hero-banner-hp .media .hero-banner-hp-img {
+      position: static;
+    }
+
+    .hero-banner-hp .media .hero-banner-hp-img img {
+      margin-bottom: -1.3rem;
+    }
+
+    
+  }
+
+  @media screen and (min-width: 750px) {
+    #Banner-{{ section.id }}::before,
+    #Banner-{{ section.id }} .banner__media::before {
+      padding-bottom: {{ 1 | divided_by: section.settings.image.aspect_ratio | times: 100 }}%;
+      content: '';
+      display: block;
+    }
+   
+  }
+ 
+  {%- endstyle -%}
+{%- endif -%}
+
+{%- style -%}
+   /* #Banner-{{ section.id }}::after {
+    opacity: {{ section.settings.image_overlay_opacity | divided_by: 100.0 }};
+  }  */
+
+  .hero-banner-hp.banner .banner__media::after {
+    opacity: {{ section.settings.image_overlay_opacity | divided_by: 100.0 }};
+  }
+  {% liquid 
+    for block in section.blocks
+      case block.type
+       when 'heading'
+        assign heading_color = block.settings.heading_color
+       when 'text'
+        assign text_color = block.settings.text_color
+       when 'buttons'
+        assign btn_color = block.settings.btn_color
+        assign btn_color_hover = block.settings.btn_color_hover
+        assign btn_text_color = block.settings.btn_text_color
+    endcase
+  endfor 
+  %}
+  .banner__heading {
+    color: {{ heading_color }};
+  }
+  .banner__text {
+    color: {{ text_color }};
+  }
+  .v-countdown-timer.banner__content {
+      padding:0;
+  }
+
+  .v-countdown-timer .banner__box {
+      padding:0;
+  }
+
+  #Banner-{{ section.id }} .custom-btn {
+      background-color: {{ btn_color }};
+      color: {{ btn_text_color }};
+      {% if section.settings.desktop_CTA_stacked == true %} 
+        width: 100%;
+      {% endif %}   
+  }
+
+  #Banner-{{ section.id }} .custom-btn:hover {
+    background-color: {{ btn_color_hover }};
+  }
+
+  #Banner-{{ section.id }} .custom-btn:hover::after {
+    box-shadow: 0 0 0 calc(var(--buttons-border-width) + var(--border-offset)) rgba(var(--color-button-text), var(--border-opacity)),
+    0 0 0 calc(var(--buttons-border-width) + 1px) {{ btn_color_hover }};
+  }
+  
+  {% if section.settings.desktop_CTA_stacked == true %} 
+    #Banner-{{ section.id }} .banner__buttons {
+      flex-wrap : wrap;
+    }
+  {% endif %}
+
+  .clickable-img {
+    cursor: pointer;
+  }
+
+  .clickable-img::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+  }
+
+  @media screen and (min-width: 750px) {
+  .v-countdown-timer .banner__box {
+    padding:1rem;
+    width: {{ section.settings.desktop_content_container_width }}%;
+    /* height: {{ section.settings.desktop_content_container_height }}% */
+    padding-left: {{ section.settings.desktop_img_padding_left }}%;
+    padding-right: {{ section.settings.desktop_img_padding_right }}%;
+    padding-top: {{ section.settings.desktop_img_padding_top }}%;
+    padding-bottom: {{ section.settings.desktop_img_padding_bottom }}%;
+    
+  }
+
+  #Banner-{{ section.id }} .banner__box{
+    width: {{ section.settings.desktop_content_container_width }}%;
+    max-width: {{ section.settings.desktop_content_container_width }}%;
+    /* height: {{ section.settings.desktop_content_container_height }}% */
+    padding-left: {{ section.settings.desktop_img_padding_left }}%;
+    padding-right: {{ section.settings.desktop_img_padding_right }}%;
+    padding-top: {{ section.settings.desktop_img_padding_top }}%;
+    padding-bottom: {{ section.settings.desktop_img_padding_bottom }}%;
+  }
+
+  #Banner-{{ section.id }} .banner-desktop-bgcolor {
+    background-color: {{ section.settings.text_box_color }}
+  }
+
+  }
+
+  @media screen and (max-width:749px) {
+    #Banner-{{ section.id }} .banner__media.mb-cta-below-img {
+      padding-bottom: {{ section.settings.mobile_img_padding_bottom }}%;
+      /* background-color: {{ section.settings.mobile_banner_box_bg }}; */
+    }
+
+    #Banner-{{ section.id }} .banner-mobile-bgcolor {
+    background-color: {{ section.settings.text_box_mobile_color }}
+    }
+
+    #Banner-{{ section.id }}.hero-banner-hp .hero-banner-hp-content {
+      top: {{ section.settings.mobile_top }}%;
+      left: {{ section.settings.mobile_left }}%;
+      padding-right:{{ section.settings.mobile_img_padding_right }}%;
+      padding-left:{{ section.settings.mobile_img_padding_left }}%;
+
+    }
+    #Banner-{{ section.id }}.hero-banner-hp .content-container {
+      padding-top: {{ section.settings.mobile_padding_top }}%;
+      padding-bottom: {{ section.settings.mobile_padding_bottom }}%;
+      padding-left: {{ section.settings.mobile_padding_left }}%;
+      padding-right: {{ section.settings.mobile_padding_right }}%;
+    }
+    {% if section.settings.mobile_CTA_stacked == false %}
+      #Banner-{{ section.id }} .banner__buttons {
+        flex-wrap : inherit;
+      }
+    {% endif %}
+    
+    }
+    @media screen and (max-width:450px) {
+      #Banner-{{ section.id }} .banner__buttons {
+        flex-wrap : wrap!important;
+      }
+      #Banner-{{ section.id }} .banner__buttons .custom-btn {
+        min-width : 180px;
+      }
+     
+    }
+{%- endstyle -%}
+
+<div id="Banner-{{ section.id }}" class="hero-banner-hp banner banner--content-align-{{ section.settings.desktop_content_alignment }} banner--content-align-mobile-{{ section.settings.mobile_content_alignment }} banner--{{ section.settings.image_height }} banner--stacked{% if section.settings.image != blank %} banner--adapt{% endif %} {% if section.settings.show_text_box == false %} banner--desktop-transparent{% endif %}">
+  {%- if section.settings.image != blank -%}
+    <div class="banner__media media{% if section.settings.image == blank %} placeholder{% endif %} {% if section.settings.mobile_below_image %} mb-cta-below-img{% endif %}" >
+      {%-liquid
+        assign image_height = section.settings.image.width | divided_by: section.settings.image.aspect_ratio
+      -%}
+      <div class="hero-banner-hp-img{% if section.settings.clickable_img %} clickable-img{% endif %}"
+        {% if section.settings.clickable_img %}
+          {% if section.settings.img_link != blank %}
+          onclick='javascript:window.location.href="{{ section.settings.img_link }}"'
+        {% endif %}
+      {% endif %}>
+        <picture>
+          <source media="(min-width: 750px)" srcset="{%- if section.settings.image.width >= 375 -%}{{ section.settings.image | image_url: width: 375 }} 375w,{%- endif -%}
+          {%- if section.settings.image.width >= 550 -%}{{ section.settings.image | image_url: width: 550 }} 550w,{%- endif -%}
+          {%- if section.settings.image.width >= 750 -%}{{ section.settings.image | image_url: width: 750 }} 750w,{%- endif -%}
+          {%- if section.settings.image.width >= 1100 -%}{{ section.settings.image | image_url: width: 1100 }} 1100w,{%- endif -%}
+          {%- if section.settings.image.width >= 1500 -%}{{ section.settings.image | image_url: width: 1500 }} 1500w,{%- endif -%}
+          {%- if section.settings.image.width >= 1780 -%}{{ section.settings.image | image_url: width: 1780 }} 1780w,{%- endif -%}
+          {%- if section.settings.image.width >= 2000 -%}{{ section.settings.image | image_url: width: 2000 }} 2000w,{%- endif -%}
+          {%- if section.settings.image.width >= 3000 -%}{{ section.settings.image | image_url: width: 3000 }} 3000w,{%- endif -%}
+          {%- if section.settings.image.width >= 3840 -%}{{ section.settings.image | image_url: width: 3840 }} 3840w,{%- endif -%}
+          {{ section.settings.image | image_url }} {{ section.settings.image.width }}w">
+          <source media="(max-width: 749px)" srcset="{{ section.settings.image_mobile | image_url }}">
+          <img
+            sizes="100vw"
+            src="{{ section.settings.image | image_url: width: 1500 }}"
+            loading="lazy"
+            alt="{{ section.settings.image.alt | escape }}"
+            width="{{ section.settings.image.width }}"
+            height="{{ section.settings.image.width | divided_by: section.settings.image.aspect_ratio | round }}"
+            style="width:100%;height:100%;object-fit:cover"
+          >
+        </picture>
+      </div>
+      
+    </div>
+  {%- endif -%}
+  <div class="hero-banner-hp-content banner__content banner__content--{{ section.settings.desktop_content_position }} 
+    {% if section.settings.clickable_img %}clickable-img{% endif %}
+    {% if section.settings.enable_timer %} v-countdown-timer{% endif %}"
+    {% if section.settings.clickable_img %}
+      {% if section.settings.img_link != blank %}
+      onclick='javascript:window.location.href="{{ section.settings.img_link }}"'
+    {% endif %}
+  {% endif %} >
+    <div class="banner__box content-container content-container--full-width-mobile color-{{ section.settings.color_scheme }} gradient {% if section.settings.show_text_box_mobile == true %}banner-mobile-bgcolor {% endif %}{% if section.settings.show_text_box == true %} banner-desktop-bgcolor{% endif %} ">
+      {%- for block in section.blocks -%}
+        {%- case block.type -%}
+          {%- when 'heading' -%}
+            <h2 class="banner__heading {{ block.settings.heading_size }} 
+              {% if section.settings.enable_timer %} timer-show-content hidden-content{% endif %} " {{ block.shopify_attributes }}>
+              <span>{{ block.settings.heading | escape }}</span>
+            </h2>
+            {% comment %} Start: timer replaced heading{% endcomment %}
+            {% if section.settings.enable_timer %}
+              {% if block.settings.timer_after_heading %}
+                <h2 class="banner__heading {{ block.settings.heading_size }} hidden-content timer-end-content" {{ block.shopify_attributes }}>
+                  <span>{{ block.settings.timer_after_heading | escape }}</span>
+                </h2>
+              {% endif %}
+            {% endif %}
+            {% comment %} End: timer replaced heading{% endcomment %}
+
+          {%- when 'text' -%}
+            <div class="banner__text {{ block.settings.text_style }} 
+              {% if section.settings.enable_timer %} timer-show-content hidden-content{% endif %} " {{ block.shopify_attributes }}>
+              <span>{{ block.settings.text }}</span>
+            </div>
+            {% comment %} Start: timer replaced text {% endcomment %}
+            {% if section.settings.enable_timer %}
+              {% if block.settings.timer_after_text %}
+                <div class="banner__text {{ block.settings.text_style }} hidden-content timer-end-content" {{ block.shopify_attributes }}>
+                  <span>{{ block.settings.timer_after_text | escape }}</span>
+                </div>
+              {% endif %}
+            {% endif %}
+            {% comment %} End: timer replaced text {% endcomment %}
+
+            {% comment %} Countdownn Timer Snippet  {% endcomment %}
+          {% if section.settings.enable_timer %}
+              {% render 'timer-hp',
+                start_date: section.settings.start_date,
+                end_date: section.settings.end_date,
+                after_msg: section.settings.after_msg,
+                timer_size: section.settings.timer_size,
+                legend_size: section.settings.legend_size,
+                timer_color: section.settings.timer_color,
+                legend_color: section.settings.legend_color
+               %}
+          {% endif %}
+          {% comment %} Countdownn Timer Snippet  {% endcomment %}
+
+          {%- when 'buttons' -%}
+            <div class="banner__buttons{% if block.settings.button_label_1 != blank and block.settings.button_label_2 != blank %} banner__buttons--multiple{% endif %} {% if section.settings.enable_timer %} timer-show-content hidden-content{% endif %}" {{ block.shopify_attributes }}>
+              {%- if block.settings.button_label_1 != blank -%}
+                <a{% if block.settings.button_link_1 == blank %} role="link" aria-disabled="true"{% else %} href="{{ block.settings.button_link_1 }}"{% endif %} class="custom-btn button{% if block.settings.button_style_secondary_1 %} button--secondary{% else %} button--primary{% endif %}">{{ block.settings.button_label_1 | escape }}</a>
+              {%- endif -%}
+              {%- if block.settings.button_label_2 != blank -%}
+                <a{% if block.settings.button_link_2 == blank %} role="link" aria-disabled="true"{% else %} href="{{ block.settings.button_link_2 }}"{% endif %} class="custom-btn button{% if block.settings.button_style_secondary_2 %} button--secondary{% else %} button--primary{% endif %}">{{ block.settings.button_label_2 | escape }}</a>
+              {%- endif -%}
+            </div>
+            {% comment %} Start: timer replaced button {% endcomment %}
+            {% if section.settings.enable_timer %}
+            <div class="banner__buttons{% if block.settings.button_label_3 != blank and block.settings.button_label_4 != blank %} banner__buttons--multiple{% endif %} timer-end-content hidden-content" {{ block.shopify_attributes }}>
+              {%- if block.settings.button_label_3 != blank -%}
+                <a{% if block.settings.button_link_3 == blank %} role="link" aria-disabled="true"{% else %} href="{{ block.settings.button_link_3 }}"{% endif %} class="custom-btn button{% if block.settings.button_style_secondary_1 %} button--secondary{% else %} button--primary{% endif %}">{{ block.settings.button_label_3 | escape }}</a>
+              {%- endif -%}
+              {%- if block.settings.button_label_4 != blank -%}
+                <a{% if block.settings.button_link_4 == blank %} role="link" aria-disabled="true"{% else %} href="{{ block.settings.button_link_4 }}"{% endif %} class="custom-btn button{% if block.settings.button_style_secondary_2 %} button--secondary{% else %} button--primary{% endif %}">{{ block.settings.button_label_4 | escape }}</a>
+              {%- endif -%}
+            </div>
+          {% endif %}
+            {% comment %} End: timer replaced button {% endcomment %}
+        {%- endcase -%}
+      {%- endfor -%}
+    </div>
+  </div>
+</div>
+
+{% if section.settings.enable_timer %}
+<script src="{{ 'check-date-time.js' | asset_url }}" defer></script>
+{% endif %}
+
+{% schema %}
+{
+  "name": "hp Hero Banner",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Hero Banner Images and Link"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Select Desktop Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_mobile",
+      "label": "Select Mobile Image"
+    },
+    {
+      "type": "url",
+      "id": "img_link",
+      "label": "Add link for the image"
+    },
+    {
+      "type": "checkbox",
+      "id": "clickable_img",
+      "default": false,
+      "label": "Select checkbox to link the image"
+      /*"info": "Please add link in the below"*/
+    },
+    
+    /*{
+      "type": "range",
+      "id": "image_overlay_opacity",
+      "min": 0,
+      "max": 100,
+      "step": 10,
+      "unit": "%",
+      "label": "t:sections.image-banner.settings.image_overlay_opacity.label",
+      "default": 0
+    },
+    {
+      "type": "select",
+      "id": "image_height",
+      "options": [
+        {
+          "value": "small",
+          "label": "t:sections.image-banner.settings.image_height.options__1.label"
+        },
+        {
+          "value": "medium",
+          "label": "t:sections.image-banner.settings.image_height.options__2.label"
+        },
+        {
+          "value": "large",
+          "label": "t:sections.image-banner.settings.image_height.options__3.label"
+        }
+      ],
+      "default": "medium",
+      "label": "t:sections.image-banner.settings.image_height.label",
+      "info": "t:sections.image-banner.settings.image_height.info"
+    },*/
+    {
+      "type": "header",
+      "content": "Desktop Content Conatiner"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_text_box",
+      "default": true,
+      "label": "t:sections.image-banner.settings.show_text_box.label"
+    },
+    {
+      "type": "color",
+      "id": "text_box_color",
+      "label": "Container Color on Dekstop",
+      "default": "#fff"
+    },
+    {
+      "type": "select",
+      "id": "desktop_content_position",
+      "options": [
+        {
+          "value": "top-left",
+          "label": "t:sections.image-banner.settings.desktop_content_position.options__1.label"
+        },
+        {
+          "value": "top-center",
+          "label": "t:sections.image-banner.settings.desktop_content_position.options__2.label"
+        },
+        {
+          "value": "top-right",
+          "label": "t:sections.image-banner.settings.desktop_content_position.options__3.label"
+        },
+        {
+          "value": "middle-left",
+          "label": "t:sections.image-banner.settings.desktop_content_position.options__4.label"
+        },
+        {
+          "value": "middle-center",
+          "label": "t:sections.image-banner.settings.desktop_content_position.options__5.label"
+        },
+        {
+          "value": "middle-right",
+          "label": "t:sections.image-banner.settings.desktop_content_position.options__6.label"
+        },
+        {
+          "value": "bottom-left",
+          "label": "t:sections.image-banner.settings.desktop_content_position.options__7.label"
+        },
+        {
+          "value": "bottom-center",
+          "label": "t:sections.image-banner.settings.desktop_content_position.options__8.label"
+        },
+        {
+          "value": "bottom-right",
+          "label": "t:sections.image-banner.settings.desktop_content_position.options__9.label"
+        }
+      ],
+      "default": "middle-center",
+      "label": "t:sections.image-banner.settings.desktop_content_position.label"
+    },
+    {
+      "type": "select",
+      "id": "desktop_content_alignment",
+      "options": [
+        {
+          "value": "left",
+          "label": "t:sections.image-banner.settings.desktop_content_alignment.options__1.label"
+        },
+        {
+          "value": "center",
+          "label": "t:sections.image-banner.settings.desktop_content_alignment.options__2.label"
+        },
+        {
+          "value": "right",
+          "label": "t:sections.image-banner.settings.desktop_content_alignment.options__3.label"
+        }
+      ],
+      "default": "center",
+      "label": "t:sections.image-banner.settings.desktop_content_alignment.label"
+    },
+    {
+      "type": "select",
+      "id": "color_scheme",
+      "options": [
+        {
+          "value": "accent-1",
+          "label": "t:sections.all.colors.accent_1.label"
+        },
+        {
+          "value": "accent-2",
+          "label": "t:sections.all.colors.accent_2.label"
+        },
+        {
+          "value": "background-1",
+          "label": "t:sections.all.colors.background_1.label"
+        },
+        {
+          "value": "background-2",
+          "label": "t:sections.all.colors.background_2.label"
+        },
+        {
+          "value": "inverse",
+          "label": "t:sections.all.colors.inverse.label"
+        }
+      ],
+      "default": "background-1",
+      "label": "t:sections.all.colors.label",
+      "info": "t:sections.image-banner.settings.color_scheme.info"
+    },
+    {
+      "type": "range",
+      "id": "desktop_content_container_width",
+      "min": 10,
+      "max": 100,
+      "step": 1,
+      "unit": "%",
+      "label": "Content Container Width",
+      "default": 60
+    },
+    {
+      "type": "range",
+      "id": "desktop_img_padding_left",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "label": "Content padding left",
+      "unit": "%",
+      "default": 10
+    },
+    {
+      "type": "range",
+      "id": "desktop_img_padding_right",
+      "min": 0,
+      "max": 100,
+      "unit": "%",
+      "step": 1,
+      "label": "Content padding right",
+      "default": 10
+    },
+    {
+      "type": "range",
+      "id": "desktop_img_padding_top",
+      "min": 0,
+      "max": 100,
+      "unit": "%",
+      "step": 1,
+      "label": "Content padding top",
+      "default": 10
+    },
+    {
+      "type": "range",
+      "id": "desktop_img_padding_bottom",
+      "min": 0,
+      "max": 100,
+      "unit": "%",
+      "step": 1,
+      "label": "Content padding bottom",
+      "default": 10
+    },
+    {
+      "type": "checkbox",
+      "id": "desktop_CTA_stacked",
+      "default": false,
+      "label": "CTA stacked on desktop"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.image-banner.settings.header.content"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_text_box_mobile",
+      "default": true,
+      "label": "Show content container - Mobile"
+    },
+    {
+      "type": "color",
+      "id": "text_box_mobile_color",
+      "label": "Select content container - Mobile",
+      "default": "#fff"
+    },
+    {
+      "type": "checkbox",
+      "id": "mobile_below_image",
+      "default": true,
+      "label": "CTA below image on mobile"
+    },
+    {
+      "type": "range",
+      "id": "mobile_img_padding_bottom",
+      "min": 50,
+      "max": 100,
+      "step": 5,
+      "label": "Padding below CTA - Mobile",
+      "unit": "%",
+      "default": 70
+    },
+    {
+      "type": "range",
+      "id": "mobile_top",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "label": "Content container vertical position - Mobile",
+      "unit": "%",
+      "default": 50
+    },
+    {
+      "type": "range",
+      "id": "mobile_left",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "label": "Content Container horizontal position - Mobile",
+      "unit": "%",
+      "default": 50
+    },
+    {
+      "type": "range",
+      "id": "mobile_img_padding_left",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "label": "Container padding Left - Mobile",
+      "unit": "%",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "mobile_img_padding_right",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "label": "Container padding right - Mobile",
+      "unit": "%",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "mobile_padding_left",
+      "min": 0,
+      "max": 100,
+      "unit":"%",
+      "step": 1,
+      "label": "Content padding left - Mobile",
+      "unit": "%",
+      "default": 10
+    },
+    {
+      "type": "range",
+      "id": "mobile_padding_right",
+      "min": 0,
+      "max": 100,
+      "unit":"%",
+      "step": 1,
+      "label": "Content padding right - Mobile",
+      "unit": "%",
+      "default": 10
+    },
+    {
+      "type": "range",
+      "id": "mobile_padding_top",
+      "min": 0,
+      "max": 100,
+      "unit":"%",
+      "step": 1,
+      "label": "Content padding top - Mobile",
+      "unit": "%",
+      "default": 10
+    },
+    {
+      "type": "range",
+      "id": "mobile_padding_bottom",
+      "min": 0,
+      "max": 100,
+      "unit":"%",
+      "step": 1,
+      "label": "Content padding bottom - Mobile",
+      "unit": "%",
+      "default": 10
+    },
+    /*{
+      "type": "color",
+      "id": "mobile_banner_box_bg",
+      "label": "CTA background color on mobile",
+      "default": "#F8F8F8"
+    },*/
+    {
+      "type": "select",
+      "id": "mobile_content_alignment",
+      "options": [
+        {
+          "value": "left",
+          "label": "t:sections.image-banner.settings.mobile_content_alignment.options__1.label"
+        },
+        {
+          "value": "center",
+          "label": "t:sections.image-banner.settings.mobile_content_alignment.options__2.label"
+        },
+        {
+          "value": "right",
+          "label": "t:sections.image-banner.settings.mobile_content_alignment.options__3.label"
+        }
+      ],
+      "default": "center",
+      "label": "t:sections.image-banner.settings.mobile_content_alignment.label"
+    },
+    {
+      "type": "checkbox",
+      "id": "mobile_CTA_stacked",
+      "default": true,
+      "label": "CTA stacked on mobile",
+      "info":"for above 450px width"
+    }
+    /*, {
+      "type": "header",
+      "content": "Countdown Timer Setup"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_timer",
+      "default": false,
+      "label": "Enable Timer"
+    },
+    {
+      "type": "text",
+      "id": "start_date",
+      "default": "2022-09-13T09:00",
+      "info": "Format: 20XX-XX-XXT00:00 (required)",
+      "label": "Start Date & Time"
+    },
+    {
+      "type": "text",
+      "id": "end_date",
+      "default": "2023-10-07T09:00",
+      "info": "Format: 20XX-XX-XXT00:00 (required)",
+      "label": "End Date & Time"
+    },
+    {
+      "type": "text",
+      "id": "after_msg",
+      "default": "Times Up",
+      "info": "Show custom message after finishing the timer",
+      "label": "Custom message"
+    },
+    {
+      "type": "number",
+      "id": "timer_size",
+      "label": "Timer Size (px) ",
+      "default": 40
+    },
+    {
+      "type": "number",
+      "id": "legend_size",
+      "label": "Legend Font Size (px)",
+      "default": 20
+    },
+    {
+      "type": "color",
+      "id": "timer_color",
+      "label": "Timer Color",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "legend_color",
+      "label": "Legend Color",
+      "default": "#000000"
+    }*/
+  ],
+  "blocks": [
+    {
+      "type": "heading",
+      "name": "t:sections.image-banner.blocks.heading.name",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "text",
+          "id": "heading",
+          "default": "Image banner",
+          "label": "t:sections.image-banner.blocks.heading.settings.heading.label"
+        },
+        {
+          "type": "text",
+          "id": "timer_after_heading",
+          "default": "Test heading",
+          "label": "Replaced heading for timer"
+        },
+        {
+          "type": "select",
+          "id": "heading_size",
+          "options": [
+            {
+              "value": "h2",
+              "label": "t:sections.all.heading_size.options__1.label"
+            },
+            {
+              "value": "h1",
+              "label": "t:sections.all.heading_size.options__2.label"
+            },
+            {
+              "value": "h0",
+              "label": "t:sections.all.heading_size.options__3.label"
+            }
+          ],
+          "default": "h1",
+          "label": "t:sections.all.heading_size.label"
+        },
+        {
+          "type": "color",
+          "id": "heading_color",
+          "label": "Heading Color",
+          "default": "#000000"
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "name": "t:sections.image-banner.blocks.text.name",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "richtext",
+          "id": "text",
+          "label": "t:sections.image-banner.blocks.text.settings.text.label",
+          "default":"<p>Please add subtext</p>"
+        },
+        {
+          "type": "richtext",
+          "id": "timer_after_text",
+          "label": "Replaced text for timer"
+        },
+        {
+          "type": "select",
+          "id": "text_style",
+          "options": [
+            {
+              "value": "body",
+              "label": "t:sections.image-banner.blocks.text.settings.text_style.options__1.label"
+            },
+            {
+              "value": "subtitle",
+              "label": "t:sections.image-banner.blocks.text.settings.text_style.options__2.label"
+            },
+            {
+              "value": "caption-with-letter-spacing",
+              "label": "t:sections.image-banner.blocks.text.settings.text_style.options__3.label"
+            }
+          ],
+          "default": "body",
+          "label": "t:sections.image-banner.blocks.text.settings.text_style.label"
+        },
+        {
+          "type": "color",
+          "id": "text_color",
+          "label": "Text Color",
+          "default": "#000000"
+        }
+      ]
+    },
+    {
+      "type": "buttons",
+      "name": "t:sections.image-banner.blocks.buttons.name",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "text",
+          "id": "button_label_1",
+          "default": "Button label",
+          "label": "t:sections.image-banner.blocks.buttons.settings.button_label_1.label",
+          "info": "t:sections.image-banner.blocks.buttons.settings.button_label_1.info"
+        },
+        {
+          "type": "url",
+          "id": "button_link_1",
+          "label": "t:sections.image-banner.blocks.buttons.settings.button_link_1.label"
+        },
+        {
+          "type": "checkbox",
+          "id": "button_style_secondary_1",
+          "default": false,
+          "label": "t:sections.image-banner.blocks.buttons.settings.button_style_secondary_1.label"
+        },
+        {
+          "type": "text",
+          "id": "button_label_2",
+          "default": "Button label",
+          "label": "t:sections.image-banner.blocks.buttons.settings.button_label_2.label",
+          "info": "t:sections.image-banner.blocks.buttons.settings.button_label_2.info"
+        },
+        {
+          "type": "url",
+          "id": "button_link_2",
+          "label": "t:sections.image-banner.blocks.buttons.settings.button_link_2.label"
+        },
+        {
+          "type": "checkbox",
+          "id": "button_style_secondary_2",
+          "default": false,
+          "label": "t:sections.image-banner.blocks.buttons.settings.button_style_secondary_2.label"
+        },
+        {
+          "type": "text",
+          "id": "button_label_3",
+          "default": "Button label 3",
+          "label": "Replaced label for timer",
+          "info": "t:sections.image-banner.blocks.buttons.settings.button_label_1.info"
+        },
+        {
+          "type": "url",
+          "id": "button_link_3",
+          "label": "Replaced button link for timer"
+        },
+        {
+          "type": "text",
+          "id": "button_label_4",
+          "default": "Button label 4",
+          "label": "Replaced label for timer",
+          "info": "t:sections.image-banner.blocks.buttons.settings.button_label_1.info"
+        },
+        {
+          "type": "url",
+          "id": "button_link_4",
+          "label": "Replaced button link for timer"
+        },
+        {
+          "type": "color",
+          "id": "btn_color",
+          "label": "Button Color",
+          "default": "#000000"
+        },
+        {
+          "type": "color",
+          "id": "btn_color_hover",
+          "label": "Button Hover Colour",
+          "default": "#000"
+        },
+        {
+          "type": "color",
+          "id": "btn_text_color",
+          "label": "Button Text Color",
+          "default": "#ffffff"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Hero Banner",
+      "blocks": [
+        {
+          "type": "heading"
+        },
+        {
+          "type": "text"
+        },
+        {
+          "type": "buttons"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

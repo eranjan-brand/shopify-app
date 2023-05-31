@@ -1,0 +1,16 @@
+{% layout none %}
+<li class="grid__item">
+    {% render 'card-product' 
+        card_product: product,
+        media_aspect_ratio: 'portrait',
+        show_secondary_image: true,
+        show_vendor: section.settings.show_vendor,
+        show_gender: true,
+        show_subcategory: section.settings.show_subcategory,
+        show_rating: section.settings.show_rating,
+        lazy_load: lazy_load,
+        show_quick_add: false,
+        section_id: section.id,
+        show_additinal_colours: true
+    %}
+</li>

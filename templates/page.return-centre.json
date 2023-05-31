@@ -1,0 +1,37 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "0cc00e4c-5a67-4e82-9279-94f49f6f7aa6": {
+      "type": "return-centre",
+      "settings": {
+        "store_code": "HPS",
+        "free_return_shipping_offered": false,
+        "free_return_shipping_threshold": 0,
+        "show_shipping_cost_page": false,
+        "show_preparing_items_page": false,
+        "show_terms_and_conditions_page": false,
+        "current_environment": "production",
+        "contact_page_url": "\/pages\/contact",
+        "allow_return_within_x_days": 28,
+        "return_center_title": "",
+        "custom": "HP",
+        "default_threshold_text": false,
+        "default_conditions_points": false,
+        "welcome_page_content": "<p classname=\"welcome_page_thresholdText\"> We want you to be passionate about your purchase. If you’re not feeling the love, return your hushpuppies.com.au product(s) within 30 days from the date of delivery free of charge for a full refund (less any shipping costs paid).<\/p>",
+        "welcome_page_condition_points": "<p>We have 3 conditions for returns due to a change of mind:<\/p><p><strong>1.<\/strong> Items must be returned within 28 days of the order date;<\/p><p><strong>2.<\/strong> Items must be unworn with the original tags still attached - we are unable to accept returns with dirty marks or wear marks;<\/p><p><strong>3.<\/strong> Items must be purchased directly from our website.<\/p><p><a href=\"\/policies\/refund-policy\"> You can find our full returns policy here. <\/a><\/p>",
+        "custom_returns_css": ""
+      }
+    }
+  },
+  "order": [
+    "main",
+    "0cc00e4c-5a67-4e82-9279-94f49f6f7aa6"
+  ]
+}

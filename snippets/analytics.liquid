@@ -1,0 +1,329 @@
+
+<script type="text/javascript">
+    // GTM Tag
+    (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-TTM369D');
+
+    // End GTM tag
+
+    {% comment %} 
+    - Triggers product-view event in GTM
+    - Adds product data to GTM datalayer
+    - product data is also consumed on add-to-cart event
+
+
+    Note: Conversion events (product purchase) are tracked on the Order Confirmation/Order-Status page via Checkout additional script
+    This is a limitation of Shopify without a plus membership, as we lack access to Checkout.liquid
+
+
+    ### Below is the code in the checkout additional scripts ###
+
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-PTBLWZL');
+    </script>
+
+    {% if first_time_accessed %}
+
+        <script>
+
+        window.dataLayer = window.dataLayer || [];
+
+        window.dataLayer.push({
+            'page_type': 'purchase',
+            'event': 'Order-Confirmed', //create a custom event in GTM
+            'transaction_id': '{{ order.name || order.order_number }}',
+            'totalValue': {{ total_price | money_without_currency | remove:',' }}, // Includes tax & shipping
+            'subtotalValue': {{ subtotal_price | money_without_currency | remove:',' }},
+            'tax': {{ tax_price | money_without_currency | remove:',' }},
+            'shipping': {{ shipping_price | money_without_currency | remove:',' }},
+            'currency': '{{ shop.currency }}',
+            'payment_type': '{{ order.transactions[0].gateway }}',
+            'items': [
+                {% for line_item in line_items %}
+                    {
+                    'item_id': '{{ line_item.sku || line_item.product_id }}', // if no SKU exists, use product Id
+                    'item_name': '{{ line_item.product.title }}',
+                    'discount': {{ line_item.line_level_total_discount | money_without_currency }},
+                    'item_variant': '{{ line_item.variant.title }}',
+                    'price': {{ line_item.final_price | money_without_currency }},
+                    'quantity': {{ line_item.quantity }},
+                    'item_category': '{{ line_item.product.collections.first.title | remove: "'" | remove: '"' }}',
+                    'item_category2': '{{ line_item.product.metafields.utopia.gender }}',
+                    'item_category3': '{{ line_item.product.metafields.utopia.age_group }}',
+                    'item_category4': '{{ line_item.product.metafields.utopia.business_plp_segment }}',
+                    'item_category5': '{{ line_item.product.metafields.utopia.ProductType }}'
+                    },
+                {% endfor %}
+            ]
+        });
+        </script>
+    {% endif %}
+
+    ### End code in checkout scripts ###
+    {% endcomment %}
+
+    // Init datalayer 
+    window.dataLayer = window.dataLayer || [];
+    
+    // Populate cart item array
+    let initItems = []
+    let initCart = {{ cart.items | json }};
+    let cartCurrency = "{{ cart.currency.iso_code }}"
+    initCart.forEach((item) => {
+        initItems.push( { sku: item.sku, qty: parseInt(item.quantity), price: item.final_price/100, item_name: item.product_title, currency: cartCurrency })
+    });
+    
+    {% assign template_name = template.name %}
+    
+    function productPageHandle(){
+        {% case template_name %}
+        {% when 'product' %}
+            // Fetch product properties from liquid data
+            const productName = "{{ product.title | remove: "'" | remove: '"' }}";
+            const productId = "{{ product.metafields.utopia.colour_code }}";
+            const productPrice = {{ product.price | money_without_currency }};
+            const productBrand = "{{ product.vendor | remove: "'" | remove: '"' }}";
+            const productCollection = "{{ product.collections.first.title | remove: "'" | remove: '"' }}"
+            
+            // Metafield definitions: 
+            const productCategory2 = "{{ product.metafields.utopia.gender }}"
+            const productCategory3 = "{{ product.metafields.utopia.age_group }}"
+            const productCategory4 = "{{ product.metafields.utopia.business_plp_segment }}"
+            const productCategory5 = "{{ product.metafields.utopia.ProductType }}"
+
+
+            // Push product view event with relevant properties
+            window.dataLayer.push({
+                event: 'product-View',
+                currency: '{{ shop.currency }}',
+                value: productPrice,
+                items: [
+                    {
+                        item_name: productName,
+                        item_id: productId,
+                        price: productPrice,
+                        item_brand: productBrand,
+                        item_category: productCollection,
+                        item_category2: productCategory2,
+                        item_category3: productCategory3,
+                        item_category4: productCategory4,
+                        item_category5: productCategory5
+                    }
+                ]
+            });
+        {% endcase %}
+    };
+
+    function watchForCartdrawerUpdate() {
+        // Watch for node change in cart drawer
+        document.querySelector('cart-drawer').addEventListener('DOMNodeInserted', (e) => {
+            try {
+                // Check for inner drawer change
+                if (e.target.closest('.drawer__inner')) {
+                    let updatedItems = [];
+
+                    // Get list of Sku's in cart
+                    let items = document.querySelectorAll('.cart-item') || [];
+                    items.forEach((item) => { 
+                        updatedItems.push(
+                            { 
+                                sku: item.getAttribute('data-sku'), 
+                                qty: parseInt(item.getAttribute('data-qty')), 
+                                item_name: item.getAttribute('data-name'), 
+                                currency: item.getAttribute('data-currency'), 
+                                price: parseInt(item.getAttribute('data-price')) 
+                            }
+                        )
+                    })
+
+                    // Compare updated Sku array with current
+                    // Push relevant event
+                    if (items.length > initItems.length) {
+                        // Item added to cart
+                        const changedItem = getDifference(updatedItems, initItems, 'sku')[0]
+                        pushCartEvent('add-to-cart', changedItem)
+
+                    } else if (items.length < initItems.length) {
+                        // Item removed from cart
+                        const changedItem = getDifference(initItems, updatedItems, 'sku')[0]
+                        pushCartEvent('remove-from-cart', changedItem)
+
+                    } else {
+                        // Quantity changed
+
+                        // Get cart item object with changed quantity
+                        const changedItem = getDifference(updatedItems, initItems, 'qty')[0]
+                        // Get original item from initItems object
+                        const originalItem = initItems.filter(item => {
+                            return item.sku === changedItem.sku
+                        })[0];
+                        //Convert quantity from String to Int
+                        const changeItemQty = parseInt(changedItem.qty)
+                        const originalItemQty = parseInt(originalItem.qty)
+                        /* 
+                            Push relevant add-to-cart or remove-from-cart events based on quantity difference
+                            Create new object to push event: 
+                            {
+                                sku: the changed sku
+                                quantity: the difference between the original and updated quantity
+                            } 
+                        */
+                        const itemObject = {
+                            sku: changedItem.sku,
+                            item_name: changedItem.item_name,
+                            currency: changedItem.currency,
+                            price: parseInt(changedItem.price)
+                        }
+                        if (changeItemQty > originalItemQty) {
+                            const addedQty =  changeItemQty - originalItemQty;
+                            itemObject.qty = parseInt(addedQty)
+                            pushCartEvent('add-to-cart', itemObject)
+                        } else if (changeItemQty < originalItemQty){        
+                            const removedQty =  originalItemQty - changeItemQty;
+                            itemObject.qty = parseInt(removedQty)
+                            pushCartEvent('remove-from-cart', itemObject)
+                        }
+                    }
+                    // Update Sku Array
+                    initItems = updatedItems
+                    
+                    window.cartArray = updatedItems;
+                    // create custom event
+                    const updateEvent = new CustomEvent('cart-updated', {
+                        bubbles: true,
+                    });
+                    // trigger the custom event
+                    document.dispatchEvent(updateEvent);
+                }
+            } catch {
+                // Ignore irrelevant elements
+            }
+        })
+    }
+
+
+    function watchForCartRemove() {
+        /*
+
+        */
+        const removeElements = document.querySelectorAll('#main-cart-items cart-remove-button');
+        removeElements.forEach( (el) => {
+            el.addEventListener('click', (e) => {
+                item = el.closest('tr')
+                const itemObject = { 
+                    sku: item.getAttribute('data-sku'), 
+                    qty: parseInt(item.getAttribute('data-qty')), 
+                    item_name: item.getAttribute('data-name'), 
+                    currency: item.getAttribute('data-currency'), 
+                    price: parseInt(item.getAttribute('data-price')) 
+                }
+                
+                pushCartEvent('remove-from-cart', item);
+                removeSkuFromCartObj(sku);
+            })
+        })
+    }
+
+    function watchForQuantityChange() {
+       
+        // Function for pushing add/remove events to the datalayer on quantity change
+       
+        document.addEventListener('change', (e) => {
+            /*
+            Check that quantity input is within the main cart
+            This prevents events firing on PDP quantity change
+            */
+            if (e.target 
+                && e.target.closest('#main-cart-items') 
+                && e.target.classList.contains('quantity__input')) {
+                
+                const input = e.target;
+                // Get sku from cart row - sku isn't stored on default Dawn theme, must be added
+                item = e.target.closest('tr')
+                const itemObject = { 
+                    sku: item.getAttribute('data-sku'), 
+                    qty: parseInt(item.getAttribute('data-qty')), 
+                    item_name: item.getAttribute('data-name'), 
+                    currency: item.getAttribute('data-currency'), 
+                    price: parseInt(item.getAttribute('data-price'))
+                }
+                // Get the cart index to compare quantity with original cart item object
+                const cartIndex = initItems.findIndex((obj => obj.sku == itemObject.sku));
+                const originalVal = parseInt(initItems[cartIndex].qty);
+                const updatedVal = parseInt(input.value);
+                // Default max quantity is 10 units
+                const maxQuantity = 10;
+
+                // Trigger remove/add events by comparing cart item quantity with new input quantity
+                // also updates cart item quantity to new value
+                if (updatedVal === 0) {
+                    itemObject.qty = originalVal
+                    // Remove SKU entirely from cart object if quantity 0 as item will be removed from cart
+                    pushCartEvent('remove-from-cart', itemObject);
+                    removeSkuFromCartObj(sku);
+                } else if (originalVal < updatedVal && updatedVal <= maxQuantity) {
+                    initItems[cartIndex].qty = updatedVal;
+                    const qtyDifference = updatedVal - originalVal;
+                    itemObject.qty = qtyDifference
+                    pushCartEvent('add-to-cart', itemObject);
+                } else if (updatedVal < originalVal){
+                    initItems[cartIndex].qty = updatedVal;
+                    const qtyDifference = originalVal - updatedVal;
+                    itemObject.qty = qtyDifference
+                    pushCartEvent('remove-from-cart', itemObject);
+                }
+                
+            }
+        })
+    }
+    
+    function getDifference(array1, array2, property) {
+        // Function for retrieving removed/added element in array
+        return array1.filter(object1 => {
+            return !array2.some(object2 => {
+                if (property === 'qty') {
+                    return parseInt(object1[property]) === parseInt(object2[property]);
+                } else {
+                    return object1[property] === object2[property];
+                }
+            });
+        });
+    }
+
+    function pushCartEvent(event, item) {
+        // Function to push cart update event to datalayer
+        const value = parseInt(item.qty) * item.price;
+        window.dataLayer.push({
+            'event': event,
+            'currency': item.currency,
+            'value': value,
+            'items': [{item_id: item.sku, quantity: parseInt(item.qty), item_name: item.item_name, price: parseInt(item.price)}]
+        })
+    }
+
+
+    function removeSkuFromCartObj(sku) {
+        const indexOfCartItem = initItems.findIndex(item => {
+            return item.sku === sku;
+          });
+          initItems.splice(indexOfCartItem, 1);
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+        {% case template_name %}
+            {% when 'product' %}
+                productPageHandle()
+            {% when 'cart' %}
+                watchForCartRemove()
+        {% endcase %}
+        watchForCartdrawerUpdate();
+        watchForQuantityChange()
+    })
+
+</script>

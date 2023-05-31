@@ -1,0 +1,1209 @@
+{
+  "sections": {
+    "ddf4bf74-ab42-4bde-acc8-6e29cde1db8f": {
+      "type": "image-banner-hp",
+      "blocks": {
+        "template--16464605741307__ddf4bf74-ab42-4bde-acc8-6e29cde1db8f-1676935528a43ff537-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "$50 off boots",
+            "timer_after_heading": "",
+            "heading_size": "h0",
+            "heading_color": "#000000"
+          }
+        },
+        "template--16464605741307__ddf4bf74-ab42-4bde-acc8-6e29cde1db8f-1676935528a43ff537-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Check out that boot(y)! T&Cs apply.*<\/p>",
+            "timer_after_text": "",
+            "text_style": "body",
+            "text_color": "#000000"
+          }
+        },
+        "template--16464605741307__ddf4bf74-ab42-4bde-acc8-6e29cde1db8f-1676935528a43ff537-2": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "Shop Womens",
+            "button_link_1": "shopify:\/\/collections\/womens-boots",
+            "button_style_secondary_1": false,
+            "button_label_2": "Shop Mens",
+            "button_link_2": "shopify:\/\/collections\/mens-boots",
+            "button_style_secondary_2": false,
+            "button_label_3": "Button label 3",
+            "button_link_3": "",
+            "button_label_4": "Button label 4",
+            "button_link_4": "",
+            "btn_color": "#000000",
+            "btn_color_hover": "#f6a049",
+            "btn_text_color": "#f8f8f8"
+          }
+        }
+      },
+      "block_order": [
+        "template--16464605741307__ddf4bf74-ab42-4bde-acc8-6e29cde1db8f-1676935528a43ff537-0",
+        "template--16464605741307__ddf4bf74-ab42-4bde-acc8-6e29cde1db8f-1676935528a43ff537-1",
+        "template--16464605741307__ddf4bf74-ab42-4bde-acc8-6e29cde1db8f-1676935528a43ff537-2"
+      ],
+      "custom_css": [
+        "h2 {font-family: \"Basset-Bold-hp\";}"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/HP-New-Site-Sliders-Desktop-Boots-BG-new.jpg",
+        "image_mobile": "shopify:\/\/shop_images\/HP-New-Site-Sliders-Mobile-Boots-bg-new_9cf1c453-2af2-47d3-94ab-e7ecb16adf96.jpg",
+        "img_link": "shopify:\/\/collections\/mens-boots",
+        "clickable_img": false,
+        "show_text_box": false,
+        "text_box_color": "#ffffff",
+        "desktop_content_position": "middle-left",
+        "desktop_content_alignment": "center",
+        "color_scheme": "background-1",
+        "desktop_content_container_width": 44,
+        "desktop_img_padding_left": 0,
+        "desktop_img_padding_right": 0,
+        "desktop_img_padding_top": 10,
+        "desktop_img_padding_bottom": 10,
+        "desktop_CTA_stacked": false,
+        "show_text_box_mobile": true,
+        "text_box_mobile_color": "#ffffff",
+        "mobile_below_image": true,
+        "mobile_img_padding_bottom": 60,
+        "mobile_top": 79,
+        "mobile_left": 50,
+        "mobile_img_padding_left": 0,
+        "mobile_img_padding_right": 0,
+        "mobile_padding_left": 10,
+        "mobile_padding_right": 10,
+        "mobile_padding_top": 10,
+        "mobile_padding_bottom": 10,
+        "mobile_content_alignment": "center",
+        "mobile_CTA_stacked": true
+      }
+    },
+    "0f85c45f-491c-4a16-a176-0f871ffcc70d": {
+      "type": "image-banner-hp",
+      "disabled": true,
+      "blocks": {
+        "24aaf7b8-1fd1-4804-bb68-4b0936e3fbe6": {
+          "type": "heading",
+          "settings": {
+            "heading": "$50 off boots",
+            "timer_after_heading": "",
+            "heading_size": "h1",
+            "heading_color": "#000000"
+          }
+        },
+        "2c38fac8-f996-4fd3-b8c1-c9ef41b986a1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>*T&C's Apply<\/p>",
+            "timer_after_text": "",
+            "text_style": "body",
+            "text_color": "#000000"
+          }
+        },
+        "ec8016fc-e918-4e2d-b6fc-5186036ebf9c": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "Shop Womens",
+            "button_link_1": "shopify:\/\/collections\/womens-boots",
+            "button_style_secondary_1": false,
+            "button_label_2": "Shop Mens",
+            "button_link_2": "shopify:\/\/collections\/mens-boots",
+            "button_style_secondary_2": false,
+            "button_label_3": "Button label 3",
+            "button_link_3": "",
+            "button_label_4": "Button label 4",
+            "button_link_4": "",
+            "btn_color": "#000000",
+            "btn_color_hover": "#7e2d7a",
+            "btn_text_color": "#ffffff"
+          }
+        }
+      },
+      "block_order": [
+        "24aaf7b8-1fd1-4804-bb68-4b0936e3fbe6",
+        "2c38fac8-f996-4fd3-b8c1-c9ef41b986a1",
+        "ec8016fc-e918-4e2d-b6fc-5186036ebf9c"
+      ],
+      "custom_css": [
+        "h2 {font-family: \"Basset-Bold-hp\"; font-size: 80px;}"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/HP-50_Off_Boots_23_Slider-Desktop-bg.jpg",
+        "image_mobile": "shopify:\/\/shop_images\/HP-50_Off_Boots_23_Slider-Mobilebiggerbox.jpg",
+        "img_link": "shopify:\/\/collections\/mens-boots",
+        "clickable_img": false,
+        "show_text_box": true,
+        "text_box_color": "#ffffff",
+        "desktop_content_position": "middle-center",
+        "desktop_content_alignment": "center",
+        "color_scheme": "background-2",
+        "desktop_content_container_width": 60,
+        "desktop_img_padding_left": 10,
+        "desktop_img_padding_right": 10,
+        "desktop_img_padding_top": 10,
+        "desktop_img_padding_bottom": 10,
+        "desktop_CTA_stacked": false,
+        "show_text_box_mobile": false,
+        "text_box_mobile_color": "#ffffff",
+        "mobile_below_image": false,
+        "mobile_img_padding_bottom": 60,
+        "mobile_top": 50,
+        "mobile_left": 50,
+        "mobile_img_padding_left": 0,
+        "mobile_img_padding_right": 0,
+        "mobile_padding_left": 10,
+        "mobile_padding_right": 10,
+        "mobile_padding_top": 10,
+        "mobile_padding_bottom": 10,
+        "mobile_content_alignment": "center",
+        "mobile_CTA_stacked": true
+      }
+    },
+    "f26f64db-8c0f-4bc2-b055-2514d61ad5b9": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "Shop your fave boots",
+        "heading_size": "h2",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "womens-boots",
+        "products_to_show": 12,
+        "columns_desktop": 4,
+        "full_width": false,
+        "show_view_all": false,
+        "view_all_style": "solid",
+        "enable_desktop_slider": true,
+        "color_scheme": "background-1",
+        "image_ratio": "adapt",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "enable_quick_add": false,
+        "columns_mobile": "2",
+        "swipe_on_mobile": true,
+        "padding_top": 36,
+        "padding_bottom": 0
+      }
+    },
+    "9209a760-d14c-4564-8a32-2b01467612c8": {
+      "type": "multicolumn-hp",
+      "disabled": true,
+      "blocks": {
+        "template--16464605741307__9209a760-d14c-4564-8a32-2b01467612c8-167712721185604df6-0": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Multicolumn_-_Sneakers_Cat.jpg",
+            "clickable": true,
+            "title": "Sneakers",
+            "bold_card_title": false,
+            "title_size": "regular",
+            "text": "",
+            "link_label": "",
+            "link": "shopify:\/\/collections\/womens-sneakers",
+            "outline_button": true
+          }
+        },
+        "template--16464605741307__9209a760-d14c-4564-8a32-2b01467612c8-167712721185604df6-1": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/441_x_441_SHOP_BOUNCE_PLUS.jpg",
+            "clickable": true,
+            "title": "Work Shoes",
+            "bold_card_title": true,
+            "title_size": "regular",
+            "text": "",
+            "link_label": "",
+            "link": "shopify:\/\/collections\/mens-work-shoes",
+            "outline_button": true
+          }
+        },
+        "template--16464605741307__9209a760-d14c-4564-8a32-2b01467612c8-167712721185604df6-2": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Multicolumn_-_Boots_Cat.jpg",
+            "clickable": true,
+            "title": "Boots",
+            "bold_card_title": true,
+            "title_size": "regular",
+            "text": "",
+            "link_label": "",
+            "link": "shopify:\/\/collections\/womens-boots",
+            "outline_button": false
+          }
+        },
+        "42a0d59a-edf6-426d-a821-0e43fe2c6605": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Multicolumn_-_Work_Cat.jpg",
+            "clickable": true,
+            "title": "Dress Shoes",
+            "bold_card_title": true,
+            "title_size": "regular",
+            "text": "",
+            "link_label": "",
+            "link": "shopify:\/\/collections\/mens-dress-shoes",
+            "outline_button": false
+          }
+        },
+        "fbdddab0-c01a-47ba-8d2b-2a189c4c4e48": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Multicolumn_-_Flats_Cat.jpg",
+            "clickable": true,
+            "title": "Flats",
+            "bold_card_title": true,
+            "title_size": "regular",
+            "text": "",
+            "link_label": "",
+            "link": "shopify:\/\/collections\/womens-flat",
+            "outline_button": false
+          }
+        }
+      },
+      "block_order": [
+        "template--16464605741307__9209a760-d14c-4564-8a32-2b01467612c8-167712721185604df6-0",
+        "template--16464605741307__9209a760-d14c-4564-8a32-2b01467612c8-167712721185604df6-1",
+        "template--16464605741307__9209a760-d14c-4564-8a32-2b01467612c8-167712721185604df6-2",
+        "42a0d59a-edf6-426d-a821-0e43fe2c6605",
+        "fbdddab0-c01a-47ba-8d2b-2a189c4c4e48"
+      ],
+      "settings": {
+        "title": "Shop By Style",
+        "heading_size": "h2",
+        "bold_section_title": false,
+        "heading_alignment": "left",
+        "heading_color": "#000000",
+        "image_width": "full",
+        "image_ratio": "square",
+        "card-shadow": "4",
+        "columns_desktop": 6,
+        "column_alignment": "center",
+        "background_style": "primary",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "background-1",
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "padding_top": 24,
+        "padding_bottom": 32
+      }
+    },
+    "ba260ad1-c872-402d-bd73-e29f022d6c21": {
+      "type": "slideshow",
+      "disabled": true,
+      "blocks": {
+        "template--18177242530073__ba260ad1-c872-402d-bd73-e29f022d6c21-1682825284071bd56d-1": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/1222HP-11__806_dae4905d-4ee3-4717-aa0e-4e9d8ab06d60.jpg",
+            "heading": "Boots Season",
+            "heading_size": "h1",
+            "subheading": "New arrivals just landed!",
+            "button_label": "Shop Now",
+            "link": "shopify:\/\/collections\/boots",
+            "button_style_secondary": false,
+            "box_align": "top-right",
+            "show_text_box": false,
+            "text_alignment": "right",
+            "image_overlay_opacity": 0,
+            "color_scheme": "background-1",
+            "text_alignment_mobile": "center"
+          }
+        },
+        "template--18177242530073__ba260ad1-c872-402d-bd73-e29f022d6c21-1682825284071bd56d-0": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/0323HP-01_96.jpg",
+            "heading": "Hush Puffies",
+            "heading_size": "h0",
+            "subheading": "So Puffing perfect",
+            "button_label": "Shop Now",
+            "link": "shopify:\/\/collections\/hush-puffies",
+            "button_style_secondary": false,
+            "box_align": "bottom-left",
+            "show_text_box": false,
+            "text_alignment": "left",
+            "image_overlay_opacity": 0,
+            "color_scheme": "background-1",
+            "text_alignment_mobile": "center"
+          }
+        }
+      },
+      "block_order": [
+        "template--18177242530073__ba260ad1-c872-402d-bd73-e29f022d6c21-1682825284071bd56d-1",
+        "template--18177242530073__ba260ad1-c872-402d-bd73-e29f022d6c21-1682825284071bd56d-0"
+      ],
+      "custom_css": [
+        "h2 {font-family: \"Basset-Bold-hp\";}",
+        "h2 {font-size: 60px;}"
+      ],
+      "settings": {
+        "layout": "full_bleed",
+        "slide_height": "adapt_image",
+        "slider_visual": "dots",
+        "auto_rotate": true,
+        "change_slides_speed": 5,
+        "show_text_below": true,
+        "accessibility_info": "Slideshow about our brand"
+      }
+    },
+    "8ec7e975-949e-45bc-bd9e-f6aa1eeaad34": {
+      "type": "image-banner",
+      "disabled": true,
+      "blocks": {
+        "template--18177242530073__8ec7e975-949e-45bc-bd9e-f6aa1eeaad34-1682663623c012ecc6-0": {
+          "type": "heading",
+          "disabled": true,
+          "settings": {
+            "heading": "Buy & Save",
+            "heading_size": "h1"
+          }
+        },
+        "template--18177242530073__8ec7e975-949e-45bc-bd9e-f6aa1eeaad34-1682663623c012ecc6-1": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "text": "Give customers details about the banner image(s) or content on the template.",
+            "text_style": "body"
+          }
+        },
+        "template--18177242530073__8ec7e975-949e-45bc-bd9e-f6aa1eeaad34-1682663623c012ecc6-2": {
+          "type": "buttons",
+          "disabled": true,
+          "settings": {
+            "button_label_1": "Button label",
+            "button_link_1": "",
+            "button_style_secondary_1": false,
+            "button_label_2": "Button label",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "template--18177242530073__8ec7e975-949e-45bc-bd9e-f6aa1eeaad34-1682663623c012ecc6-0",
+        "template--18177242530073__8ec7e975-949e-45bc-bd9e-f6aa1eeaad34-1682663623c012ecc6-1",
+        "template--18177242530073__8ec7e975-949e-45bc-bd9e-f6aa1eeaad34-1682663623c012ecc6-2"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/HP-New-Site-Banner-Desktop-Buy-Save.jpg",
+        "image_overlay_opacity": 0,
+        "image_height": "medium",
+        "adapt_height_first_image": true,
+        "desktop_content_position": "middle-center",
+        "show_text_box": true,
+        "desktop_content_alignment": "center",
+        "color_scheme": "background-1",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": true,
+        "show_text_below": false
+      }
+    },
+    "dd689e9f-6958-4ba9-b5d4-0af997a5b955": {
+      "type": "image-banner-hp",
+      "disabled": true,
+      "blocks": {
+        "template--18177242530073__dd689e9f-6958-4ba9-b5d4-0af997a5b955-168289402616beb143-0": {
+          "type": "heading",
+          "disabled": true,
+          "settings": {
+            "heading": "Image banner",
+            "timer_after_heading": "Test heading",
+            "heading_size": "h1",
+            "heading_color": "#000000"
+          }
+        },
+        "template--18177242530073__dd689e9f-6958-4ba9-b5d4-0af997a5b955-168289402616beb143-2": {
+          "type": "buttons",
+          "disabled": true,
+          "settings": {
+            "button_label_1": "Button label",
+            "button_link_1": "",
+            "button_style_secondary_1": false,
+            "button_label_2": "Button label",
+            "button_link_2": "",
+            "button_style_secondary_2": false,
+            "button_label_3": "Button label 3",
+            "button_link_3": "",
+            "button_label_4": "Button label 4",
+            "button_link_4": "",
+            "btn_color": "#000000",
+            "btn_color_hover": "#000000",
+            "btn_text_color": "#000000"
+          }
+        }
+      },
+      "block_order": [
+        "template--18177242530073__dd689e9f-6958-4ba9-b5d4-0af997a5b955-168289402616beb143-0",
+        "template--18177242530073__dd689e9f-6958-4ba9-b5d4-0af997a5b955-168289402616beb143-2"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/HP-New-Site-Banner-Desktop-Buy-Save.jpg",
+        "image_mobile": "shopify:\/\/shop_images\/HP-New-Site-Banner-Mobile-Buy-Save.jpg",
+        "img_link": "shopify:\/\/collections\/full-price-shoes",
+        "clickable_img": true,
+        "show_text_box": false,
+        "text_box_color": "#ffffff",
+        "desktop_content_position": "middle-center",
+        "desktop_content_alignment": "center",
+        "color_scheme": "background-1",
+        "desktop_content_container_width": 60,
+        "desktop_img_padding_left": 10,
+        "desktop_img_padding_right": 10,
+        "desktop_img_padding_top": 10,
+        "desktop_img_padding_bottom": 10,
+        "desktop_CTA_stacked": false,
+        "show_text_box_mobile": true,
+        "text_box_mobile_color": "#ffffff",
+        "mobile_below_image": false,
+        "mobile_img_padding_bottom": 70,
+        "mobile_top": 50,
+        "mobile_left": 50,
+        "mobile_img_padding_left": 0,
+        "mobile_img_padding_right": 0,
+        "mobile_padding_left": 10,
+        "mobile_padding_right": 10,
+        "mobile_padding_top": 10,
+        "mobile_padding_bottom": 10,
+        "mobile_content_alignment": "center",
+        "mobile_CTA_stacked": true
+      }
+    },
+    "c6cd78b1-ede6-4b9a-94d5-3abf78350185": {
+      "type": "image-banner-hp",
+      "disabled": true,
+      "blocks": {
+        "template--18177242530073__c6cd78b1-ede6-4b9a-94d5-3abf78350185-1682576800e22dd9b8-0": {
+          "type": "heading",
+          "disabled": true,
+          "settings": {
+            "heading": "Image banner",
+            "timer_after_heading": "Test heading",
+            "heading_size": "h1",
+            "heading_color": "#000000"
+          }
+        },
+        "template--18177242530073__c6cd78b1-ede6-4b9a-94d5-3abf78350185-1682576800e22dd9b8-2": {
+          "type": "buttons",
+          "disabled": true,
+          "settings": {
+            "button_label_1": "Button label",
+            "button_link_1": "",
+            "button_style_secondary_1": false,
+            "button_label_2": "Button label",
+            "button_link_2": "",
+            "button_style_secondary_2": false,
+            "button_label_3": "Button label 3",
+            "button_link_3": "",
+            "button_label_4": "Button label 4",
+            "button_link_4": "",
+            "btn_color": "#000000",
+            "btn_color_hover": "#000000",
+            "btn_text_color": "#000000"
+          }
+        }
+      },
+      "block_order": [
+        "template--18177242530073__c6cd78b1-ede6-4b9a-94d5-3abf78350185-1682576800e22dd9b8-0",
+        "template--18177242530073__c6cd78b1-ede6-4b9a-94d5-3abf78350185-1682576800e22dd9b8-2"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/HP-Hero-Banner-2-Desktop-GF-mock.jpg",
+        "image_mobile": "shopify:\/\/shop_images\/Genius_Fit_Mobile_Cropped.png",
+        "img_link": "shopify:\/\/collections\/genius-fit",
+        "clickable_img": true,
+        "show_text_box": false,
+        "text_box_color": "#ffffff",
+        "desktop_content_position": "middle-center",
+        "desktop_content_alignment": "center",
+        "color_scheme": "background-1",
+        "desktop_content_container_width": 60,
+        "desktop_img_padding_left": 10,
+        "desktop_img_padding_right": 10,
+        "desktop_img_padding_top": 10,
+        "desktop_img_padding_bottom": 10,
+        "desktop_CTA_stacked": false,
+        "show_text_box_mobile": true,
+        "text_box_mobile_color": "#ffffff",
+        "mobile_below_image": false,
+        "mobile_img_padding_bottom": 50,
+        "mobile_top": 50,
+        "mobile_left": 50,
+        "mobile_img_padding_left": 0,
+        "mobile_img_padding_right": 0,
+        "mobile_padding_left": 10,
+        "mobile_padding_right": 10,
+        "mobile_padding_top": 10,
+        "mobile_padding_bottom": 10,
+        "mobile_content_alignment": "center",
+        "mobile_CTA_stacked": true
+      }
+    },
+    "962ec180-1182-4771-938c-af1d9953b76e": {
+      "type": "multicolumn-hp",
+      "blocks": {
+        "template--16464605741307__962ec180-1182-4771-938c-af1d9953b76e-167712721185604df6-0": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/1222HP-11__1087_c228cd01-9d85-4b9f-b06d-c56dcfcc2b21.jpg",
+            "clickable": true,
+            "title": "",
+            "bold_card_title": false,
+            "title_size": "regular",
+            "text": "",
+            "link_label": "Shop Sneakers",
+            "link": "shopify:\/\/collections\/sneakers",
+            "outline_button": true
+          }
+        },
+        "template--16464605741307__962ec180-1182-4771-938c-af1d9953b76e-167712721185604df6-2": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Style_column_mens_22.png",
+            "clickable": true,
+            "title": "",
+            "bold_card_title": false,
+            "title_size": "regular",
+            "text": "",
+            "link_label": "Shop Work Shoes",
+            "link": "shopify:\/\/collections\/work",
+            "outline_button": true
+          }
+        },
+        "template--16464605741307__962ec180-1182-4771-938c-af1d9953b76e-167712721185604df6-1": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Nav_new_flats_0.75x.jpg",
+            "clickable": true,
+            "title": "",
+            "bold_card_title": false,
+            "title_size": "regular",
+            "text": "",
+            "link_label": "Shop Flats",
+            "link": "shopify:\/\/collections\/womens-flat",
+            "outline_button": true
+          }
+        },
+        "c53f209a-a7ee-4596-bdb3-ce3aa89210fc": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Slippers_-_recrop.png",
+            "clickable": true,
+            "title": "",
+            "bold_card_title": true,
+            "title_size": "regular",
+            "text": "",
+            "link_label": "Shop Slippers",
+            "link": "shopify:\/\/collections\/slippers",
+            "outline_button": true
+          }
+        }
+      },
+      "block_order": [
+        "template--16464605741307__962ec180-1182-4771-938c-af1d9953b76e-167712721185604df6-0",
+        "template--16464605741307__962ec180-1182-4771-938c-af1d9953b76e-167712721185604df6-2",
+        "template--16464605741307__962ec180-1182-4771-938c-af1d9953b76e-167712721185604df6-1",
+        "c53f209a-a7ee-4596-bdb3-ce3aa89210fc"
+      ],
+      "settings": {
+        "title": "More styles to adore",
+        "heading_size": "h2",
+        "bold_section_title": false,
+        "heading_alignment": "left",
+        "heading_color": "#000000",
+        "image_width": "full",
+        "image_ratio": "square",
+        "card-shadow": "1",
+        "columns_desktop": 4,
+        "column_alignment": "center",
+        "background_style": "primary",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "background-1",
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "edb2ff99-4e98-49b7-9ebd-f1b4f0829a80": {
+      "type": "multicolumn-hp",
+      "disabled": true,
+      "blocks": {
+        "template--16464605741307__edb2ff99-4e98-49b7-9ebd-f1b4f0829a80-167712721185604df6-0": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/NEW_WOMENS.jpg",
+            "clickable": true,
+            "title": "Oh My Newness!",
+            "bold_card_title": true,
+            "title_size": "large",
+            "text": "",
+            "link_label": "NEW WOMENS",
+            "link": "shopify:\/\/collections\/womens-new",
+            "outline_button": true
+          }
+        },
+        "template--16464605741307__edb2ff99-4e98-49b7-9ebd-f1b4f0829a80-167712721185604df6-1": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/NEW_MENS.jpg",
+            "clickable": true,
+            "title": "Sit. Stay. Shop!",
+            "bold_card_title": true,
+            "title_size": "large",
+            "text": "",
+            "link_label": "NEW MENS",
+            "link": "shopify:\/\/collections\/mens-new",
+            "outline_button": true
+          }
+        }
+      },
+      "block_order": [
+        "template--16464605741307__edb2ff99-4e98-49b7-9ebd-f1b4f0829a80-167712721185604df6-0",
+        "template--16464605741307__edb2ff99-4e98-49b7-9ebd-f1b4f0829a80-167712721185604df6-1"
+      ],
+      "settings": {
+        "title": "",
+        "heading_size": "h1",
+        "bold_section_title": true,
+        "heading_alignment": "left",
+        "heading_color": "#000000",
+        "image_width": "full",
+        "image_ratio": "square",
+        "card-shadow": "1",
+        "columns_desktop": 2,
+        "column_alignment": "left",
+        "background_style": "primary",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "background-2",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "4539121d-a00a-4871-af91-dca22737328f": {
+      "type": "image-banner-hp",
+      "settings": {
+        "image": "shopify:\/\/shop_images\/HP-New-Site-Sliders-Desktop-Hush-Puffies-mock-new.jpg",
+        "image_mobile": "shopify:\/\/shop_images\/HP-New-Site-Sliders-Mobile-Hush-Puffies-mock-new.jpg",
+        "img_link": "shopify:\/\/collections\/hush-puffies",
+        "clickable_img": true,
+        "show_text_box": false,
+        "text_box_color": "#ffffff",
+        "desktop_content_position": "middle-center",
+        "desktop_content_alignment": "center",
+        "color_scheme": "background-1",
+        "desktop_content_container_width": 60,
+        "desktop_img_padding_left": 10,
+        "desktop_img_padding_right": 10,
+        "desktop_img_padding_top": 10,
+        "desktop_img_padding_bottom": 10,
+        "desktop_CTA_stacked": false,
+        "show_text_box_mobile": true,
+        "text_box_mobile_color": "#ffffff",
+        "mobile_below_image": false,
+        "mobile_img_padding_bottom": 70,
+        "mobile_top": 50,
+        "mobile_left": 50,
+        "mobile_img_padding_left": 0,
+        "mobile_img_padding_right": 0,
+        "mobile_padding_left": 10,
+        "mobile_padding_right": 10,
+        "mobile_padding_top": 10,
+        "mobile_padding_bottom": 10,
+        "mobile_content_alignment": "center",
+        "mobile_CTA_stacked": true
+      }
+    },
+    "f40afcec-963e-4703-a625-0270c980d087": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "Boot season is here!",
+        "heading_size": "h2",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "mens-boots",
+        "products_to_show": 12,
+        "columns_desktop": 4,
+        "full_width": false,
+        "show_view_all": false,
+        "view_all_style": "solid",
+        "enable_desktop_slider": true,
+        "color_scheme": "background-1",
+        "image_ratio": "adapt",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "enable_quick_add": false,
+        "columns_mobile": "2",
+        "swipe_on_mobile": true,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "d39b7b73-ff05-4d2c-bf2b-487e544eaf36": {
+      "type": "multicolumn-hp",
+      "blocks": {
+        "template--16464605741307__d39b7b73-ff05-4d2c-bf2b-487e544eaf36-167712721185604df6-1": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/For_our_people_Mobile.jpg",
+            "clickable": true,
+            "title": "For our people.",
+            "bold_card_title": true,
+            "title_size": "regular",
+            "text": "",
+            "link_label": "Learn more",
+            "link": "shopify:\/\/pages\/our-people",
+            "outline_button": true
+          }
+        },
+        "template--16464605741307__d39b7b73-ff05-4d2c-bf2b-487e544eaf36-167712721185604df6-2": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/For_our_community_Mobile.jpg",
+            "clickable": true,
+            "title": "For our community.",
+            "bold_card_title": true,
+            "title_size": "regular",
+            "text": "",
+            "link_label": "Learn more",
+            "link": "shopify:\/\/pages\/for-our-community",
+            "outline_button": true
+          }
+        },
+        "template--16464605741307__d39b7b73-ff05-4d2c-bf2b-487e544eaf36-167712721185604df6-0": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/For_our_planet_Mobile.jpg",
+            "clickable": true,
+            "title": "For our planet.",
+            "bold_card_title": true,
+            "title_size": "regular",
+            "text": "",
+            "link_label": "Learn more",
+            "link": "shopify:\/\/pages\/our-materials",
+            "outline_button": true
+          }
+        }
+      },
+      "block_order": [
+        "template--16464605741307__d39b7b73-ff05-4d2c-bf2b-487e544eaf36-167712721185604df6-1",
+        "template--16464605741307__d39b7b73-ff05-4d2c-bf2b-487e544eaf36-167712721185604df6-2",
+        "template--16464605741307__d39b7b73-ff05-4d2c-bf2b-487e544eaf36-167712721185604df6-0"
+      ],
+      "custom_css": [
+        "h2 {font-family: \"Basset-Bold-hp\";}"
+      ],
+      "settings": {
+        "title": "Better + Brighter.",
+        "heading_size": "h1",
+        "bold_section_title": false,
+        "heading_alignment": "center",
+        "heading_color": "#000000",
+        "image_width": "half",
+        "image_ratio": "adapt",
+        "card-shadow": "4",
+        "columns_desktop": 3,
+        "column_alignment": "center",
+        "background_style": "primary",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "accent-1",
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "1af118ac-de11-4305-9ab9-6a6fdc3b0307": {
+      "type": "image-with-text-hp",
+      "disabled": true,
+      "blocks": {
+        "template--16464605741307__1af118ac-de11-4305-9ab9-6a6fdc3b0307-16769499211fc59444-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "Huge Over Heels",
+            "heading_size": "h1"
+          }
+        },
+        "template--16464605741307__1af118ac-de11-4305-9ab9-6a6fdc3b0307-16769499211fc59444-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Step it up into our super comfy, casual, perfectly pointed Hazel Pointe Flat.<\/p>",
+            "text_style": "body"
+          }
+        },
+        "template--16464605741307__1af118ac-de11-4305-9ab9-6a6fdc3b0307-16769499211fc59444-2": {
+          "type": "button",
+          "settings": {
+            "button_label": "Shop Hazel Pointe",
+            "button_link": "shopify:\/\/products\/adventure-mens-brown-multi",
+            "button_style_secondary": true,
+            "btn_bg_color": "#ffffff"
+          }
+        }
+      },
+      "block_order": [
+        "template--16464605741307__1af118ac-de11-4305-9ab9-6a6fdc3b0307-16769499211fc59444-0",
+        "template--16464605741307__1af118ac-de11-4305-9ab9-6a6fdc3b0307-16769499211fc59444-1",
+        "template--16464605741307__1af118ac-de11-4305-9ab9-6a6fdc3b0307-16769499211fc59444-2"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/image_2.jpg",
+        "clickable_img": false,
+        "img_link": "",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "text_first",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "background_color": "#b7331d",
+        "content_color": "#ffffff",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "a11b0768-ac65-4d60-bbf5-85c60f17a2dd": {
+      "type": "image-banner-hp",
+      "blocks": {
+        "template--18177242530073__a11b0768-ac65-4d60-bbf5-85c60f17a2dd-168289402616beb143-0": {
+          "type": "heading",
+          "disabled": true,
+          "settings": {
+            "heading": "Image banner",
+            "timer_after_heading": "Test heading",
+            "heading_size": "h1",
+            "heading_color": "#000000"
+          }
+        },
+        "template--18177242530073__a11b0768-ac65-4d60-bbf5-85c60f17a2dd-168289402616beb143-2": {
+          "type": "buttons",
+          "disabled": true,
+          "settings": {
+            "button_label_1": "Button label",
+            "button_link_1": "",
+            "button_style_secondary_1": false,
+            "button_label_2": "Button label",
+            "button_link_2": "",
+            "button_style_secondary_2": false,
+            "button_label_3": "Button label 3",
+            "button_link_3": "",
+            "button_label_4": "Button label 4",
+            "button_link_4": "",
+            "btn_color": "#000000",
+            "btn_color_hover": "#000000",
+            "btn_text_color": "#000000"
+          }
+        }
+      },
+      "block_order": [
+        "template--18177242530073__a11b0768-ac65-4d60-bbf5-85c60f17a2dd-168289402616beb143-0",
+        "template--18177242530073__a11b0768-ac65-4d60-bbf5-85c60f17a2dd-168289402616beb143-2"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/HP-New-Site-Banner-Desktop-Melb-Storm.jpg",
+        "image_mobile": "shopify:\/\/shop_images\/HP-New-Site-Banner-Mobile-Melb-Storm.jpg",
+        "img_link": "",
+        "clickable_img": false,
+        "show_text_box": true,
+        "text_box_color": "#ffffff",
+        "desktop_content_position": "middle-center",
+        "desktop_content_alignment": "center",
+        "color_scheme": "background-1",
+        "desktop_content_container_width": 60,
+        "desktop_img_padding_left": 10,
+        "desktop_img_padding_right": 10,
+        "desktop_img_padding_top": 10,
+        "desktop_img_padding_bottom": 10,
+        "desktop_CTA_stacked": false,
+        "show_text_box_mobile": true,
+        "text_box_mobile_color": "#ffffff",
+        "mobile_below_image": false,
+        "mobile_img_padding_bottom": 70,
+        "mobile_top": 50,
+        "mobile_left": 50,
+        "mobile_img_padding_left": 0,
+        "mobile_img_padding_right": 0,
+        "mobile_padding_left": 10,
+        "mobile_padding_right": 10,
+        "mobile_padding_top": 10,
+        "mobile_padding_bottom": 10,
+        "mobile_content_alignment": "center",
+        "mobile_CTA_stacked": true
+      }
+    },
+    "70a38003-63f5-413c-b5fe-822847dd8db8": {
+      "type": "image-banner",
+      "disabled": true,
+      "blocks": {
+        "template--18177242530073__70a38003-63f5-413c-b5fe-822847dd8db8-1682663623c012ecc6-0": {
+          "type": "heading",
+          "disabled": true,
+          "settings": {
+            "heading": "Image banner",
+            "heading_size": "h1"
+          }
+        },
+        "template--18177242530073__70a38003-63f5-413c-b5fe-822847dd8db8-1682663623c012ecc6-1": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "text": "Give customers details about the banner image(s) or content on the template.",
+            "text_style": "body"
+          }
+        },
+        "template--18177242530073__70a38003-63f5-413c-b5fe-822847dd8db8-1682663623c012ecc6-2": {
+          "type": "buttons",
+          "disabled": true,
+          "settings": {
+            "button_label_1": "Button label",
+            "button_link_1": "",
+            "button_style_secondary_1": false,
+            "button_label_2": "Button label",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "template--18177242530073__70a38003-63f5-413c-b5fe-822847dd8db8-1682663623c012ecc6-0",
+        "template--18177242530073__70a38003-63f5-413c-b5fe-822847dd8db8-1682663623c012ecc6-1",
+        "template--18177242530073__70a38003-63f5-413c-b5fe-822847dd8db8-1682663623c012ecc6-2"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/HP-New-Site-Banner-Desktop-Melb-Storm.jpg",
+        "image_overlay_opacity": 0,
+        "image_height": "medium",
+        "adapt_height_first_image": true,
+        "desktop_content_position": "middle-center",
+        "show_text_box": true,
+        "desktop_content_alignment": "center",
+        "color_scheme": "background-1",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": true,
+        "show_text_below": true
+      }
+    },
+    "4a201fde-b023-4f73-a0d9-04819655fa2a": {
+      "type": "rich-text",
+      "blocks": {
+        "template--18177242530073__4a201fde-b023-4f73-a0d9-04819655fa2a-1682045545f8a86865-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p>Let's get social @hushpuppiesau<\/p>",
+            "heading_size": "h2"
+          }
+        },
+        "template--18177242530073__4a201fde-b023-4f73-a0d9-04819655fa2a-1682045545f8a86865-1": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "text": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.<\/p>"
+          }
+        },
+        "template--18177242530073__4a201fde-b023-4f73-a0d9-04819655fa2a-1682045545f8a86865-2": {
+          "type": "button",
+          "disabled": true,
+          "settings": {
+            "button_label": "Button label",
+            "button_link": "",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "template--18177242530073__4a201fde-b023-4f73-a0d9-04819655fa2a-1682045545f8a86865-0",
+        "template--18177242530073__4a201fde-b023-4f73-a0d9-04819655fa2a-1682045545f8a86865-1",
+        "template--18177242530073__4a201fde-b023-4f73-a0d9-04819655fa2a-1682045545f8a86865-2"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "background-1",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 32
+      }
+    },
+    "1682045155f4032a16": {
+      "type": "apps",
+      "blocks": {
+        "72d7e5cd-2c2a-4dcb-85d9-1f833b0aef22": {
+          "type": "shopify:\/\/apps\/shoppable-instagram-ugc\/blocks\/custom_slider\/e2616dfe-fbb6-4e7d-874d-d250b973556d",
+          "settings": {
+            "foreground_color": "#ffffff",
+            "background_color": "#000000",
+            "background_color_alpha": 90,
+            "post_spacing": 7,
+            "hover_margin": 0,
+            "cell_size": "20%",
+            "target_blank": false,
+            "arrows_outside": true,
+            "show_icon": true,
+            "show_text": false,
+            "show_date": false,
+            "call_to_action": "SHOP IT",
+            "shop_type": "button",
+            "body_font_size": 14,
+            "body_font": "helvetica_n4",
+            "accent_font_size": 14,
+            "accent_font": "helvetica_n4",
+            "override_feed_id": "",
+            "arbitrary_attributes": "",
+            "custom_css": "",
+            "custom_js": ""
+          }
+        }
+      },
+      "block_order": [
+        "72d7e5cd-2c2a-4dcb-85d9-1f833b0aef22"
+      ],
+      "settings": {
+        "include_margins": false
+      }
+    },
+    "588f2f6a-76c5-46de-ac9e-61aef9b9d641": {
+      "type": "multicolumn-hp-carousel",
+      "disabled": true,
+      "blocks": {
+        "template--16464605741307__588f2f6a-76c5-46de-ac9e-61aef9b9d641-16771081376ce9bb71-0": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Product_Image_4.jpg",
+            "title": "The Most Comfy Sustainable Shoe",
+            "bold_card_title": true,
+            "text": "<p><a href=\"\/products\/abella-black-spotted-leopard\" title=\"Abella Black\/Spotted Leopard\">Shop womens<\/a><\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "template--16464605741307__588f2f6a-76c5-46de-ac9e-61aef9b9d641-16771081376ce9bb71-1": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Product_Image_3_5e4c475a-f041-42a8-b21a-5a2cc2db7592.jpg",
+            "title": "The Most Comfy Sustainable Shoe",
+            "bold_card_title": true,
+            "text": "<p><a href=\"\/products\/adventure-mens-khaki-multi\" title=\"Adventure - Mens Khaki Multi\">Shop womens<\/a><\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "template--16464605741307__588f2f6a-76c5-46de-ac9e-61aef9b9d641-16771081376ce9bb71-2": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Product_Image_6.jpg",
+            "title": "The Most Comfy Sustainable Shoe",
+            "bold_card_title": true,
+            "text": "<p><a href=\"\/products\/allanby-black-flyknit\" title=\"Allanby Black Flyknit\">Shop womens<\/a><\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "297e033f-2d03-4aea-a6c8-e41d6784bd36": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Product_Image_5.jpg",
+            "title": "The Most Comfy Sustainable Shoe",
+            "bold_card_title": true,
+            "text": "<p><a href=\"\/collections\/the-good-shoe\" title=\"The Good Shoe\">Shop womens<\/a><\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--16464605741307__588f2f6a-76c5-46de-ac9e-61aef9b9d641-16771081376ce9bb71-0",
+        "template--16464605741307__588f2f6a-76c5-46de-ac9e-61aef9b9d641-16771081376ce9bb71-1",
+        "template--16464605741307__588f2f6a-76c5-46de-ac9e-61aef9b9d641-16771081376ce9bb71-2",
+        "297e033f-2d03-4aea-a6c8-e41d6784bd36"
+      ],
+      "custom_css": [
+
+      ],
+      "settings": {
+        "title": "Carousel Section",
+        "heading_size": "h2",
+        "bold_section_title": true,
+        "image_width": "full",
+        "image_ratio": "square",
+        "card-shadow": "4",
+        "column_alignment": "center",
+        "background_style": "primary",
+        "color_scheme": "accent-2",
+        "columns_mobile": "1",
+        "margin_left": 5,
+        "padding_top": 36,
+        "padding_bottom": 40
+      }
+    },
+    "1675044388983b9ef4": {
+      "type": "apps",
+      "disabled": true,
+      "settings": {
+        "include_margins": false
+      }
+    },
+    "1675128351bd7c8b1c": {
+      "type": "apps",
+      "disabled": true,
+      "settings": {
+        "include_margins": true
+      }
+    },
+    "16751287183925db31": {
+      "type": "apps",
+      "disabled": true,
+      "settings": {
+        "include_margins": true
+      }
+    },
+    "3aa7f598-b563-4174-8328-bde6bea8c8ff": {
+      "type": "custom-liquid",
+      "disabled": true,
+      "settings": {
+        "custom_liquid": "",
+        "color_scheme": "background-1",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    }
+  },
+  "order": [
+    "ddf4bf74-ab42-4bde-acc8-6e29cde1db8f",
+    "0f85c45f-491c-4a16-a176-0f871ffcc70d",
+    "f26f64db-8c0f-4bc2-b055-2514d61ad5b9",
+    "9209a760-d14c-4564-8a32-2b01467612c8",
+    "ba260ad1-c872-402d-bd73-e29f022d6c21",
+    "8ec7e975-949e-45bc-bd9e-f6aa1eeaad34",
+    "dd689e9f-6958-4ba9-b5d4-0af997a5b955",
+    "c6cd78b1-ede6-4b9a-94d5-3abf78350185",
+    "962ec180-1182-4771-938c-af1d9953b76e",
+    "edb2ff99-4e98-49b7-9ebd-f1b4f0829a80",
+    "4539121d-a00a-4871-af91-dca22737328f",
+    "f40afcec-963e-4703-a625-0270c980d087",
+    "d39b7b73-ff05-4d2c-bf2b-487e544eaf36",
+    "1af118ac-de11-4305-9ab9-6a6fdc3b0307",
+    "a11b0768-ac65-4d60-bbf5-85c60f17a2dd",
+    "70a38003-63f5-413c-b5fe-822847dd8db8",
+    "4a201fde-b023-4f73-a0d9-04819655fa2a",
+    "1682045155f4032a16",
+    "588f2f6a-76c5-46de-ac9e-61aef9b9d641",
+    "1675044388983b9ef4",
+    "1675128351bd7c8b1c",
+    "16751287183925db31",
+    "3aa7f598-b563-4174-8328-bde6bea8c8ff"
+  ]
+}

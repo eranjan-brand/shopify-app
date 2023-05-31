@@ -1,0 +1,42 @@
+{% comment %} Requires product object to be available or passed in to function {% endcomment %}
+{% liquid 
+    assign promoline = product.metafields.utopia.promo_line
+    assign background = product.metafields.utopia.promo_background
+    assign colour = product.metafields.utopia.promo_colour
+%}
+{% if promoline != blank %}
+<style>
+    #promoline-{{ product.id }} {
+        width: 100%;
+        {%- if background != blank and settings.promoline-show_background == true -%}
+            background-color: {{ background }};
+            {%- else -%}
+            background-color: #EAF2EB;
+        {%- endif -%}
+        {%- if colour != blank -%}
+            color: {{ colour }};
+            {%- else -%}
+            color: #617F59;
+        {%- endif -%}
+        font-size: {{ settings.promoline-font-size }}px;
+        padding-block: {{ settings.promoline-padding-vertical }}px;
+        padding-inline: {{ settings.promoline-padding-horizontal }}px;
+    }
+
+    .promoline-wrapper {
+        margin: 0;
+        text-align:center;
+        font-style: normal;
+        font-weight: 700;
+        text-transform: uppercase;
+    }
+
+    
+</style>
+
+<div id="promoline-{{ product.id }}" class="promoline-wrapper">
+    <span>
+        {{ promoline }}
+    </span>
+</div>
+{% endif %}

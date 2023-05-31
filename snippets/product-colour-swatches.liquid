@@ -1,0 +1,112 @@
+{% comment %}
+    Renders a list of colour swatches for a product
+
+    Accepts:
+    - Product: {Object} Product object
+
+    Usage:
+    {% render 'product-colour-swatches' with product %}
+{% endcomment %}
+{%- assign variants = product.metafields.utopia.product_references.value -%}
+<ul>
+    <li class="active additional-colours__option" style="background-color: {{ product.metafields.utopia.swatch_colour }};">
+        <a href="{{ product.url }}" alt="{{ product.title }}" hidden>
+            {{ product.featured_media | image_url: width: 533 | image_tag: alt: product.title }}
+        </a>
+        <span class="card__price__regular" data-price="{{ product.compare_at_price | money }}"></span>
+        <span class="card__price__sale" data-price="{{ product.price | money }}"></span>
+        <span class="card__title" data-title="{{ product.metafields.utopia.customer_facing_product_name | escape }}"></span>
+        <span class="card__url" data-url="{{ shop.url }}{{ product.url }}"></span>
+        <span class="card__product-id" data-product-id="{{ product.id }}"></span>
+        {% if product.metafields.utopia.promo_line != blank %}
+            <span class="card__promoline" data-promoline="{{ product.metafields.utopia.promo_line }}">
+        {% endif %}
+        {% if product.selected_or_first_available_variant %}
+        {% assign currentVariant = product.selected_or_first_available_variant %}
+        {% else %}
+        {% assign currentVariant = product.variants[0] %}
+        {%- endif -%}
+        <span class="card__variant-id" data-variant-id="{{ currentVariant.id }}"></span>
+        <span class="card__hover-image"
+            data-srcset="{%- if product.media[1].width >= 165 -%}{{ product.media[1] | image_url: width: 165 }} 165w,{%- endif -%}
+              {%- if product.media[1].width >= 360 -%}{{ product.media[1] | image_url: width: 360 }} 360w,{%- endif -%}
+              {%- if product.media[1].width >= 533 -%}{{ product.media[1] | image_url: width: 533 }} 533w,{%- endif -%}
+              {%- if product.media[1].width >= 720 -%}{{ product.media[1] | image_url: width: 720 }} 720w,{%- endif -%}
+              {%- if product.media[1].width >= 940 -%}{{ product.media[1] | image_url: width: 940 }} 940w,{%- endif -%}
+              {%- if product.media[1].width >= 1066 -%}{{ product.media[1] | image_url: width: 1066 }} 1066w,{%- endif -%}
+              {{ product.media[1] | image_url }} {{ product.media[1].width }}w"
+            data-src="{{ product.media[1] | image_url: width: 533 }}"
+          >
+        
+    </li>
+
+    {% assign variantCount = 0 %}
+    {% for variant in variants %}
+        {% liquid 
+            assign promoline = variant.metafields.utopia.promo_line
+            assign background = variant.metafields.utopia.promo_background
+            assign colour = variant.metafields.utopia.promo_colour
+        %}
+
+        
+
+
+        {% if variant.metafields.utopia.swatch_colour %}
+            {% assign variantCount = variantCount | plus: 1 %}
+            {%- assign compare_at_price = variant.compare_at_price | money -%}
+            {%- assign price = variant.price | money -%}
+            <li class="additional-colours__option" style="background-color: {{ variant.metafields.utopia.swatch_colour }};" data-count="{{ variantCount }}">
+                <style>
+                    #promoline-{{ variant.id }} {
+                        width: 100%;
+                        {%- if background != blank and settings.promoline-show_background == true -%}
+                            background-color: {{ background }};
+                            {%- else -%}
+                            background-color: #EAF2EB;
+                        {%- endif -%}
+                        {%- if colour != blank -%}
+                            color: {{ colour }};
+                            {%- else -%}
+                            color: #617F59;
+                        {%- endif -%}
+                        font-size: {{ settings.promoline-font-size }}px;
+                        padding-block: {{ settings.promoline-padding-vertical }}px;
+                        padding-inline: {{ settings.promoline-padding-horizontal }}px;
+                    }
+                </style>
+                <a href="{{ variant.url }}" alt="{{ variant.title }}"  hidden>
+                    {{ variant.media[0].preview_image | image_url: width: 533 | image_tag: alt: variant.title }}
+                </a>
+                <span class="card__price__regular" data-price="{{ compare_at_price }}"></span>
+                <span class="card__price__sale" data-price="{{ price }}"></span>
+                <span class="card__title" data-title="{{ variant.metafields.utopia.customer_facing_product_name | escape }}"></span>
+                <span class="card__url" data-url="{{ shop.url }}{{ variant.url }}"></span>
+                <span class="card__product-id" data-product-id="{{ variant.id }}"></span>
+                {% if variant.metafields.utopia.promo_line != blank %}
+                    <span class="card__promoline" data-promoline="{{ variant.metafields.utopia.promo_line }}">
+                {% endif %}
+                {% if variant.selected_or_first_available_variant %}
+                {% assign currentVariant = variant.selected_or_first_available_variant %}
+                {% else %}
+                {% assign currentVariant = variant.variants[0] %}
+                {%- endif -%}
+                <span class="card__variant-id" data-variant-id="{{ currentVariant.id }}"></span>
+
+                <span class="card__hover-image"
+                    data-srcset="{%- if variant.media[1].width >= 165 -%}{{ variant.media[1] | image_url: width: 165 }} 165w,{%- endif -%}
+                      {%- if variant.media[1].width >= 360 -%}{{ variant.media[1] | image_url: width: 360 }} 360w,{%- endif -%}
+                      {%- if variant.media[1].width >= 533 -%}{{ variant.media[1] | image_url: width: 533 }} 533w,{%- endif -%}
+                      {%- if variant.media[1].width >= 720 -%}{{ variant.media[1] | image_url: width: 720 }} 720w,{%- endif -%}
+                      {%- if variant.media[1].width >= 940 -%}{{ variant.media[1] | image_url: width: 940 }} 940w,{%- endif -%}
+                      {%- if variant.media[1].width >= 1066 -%}{{ variant.media[1] | image_url: width: 1066 }} 1066w,{%- endif -%}
+                      {{ variant.media[1] | image_url }} {{ variant.media[1].width }}w"
+                    data-src="{{ variant.media[1] | image_url: width: 533 }}"
+                  >
+            </li>
+        {% endif %}
+    {% endfor %}
+    
+    {% if variantCount > 3 %}
+        <button class="additional-colours__show-more"><span>+{{ variantCount | minus: 3 }}</span></button>
+    {% endif %}
+  </ul>

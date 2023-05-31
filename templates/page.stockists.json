@@ -1,0 +1,147 @@
+{
+  "wrapper": "div#info-page__wrapper.page-width",
+  "sections": {
+    "e6053cb1-7c27-4ab5-81a3-58e489d080f2": {
+      "type": "breadcrumb-section",
+      "settings": {
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "2b0fea8d-df5e-4170-889e-a2bb18c67a87": {
+      "type": "info-menu",
+      "blocks": {
+        "1ac1f800-16d3-47f1-991a-e38873f7bad7": {
+          "type": "link_list",
+          "settings": {
+            "heading": "Quick links",
+            "menu": "info-menu"
+          }
+        }
+      },
+      "block_order": [
+        "1ac1f800-16d3-47f1-991a-e38873f7bad7"
+      ],
+      "settings": {
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 20,
+        "padding_bottom": 0
+      }
+    },
+    "666ba209-894a-424b-a566-c5c9dba0e804": {
+      "type": "stockists-hp",
+      "blocks": {
+        "template--18699408048409__666ba209-894a-424b-a566-c5c9dba0e804-168196240548ffc8d7-0": {
+          "type": "chart",
+          "settings": {
+            "title": "VIC",
+            "description": "",
+            "page": "stockists-vic",
+            "group": "1"
+          }
+        },
+        "template--18699408048409__666ba209-894a-424b-a566-c5c9dba0e804-168196240548ffc8d7-1": {
+          "type": "chart",
+          "settings": {
+            "title": "NSW",
+            "description": "",
+            "page": "stockists-nsw",
+            "group": "1"
+          }
+        },
+        "template--18699408048409__666ba209-894a-424b-a566-c5c9dba0e804-168196240548ffc8d7-2": {
+          "type": "chart",
+          "settings": {
+            "title": "SA",
+            "description": "",
+            "page": "stockists-sa",
+            "group": "1"
+          }
+        },
+        "6274f56f-33c0-4ccf-a0d2-f9954f740c64": {
+          "type": "chart",
+          "settings": {
+            "title": "QLD",
+            "description": "",
+            "page": "stockists-qld",
+            "group": "1"
+          }
+        },
+        "fcfa7475-be7f-43a4-87c2-6c75b80b785b": {
+          "type": "chart",
+          "settings": {
+            "title": "TAS",
+            "description": "",
+            "page": "stockists-tas",
+            "group": "1"
+          }
+        },
+        "6dd2bc48-c971-421c-9c88-e51a96fab4ff": {
+          "type": "chart",
+          "settings": {
+            "title": "WA",
+            "description": "",
+            "page": "stockists-wa",
+            "group": "1"
+          }
+        },
+        "f8426ca8-cc01-4417-bf5a-a79aed15203f": {
+          "type": "chart",
+          "settings": {
+            "title": "NT",
+            "description": "",
+            "page": "stockists-nt",
+            "group": "1"
+          }
+        },
+        "7077f953-c6aa-4561-89db-a8509681137f": {
+          "type": "chart",
+          "settings": {
+            "title": "ACT",
+            "description": "",
+            "page": "stockists-act",
+            "group": "1"
+          }
+        },
+        "0e6f3ad5-e51c-48d0-a216-7fbb88b1fd63": {
+          "type": "chart",
+          "settings": {
+            "title": "National",
+            "description": "",
+            "page": "stockists-national",
+            "group": "1"
+          }
+        }
+      },
+      "block_order": [
+        "template--18699408048409__666ba209-894a-424b-a566-c5c9dba0e804-168196240548ffc8d7-0",
+        "template--18699408048409__666ba209-894a-424b-a566-c5c9dba0e804-168196240548ffc8d7-1",
+        "template--18699408048409__666ba209-894a-424b-a566-c5c9dba0e804-168196240548ffc8d7-2",
+        "6274f56f-33c0-4ccf-a0d2-f9954f740c64",
+        "fcfa7475-be7f-43a4-87c2-6c75b80b785b",
+        "6dd2bc48-c971-421c-9c88-e51a96fab4ff",
+        "f8426ca8-cc01-4417-bf5a-a79aed15203f",
+        "7077f953-c6aa-4561-89db-a8509681137f",
+        "0e6f3ad5-e51c-48d0-a216-7fbb88b1fd63"
+      ],
+      "settings": {
+        "title": "Stockists",
+        "subtitle": "",
+        "sizeguide_footer_title": ""
+      }
+    }
+  },
+  "order": [
+    "e6053cb1-7c27-4ab5-81a3-58e489d080f2",
+    "2b0fea8d-df5e-4170-889e-a2bb18c67a87",
+    "main",
+    "666ba209-894a-424b-a566-c5c9dba0e804"
+  ]
+}

@@ -1,0 +1,156 @@
+{
+  "wrapper": "div#info-page__wrapper.page-width",
+  "sections": {
+    "e6053cb1-7c27-4ab5-81a3-58e489d080f2": {
+      "type": "breadcrumb-section",
+      "settings": {
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "2b0fea8d-df5e-4170-889e-a2bb18c67a87": {
+      "type": "info-menu",
+      "blocks": {
+        "1ac1f800-16d3-47f1-991a-e38873f7bad7": {
+          "type": "link_list",
+          "settings": {
+            "heading": "Quick links",
+            "menu": "info-menu"
+          }
+        }
+      },
+      "block_order": [
+        "1ac1f800-16d3-47f1-991a-e38873f7bad7"
+      ],
+      "settings": {
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 20,
+        "padding_bottom": 0
+      }
+    },
+    "be4e49cf-a0ca-466f-ba05-a0b099177d70": {
+      "type": "size-guide-hp",
+      "blocks": {
+        "template--18687787925785__be4e49cf-a0ca-466f-ba05-a0b099177d70-1681878552e4324ee0-0": {
+          "type": "chart",
+          "settings": {
+            "title": "Mens",
+            "description": "US sizing",
+            "page": "mens-size-chart",
+            "group": "1"
+          }
+        },
+        "template--18687787925785__be4e49cf-a0ca-466f-ba05-a0b099177d70-1681878552e4324ee0-1": {
+          "type": "chart",
+          "settings": {
+            "title": "Womens",
+            "description": "US sizing",
+            "page": "womens-size-chart",
+            "group": "1"
+          }
+        },
+        "template--18687787925785__be4e49cf-a0ca-466f-ba05-a0b099177d70-1681878552e4324ee0-2": {
+          "type": "chart",
+          "disabled": true,
+          "settings": {
+            "title": "Womens",
+            "description": "US sizing",
+            "page": "womens-size-chart",
+            "group": "2"
+          }
+        },
+        "f61f9a2f-923b-4c26-8a0f-b756ad5cf126": {
+          "type": "chart",
+          "disabled": true,
+          "settings": {
+            "title": "How to Measure",
+            "description": "",
+            "page": "how-to-measure",
+            "group": "none"
+          }
+        }
+      },
+      "block_order": [
+        "template--18687787925785__be4e49cf-a0ca-466f-ba05-a0b099177d70-1681878552e4324ee0-0",
+        "template--18687787925785__be4e49cf-a0ca-466f-ba05-a0b099177d70-1681878552e4324ee0-1",
+        "template--18687787925785__be4e49cf-a0ca-466f-ba05-a0b099177d70-1681878552e4324ee0-2",
+        "f61f9a2f-923b-4c26-8a0f-b756ad5cf126"
+      ],
+      "settings": {
+        "title": "Size Guide",
+        "subtitle": "",
+        "sizeguide_footer_title": ""
+      }
+    },
+    "f2f0ee0a-e141-4df4-be5f-eed26180177e": {
+      "type": "multicolumn",
+      "blocks": {
+        "template--18686680269081__f2f0ee0a-e141-4df4-be5f-eed26180177e-168264458610e12dd8-0": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/step1.jpg",
+            "title": "Step 1",
+            "text": "<p>Stand up straight on a hard surface with your heel against the wall and a piece of blank paper flush against the wall beneath your foot.<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "template--18686680269081__f2f0ee0a-e141-4df4-be5f-eed26180177e-168264458610e12dd8-1": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Step_2_480x480_a9d0e31a-0d65-4b7f-9beb-10fd65ce9d7d.jpg",
+            "title": "Step 2",
+            "text": "<p>Mark the longest part of your foot on the paper with a pen. Repeat with the other foot, as right and left sizes may be different.<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "template--18686680269081__f2f0ee0a-e141-4df4-be5f-eed26180177e-168264458610e12dd8-2": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Step_3_480x480_8c18fb34-8a20-4b92-8b57-29e3282d021b.jpg",
+            "title": "Step 3",
+            "text": "<p>Use a ruler to measure the heel-to-toe length you marked for each foot in CM. You can then match your size to the above!<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--18686680269081__f2f0ee0a-e141-4df4-be5f-eed26180177e-168264458610e12dd8-0",
+        "template--18686680269081__f2f0ee0a-e141-4df4-be5f-eed26180177e-168264458610e12dd8-1",
+        "template--18686680269081__f2f0ee0a-e141-4df4-be5f-eed26180177e-168264458610e12dd8-2"
+      ],
+      "settings": {
+        "title": "How to measure",
+        "heading_size": "h2",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "columns_desktop": 3,
+        "column_alignment": "left",
+        "background_style": "primary",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "background-1",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    }
+  },
+  "order": [
+    "e6053cb1-7c27-4ab5-81a3-58e489d080f2",
+    "2b0fea8d-df5e-4170-889e-a2bb18c67a87",
+    "main",
+    "be4e49cf-a0ca-466f-ba05-a0b099177d70",
+    "f2f0ee0a-e141-4df4-be5f-eed26180177e"
+  ]
+}

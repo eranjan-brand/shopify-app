@@ -1,0 +1,506 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "4a88a001-bb46-42ee-ae9c-06d2f531d64a": {
+      "type": "rich-text",
+      "blocks": {
+        "template--18685132734745__4a88a001-bb46-42ee-ae9c-06d2f531d64a-1681862599e7e48d40-0": {
+          "type": "heading",
+          "disabled": true,
+          "settings": {
+            "heading": "<p>FOR OUR PEOPLE<\/p>",
+            "heading_size": "h2"
+          }
+        },
+        "template--18685132734745__4a88a001-bb46-42ee-ae9c-06d2f531d64a-1681862599e7e48d40-1": {
+          "type": "text",
+          "settings": {
+            "text": ""
+          }
+        },
+        "template--18685132734745__4a88a001-bb46-42ee-ae9c-06d2f531d64a-1681862599e7e48d40-2": {
+          "type": "button",
+          "disabled": true,
+          "settings": {
+            "button_label": "",
+            "button_link": "",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "template--18685132734745__4a88a001-bb46-42ee-ae9c-06d2f531d64a-1681862599e7e48d40-0",
+        "template--18685132734745__4a88a001-bb46-42ee-ae9c-06d2f531d64a-1681862599e7e48d40-1",
+        "template--18685132734745__4a88a001-bb46-42ee-ae9c-06d2f531d64a-1681862599e7e48d40-2"
+      ],
+      "custom_css": [
+
+      ],
+      "settings": {
+        "desktop_content_position": "left",
+        "content_alignment": "left",
+        "color_scheme": "background-1",
+        "full_width": true,
+        "padding_top": 12,
+        "padding_bottom": 0
+      }
+    },
+    "755226cf-30aa-4cf2-b9f3-50bb2538608c": {
+      "type": "image-banner-hp",
+      "blocks": {
+        "template--18685132734745__755226cf-30aa-4cf2-b9f3-50bb2538608c-168289402616beb143-0": {
+          "type": "heading",
+          "disabled": true,
+          "settings": {
+            "heading": "Image banner",
+            "timer_after_heading": "Test heading",
+            "heading_size": "h1",
+            "heading_color": "#000000"
+          }
+        },
+        "template--18685132734745__755226cf-30aa-4cf2-b9f3-50bb2538608c-168289402616beb143-2": {
+          "type": "buttons",
+          "disabled": true,
+          "settings": {
+            "button_label_1": "Button label",
+            "button_link_1": "",
+            "button_style_secondary_1": false,
+            "button_label_2": "Button label",
+            "button_link_2": "",
+            "button_style_secondary_2": false,
+            "button_label_3": "Button label 3",
+            "button_link_3": "",
+            "button_label_4": "Button label 4",
+            "button_link_4": "",
+            "btn_color": "#000000",
+            "btn_color_hover": "#000000",
+            "btn_text_color": "#000000"
+          }
+        }
+      },
+      "block_order": [
+        "template--18685132734745__755226cf-30aa-4cf2-b9f3-50bb2538608c-168289402616beb143-0",
+        "template--18685132734745__755226cf-30aa-4cf2-b9f3-50bb2538608c-168289402616beb143-2"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/Untitled_5000_x_1080px_6000_x_1080px_6000_x_600px.png",
+        "image_mobile": "shopify:\/\/shop_images\/Untitled_5000_x_1080px_6000_x_1080px_6000_x_600px_e28b4e06-06e2-41e2-a5c9-cdc91efc2f38.png",
+        "img_link": "",
+        "clickable_img": false,
+        "show_text_box": false,
+        "text_box_color": "#ffffff",
+        "desktop_content_position": "middle-center",
+        "desktop_content_alignment": "center",
+        "color_scheme": "background-1",
+        "mobile_below_image": false,
+        "mobile_img_padding_bottom": 70,
+        "mobile_top": 50,
+        "mobile_left": 50,
+        "mobile_content_alignment": "center"
+      }
+    },
+    "b68c02e4-a051-4454-adec-73cb098030e6": {
+      "type": "rich-text",
+      "blocks": {
+        "template--18685132734745__b68c02e4-a051-4454-adec-73cb098030e6-168289531285c39ca2-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p>We aim to harmonise the commercial interests of Hush Puppies with the private and family needs of our employees and suppliers.<\/p>",
+            "heading_size": "h1"
+          }
+        },
+        "template--18685132734745__b68c02e4-a051-4454-adec-73cb098030e6-168289531285c39ca2-1": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "text": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.<\/p>"
+          }
+        },
+        "template--18685132734745__b68c02e4-a051-4454-adec-73cb098030e6-168289531285c39ca2-2": {
+          "type": "button",
+          "disabled": true,
+          "settings": {
+            "button_label": "Button label",
+            "button_link": "",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "template--18685132734745__b68c02e4-a051-4454-adec-73cb098030e6-168289531285c39ca2-0",
+        "template--18685132734745__b68c02e4-a051-4454-adec-73cb098030e6-168289531285c39ca2-1",
+        "template--18685132734745__b68c02e4-a051-4454-adec-73cb098030e6-168289531285c39ca2-2"
+      ],
+      "custom_css": [
+        "h2 {font-family: \"Basset-Bold-hp\";}"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "background-1",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "75578469-0434-40fb-bb17-c5d009eed4c4": {
+      "type": "image-banner",
+      "disabled": true,
+      "blocks": {
+        "template--18685132734745__75578469-0434-40fb-bb17-c5d009eed4c4-1682587377eb362374-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "Our People.",
+            "heading_size": "h1"
+          }
+        },
+        "template--18685132734745__75578469-0434-40fb-bb17-c5d009eed4c4-1682587377eb362374-1": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "text": "Give customers details about the banner image(s) or content on the template.",
+            "text_style": "body"
+          }
+        },
+        "template--18685132734745__75578469-0434-40fb-bb17-c5d009eed4c4-1682587377eb362374-2": {
+          "type": "buttons",
+          "disabled": true,
+          "settings": {
+            "button_label_1": "Button label",
+            "button_link_1": "",
+            "button_style_secondary_1": false,
+            "button_label_2": "Button label",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "template--18685132734745__75578469-0434-40fb-bb17-c5d009eed4c4-1682587377eb362374-0",
+        "template--18685132734745__75578469-0434-40fb-bb17-c5d009eed4c4-1682587377eb362374-1",
+        "template--18685132734745__75578469-0434-40fb-bb17-c5d009eed4c4-1682587377eb362374-2"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/20230207_145650.jpg",
+        "image_overlay_opacity": 0,
+        "image_height": "small",
+        "adapt_height_first_image": false,
+        "desktop_content_position": "bottom-right",
+        "show_text_box": false,
+        "desktop_content_alignment": "center",
+        "color_scheme": "background-1",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": true,
+        "show_text_below": false
+      }
+    },
+    "26537c91-c85d-4c68-9e3d-0902e969d915": {
+      "type": "rich-text",
+      "disabled": true,
+      "blocks": {
+        "template--18685132734745__26537c91-c85d-4c68-9e3d-0902e969d915-168257948254368863-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p>We aim to harmonise the commercial interests of Hush Puppies with the private and family needs of our employees and suppliers.<\/p>",
+            "heading_size": "h1"
+          }
+        },
+        "template--18685132734745__26537c91-c85d-4c68-9e3d-0902e969d915-168257948254368863-1": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "text": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.<\/p>"
+          }
+        },
+        "template--18685132734745__26537c91-c85d-4c68-9e3d-0902e969d915-168257948254368863-2": {
+          "type": "button",
+          "disabled": true,
+          "settings": {
+            "button_label": "Button label",
+            "button_link": "",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "template--18685132734745__26537c91-c85d-4c68-9e3d-0902e969d915-168257948254368863-0",
+        "template--18685132734745__26537c91-c85d-4c68-9e3d-0902e969d915-168257948254368863-1",
+        "template--18685132734745__26537c91-c85d-4c68-9e3d-0902e969d915-168257948254368863-2"
+      ],
+      "custom_css": [
+        "h2 {font-family: \"Basset-Bold-hp\";}"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "background-1",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 32
+      }
+    },
+    "ab3093f9-81f0-421c-bf1d-a128f9fe4619": {
+      "type": "image-with-text",
+      "disabled": true,
+      "blocks": {
+        "template--18685132734745__ab3093f9-81f0-421c-bf1d-a128f9fe4619-1682473287c383f296-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "We aim to harmonise the commercial interests of Hush Puppies with the private and family needs of our employees and suppliers.",
+            "heading_size": "h1"
+          }
+        }
+      },
+      "block_order": [
+        "template--18685132734745__ab3093f9-81f0-421c-bf1d-a128f9fe4619-1682473287c383f296-0"
+      ],
+      "custom_css": [
+        "h2 {font-family: \"Basset-Bold-hp\";}"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/people-photos2.jpg",
+        "height": "adapt",
+        "desktop_image_width": "small",
+        "layout": "image_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "color_scheme": "background-1",
+        "mobile_content_alignment": "left",
+        "padding_top": 16,
+        "padding_bottom": 28
+      }
+    },
+    "2b5804b3-4eb6-4c4a-a2ae-45522632559b": {
+      "type": "multicolumn",
+      "blocks": {
+        "template--18685132734745__2b5804b3-4eb6-4c4a-a2ae-45522632559b-16818618753d3979f2-0": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/ourpeople-strip01.jpg",
+            "title": "LABOUR & HUMAN RIGHTS",
+            "text": "<p>Our Ethical Sourcing Program aims to protect workers’ rights and strengthen our supplier relationships and commitment to traceability and transparency. We ensure that working conditions are safe and ethical for all our factory workers, no child labour is used, employment is regular, and wages are paid in full at regular intervals in accordance to local government laws.<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "d93cc18a-fc8c-4f53-aa07-cc30696fea76": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/ourpeople-strip2.jpg",
+            "title": "GENDER EQUALITY",
+            "text": "<p>In promoting workers’ rights, we are committed to challenging the gender inequality and sex discrimination faced by workers throughout our industry. We stress that no person is to be unfairly disadvantaged, favoured or ostracized because of their gender, or gender identity. Harassment of any kind is forbidden. We expect the conduct of our employees and business partners worldwide to reflect this commitment.<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "63118c62-865b-405b-8fd9-467152878148": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/ourpeople-strip03.jpg",
+            "title": "EMPLOYER OF CHOICE",
+            "text": "<p>We know that our people are crucial to our success which is why we want to make a positive impact in the lives of every single employee. We place a considerable effort into creating a work environment that promotes innovation, fosters talent and nurtures team-spirit. The spirit of the Puppie Pack is well and truly alive.<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--18685132734745__2b5804b3-4eb6-4c4a-a2ae-45522632559b-16818618753d3979f2-0",
+        "d93cc18a-fc8c-4f53-aa07-cc30696fea76",
+        "63118c62-865b-405b-8fd9-467152878148"
+      ],
+      "settings": {
+        "title": "",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "columns_desktop": 3,
+        "column_alignment": "left",
+        "background_style": "primary",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "accent-2",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "a5ec984a-e62b-4b99-95fc-fdf0fca12126": {
+      "type": "rich-text",
+      "blocks": {
+        "4c6fa293-0eb8-44ee-a354-561cfad87dd1": {
+          "type": "heading",
+          "settings": {
+            "heading": "<h2>We consider every person that touches the brand in its lifecycle to be just as important as the next. Our motto “welcome to all, exclusive to none”, underpins everything we do and only further stimulates the environment of diversity and inclusivity that we have built.<\/h2>",
+            "heading_size": "h2"
+          }
+        },
+        "a93286b2-d874-4d5e-b1b2-cb7998f79beb": {
+          "type": "button",
+          "settings": {
+            "button_label": "",
+            "button_link": "",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "4c6fa293-0eb8-44ee-a354-561cfad87dd1",
+        "a93286b2-d874-4d5e-b1b2-cb7998f79beb"
+      ],
+      "custom_css": [
+        "h2 {font-family: \"Basset-Bold-hp\"; font-size: 27px;}"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "background-1",
+        "full_width": true,
+        "padding_top": 12,
+        "padding_bottom": 4
+      }
+    },
+    "9f1b1d1e-63af-482c-803e-c234e4db157c": {
+      "type": "collage",
+      "blocks": {
+        "1a397308-0dcd-4c23-9990-0616c6a5b4a6": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/20230207_145650.jpg",
+            "image_padding": false
+          }
+        },
+        "0857634e-861b-4348-84c3-8b70faa05116": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/people-photos3.jpg",
+            "image_padding": false
+          }
+        },
+        "6d40ffd1-7d86-4c21-8981-8790b074c221": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/ourpeople-photos4.jpg",
+            "image_padding": false
+          }
+        }
+      },
+      "block_order": [
+        "1a397308-0dcd-4c23-9990-0616c6a5b4a6",
+        "0857634e-861b-4348-84c3-8b70faa05116",
+        "6d40ffd1-7d86-4c21-8981-8790b074c221"
+      ],
+      "settings": {
+        "heading": "",
+        "heading_size": "h1",
+        "desktop_layout": "left",
+        "mobile_layout": "collage",
+        "color_scheme": "background-1",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "50049855-cb21-4bdd-91ae-687db300e3cd": {
+      "type": "multicolumn",
+      "disabled": true,
+      "blocks": {
+        "template--18685132734745__50049855-cb21-4bdd-91ae-687db300e3cd-16824836776d85f2b3-0": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/ourpeople-photos4.jpg",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "template--18685132734745__50049855-cb21-4bdd-91ae-687db300e3cd-16824836776d85f2b3-1": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/people-photos2.jpg",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "template--18685132734745__50049855-cb21-4bdd-91ae-687db300e3cd-16824836776d85f2b3-2": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/ourpeople-photos2.jpg",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "b7ba2cb2-14cb-4e4b-902f-a15503c260a4": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/people-photos3.jpg",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--18685132734745__50049855-cb21-4bdd-91ae-687db300e3cd-16824836776d85f2b3-0",
+        "template--18685132734745__50049855-cb21-4bdd-91ae-687db300e3cd-16824836776d85f2b3-1",
+        "template--18685132734745__50049855-cb21-4bdd-91ae-687db300e3cd-16824836776d85f2b3-2",
+        "b7ba2cb2-14cb-4e4b-902f-a15503c260a4"
+      ],
+      "settings": {
+        "title": "",
+        "heading_size": "h2",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "columns_desktop": 4,
+        "column_alignment": "left",
+        "background_style": "primary",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "background-1",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 0,
+        "padding_bottom": 36
+      }
+    }
+  },
+  "order": [
+    "main",
+    "4a88a001-bb46-42ee-ae9c-06d2f531d64a",
+    "755226cf-30aa-4cf2-b9f3-50bb2538608c",
+    "b68c02e4-a051-4454-adec-73cb098030e6",
+    "75578469-0434-40fb-bb17-c5d009eed4c4",
+    "26537c91-c85d-4c68-9e3d-0902e969d915",
+    "ab3093f9-81f0-421c-bf1d-a128f9fe4619",
+    "2b5804b3-4eb6-4c4a-a2ae-45522632559b",
+    "a5ec984a-e62b-4b99-95fc-fdf0fca12126",
+    "9f1b1d1e-63af-482c-803e-c234e4db157c",
+    "50049855-cb21-4bdd-91ae-687db300e3cd"
+  ]
+}

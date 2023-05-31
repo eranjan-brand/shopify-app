@@ -1,0 +1,138 @@
+{% comment %}
+    Renders a collection of universal sizing grids
+
+    Accepts:
+    - product: {Object} product object (Required)
+    
+    Usage:
+    {% render 'universal-size-grid', product: product %}
+{% endcomment %}
+
+
+{% comment %} <script src="{{ 'universal-size.js' | asset_url }}" defer="defer"></script> {% endcomment %}
+{% liquid 
+  assign open_brac = "{" 
+  assign close_brac = "}"
+%}
+{% comment %} EURO size {% endcomment %}
+{% capture euro_size %}
+{{ open_brac }}
+{% for sizeGroup in product.metafields.utopia.universal_size_map.value %}
+  "key{% increment euro_index %}":{{ sizeGroup['EURO'] }}{% if forloop.last == false %},{% endif%}
+{% endfor %}
+{{ close_brac }}
+{% endcapture %}
+{% comment %} UK size {% endcomment %}
+{% capture uk_size %}
+{{ open_brac }}
+{% for sizeGroup in product.metafields.utopia.universal_size_map.value %}
+  {% if product.metafields.utopia.gender == "Womens" %}
+    "key{% increment uk_index %}":{{ sizeGroup['WOMEN UK'] }}{% if forloop.last == false %},{% endif%}
+  {% endif %}
+  {% if product.metafields.utopia.gender == "Mens" %}
+    "key{% increment uk_index %}":{{ sizeGroup['MEN UK'] }}{% if forloop.last == false %},{% endif%}
+  {% endif %}
+{% endfor %}
+{{ close_brac }}
+{% endcapture %}
+{% comment %} US size {% endcomment %}
+{% capture us_size %}
+{{ open_brac }}
+{% for sizeGroup in product.metafields.utopia.universal_size_map.value %}
+  {% if product.metafields.utopia.gender == "Womens" %}
+    "key{% increment us_index %}":{{ sizeGroup['WOMEN US'] }}{% if forloop.last == false %},{% endif%}
+  {% endif %}
+  {% if product.metafields.utopia.gender == "Mens" %}
+    "key{% increment us_index %}":{{ sizeGroup['MEN US'] }}{% if forloop.last == false %},{% endif%}
+  {% endif %}
+{% endfor %}
+{{ close_brac }}
+{% endcapture %}
+{% comment %} CM size 
+{% capture cm_size %}
+{{ open_brac }}
+{% for sizeGroup in product.metafields.utopia.universal_size_map.value %}
+  "key{% increment cm_index %}":{{ sizeGroup['CM'] }}{% if forloop.last == false %},{% endif%}
+{% endfor %}
+{{ close_brac }}
+{% endcapture %}
+{% endcomment %}
+
+{% comment %} Filter unavailable sizes to an array {% endcomment %}
+{% capture unavailable_sizes %}
+[
+  {% for variant in product.variants %}
+    {% if variant.available == false %}
+      "{{ variant.title }}"{% if forloop.last == false %},{% endif %}
+    {% endif %}
+  {% endfor %}
+]
+{% endcapture %}
+
+
+{% liquid 
+  assign defaultSize = product.metafields.utopia.default_size_range 
+  if defaultSize == "EURO" 
+    assign defaultSize = "EU"
+  endif 
+%}
+
+
+{% if product.metafields.utopia.universal_size_map.value[0] %}
+  {% render 'universal-size-dropdown' selectedSize: defaultSize %}
+{% endif %}
+
+<variant-radios class="no-js-hidden" data-section="{{ section.id }}" data-url="{{ product.url }}" {{ block.shopify_attributes }}>
+    {%- for option in product.options_with_values -%}
+        <fieldset class="js product-form__input">
+          <legend class="form__label">{{ option.name }}</legend>
+          {%- for value in option.values -%}
+            {% if forloop.length > 1 %}
+              {% assign value_arr = value | split : ',' %}
+              {% if product.metafields.utopia.gender == "Womens" %}
+                {% assign us_size_value = value_arr[5] | split : ' ' %}
+                {% else %}
+                {% assign us_size_value = value_arr[7] | split : ' ' %}
+              {% endif %}
+              {% assign size_number = us_size_value[2] %}
+            {% endif %}
+                
+            <input type="radio" id="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}"
+                  name="{{ option.name }}"
+                  value="{{ value | escape }}"
+                  form="{{ product_form_id }}"
+                  {% if option.selected_value == value %}checked{% endif %}
+                  {% if unavailable_sizes contains value %} disabled="disabled"{% endif %}
+            >
+            
+            <label for="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}" {% if forloop.length == 1 %}class="one-size"{% endif %}>
+              {% if forloop.length > 1 %}
+                <span>US</span>
+                <span>{{ size_number }}</span>
+                {% else %}
+                <span>{{ value }}</span>
+              {% endif %}
+            </label>
+          {%- endfor -%}
+        </fieldset>
+    {%- endfor -%}
+    <script type="application/json">
+      {{ product.variants | json }}
+    </script>
+  </variant-radios>
+
+{% if product.metafields.utopia.universal_size_map.value[0] %}
+  <script id="UniSizeEU-{{ product.id }}-{{ section.id }}" type="application/json">
+    {{ euro_size | json }}
+  </script>
+  <script id="UniSizeUS-{{ product.id }}-{{ section.id }}" type="application/json">
+    {{ us_size | json }}
+  </script>
+  <script id="UniSizeUK-{{ product.id }}-{{ section.id }}" type="application/json">
+    {{ uk_size | json }}
+  </script>
+  <script>
+    
+    window.product_default_size = "{{ defaultSize }}"
+  </script>
+{% endif %}

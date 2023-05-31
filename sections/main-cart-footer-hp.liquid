@@ -1,0 +1,180 @@
+{{ 'component-cart.css' | asset_url | stylesheet_tag }}
+{{ 'component-totals.css' | asset_url | stylesheet_tag }}
+{{ 'component-price.css' | asset_url | stylesheet_tag }}
+{{ 'component-discounts.css' | asset_url | stylesheet_tag }}
+
+<div class="main-cart-footer-hp page-width{% if cart == empty %} is-empty{% endif %}" id="main-cart-footer" data-id="{{ section.id }}">
+  <div>
+    {% comment %} Start: cart promoline {% endcomment %}
+    {% if settings.cart_promo %}
+      <div id="cart-footer-promoline" class="cart-promoline">{{ settings.cart_promo }}</div>
+    {% endif %}
+    {% comment %} End: cart promoline {% endcomment %}
+    <div class="cart__footer">
+      {%- if settings.show_cart_note -%}
+        <cart-note class="cart__note field">
+          <label for="Cart-note">{{ 'sections.cart.note' | t }}</label>
+          <textarea class="text-area field__input" name="note" form="cart" id="Cart-note" placeholder="{{ 'sections.cart.note' | t }}">{{ cart.note }}</textarea>
+        </cart-note>
+      {%- endif -%}
+
+      <div class="cart__blocks">
+        {% for block in section.blocks %}
+          {%- case block.type -%}
+            {%- when '@app' -%}
+              {% render block %}
+            {%- when 'subtotal' -%}
+              <div class="js-contents" {{ block.shopify_attributes }}>
+                {% comment %} COMPONENT: Progress bar {% endcomment %}
+                {%liquid 
+                  assign shipping_value = settings.progress_bar_threshold
+                  assign cart_total = cart.total_price | plus: 0
+                  assign shipping_value_left = shipping_value | minus: cart_total
+              %}
+              
+              {%- unless cart == empty -%}
+                {% if settings.show_progress_bar == true %}
+                    {% render 'progress-bar-bc', shipping_value: shipping_value, cart_total: cart_total, shipping_value_left: shipping_value_left %}
+                  {% endif %}
+                {% endunless %}
+                  {% comment %} END COMPONENT: Progress bar {% endcomment %}
+                  
+                  {% comment %} Start: Calculate the sum of product-level discount {% endcomment %}
+                  {% liquid 
+                    assign sum_product_discount = 0
+                    for item in cart.items 
+                      if item.variant.compare_at_price > item.final_price 
+                        assign price_gap = item.variant.compare_at_price | minus: item.final_price
+                        if item.quantity > 1
+                          assign price_gap = price_gap | times: item.quantity
+                        endif 
+                        assign sum_product_discount = sum_product_discount | plus: price_gap 
+                      endif 
+                    endfor 
+
+                    if sum_product_discount == 0
+                    assign no_discount = true
+                    endif
+                  %}
+                  {% comment %} End: Calculate the sum of product-level discount {% endcomment %}
+                  {% comment %} Start: shipping & discount {% endcomment %}
+                  <div class="cart-footer-notes {% unless no_discount %} cart-has-discount{% endunless %}">
+                    <div class="totals totals_shipping" role="status">
+                      <h2 class="totals__subtotal">{{ 'sections.cart.shipping' | t }}</h2>
+                      {% if shipping_value_left > 0 %}
+                          <p class="totals__subtotal-value">${{ settings.standard_shipping_rate }}</p>
+                      {% else %}
+                          <p class="totals__subtotal-value">FREE</p>
+                      {% endif %}
+      
+                    </div>
+                    
+                  {% unless no_discount %}
+                    <div class="cart-footer-discount totals">
+                      <h2 class="totals__subtotal">{{ 'sections.cart.discount' | t }}</h2>
+                        <p class="totals__subtotal-value">- {{ sum_product_discount | money }}</p>
+                    </div>
+                  {% endunless %}
+                  </div>
+                  {% comment %} End: shipping & discount {% endcomment %}
+                  
+                <div class="totals cart-footer-totals">
+                  <h2 class="totals__subtotal">{{ 'sections.cart.subtotal' | t }}</h2>
+                  <p class="totals__subtotal-value">{{ cart.total_price | money }}</p>
+                </div>
+
+                <div>
+                  {%- if cart.cart_level_discount_applications.size > 0 -%}
+                    <ul class="discounts list-unstyled" role="list" aria-label="{{ 'customer.order.discount' | t }}">
+                      {%- for discount in cart.cart_level_discount_applications -%}
+                        <li class="discounts__discount discounts__discount--position">
+                          {%- render 'icon-discount' -%}
+                          {{ discount.title }}
+                          (-{{ discount.total_allocated_amount | money }})
+                        </li>
+                      {%- endfor -%}
+                    </ul>
+                  {%- endif -%}
+                </div>
+
+                <small class="tax-note caption-large rte">
+                  {%- if cart.taxes_included and shop.shipping_policy.body != blank -%}
+                    {{ 'sections.cart.taxes_included_and_shipping_policy_html' | t: link: shop.shipping_policy.url }}
+                  {%- elsif cart.taxes_included -%}
+                    {{ 'sections.cart.taxes_included_but_shipping_at_checkout' | t }}
+                  {%- elsif shop.shipping_policy.body != blank -%}
+                    {{ 'sections.cart.taxes_and_shipping_policy_at_checkout_html' | t: link: shop.shipping_policy.url }}
+                  {%- else -%}
+                    {{ 'sections.cart.taxes_and_shipping_at_checkout' | t }}
+                  {%- endif -%}
+                </small>
+              </div>
+            {%- else -%}
+              <div class="cart__ctas" {{ block.shopify_attributes }}>
+                <noscript>
+                  <button type="submit" class="cart__update-button button button--secondary" form="cart">
+                    {{ 'sections.cart.update' | t }}
+                  </button>
+                </noscript>
+
+                <button type="submit" id="checkout" class="cart__checkout-button button" name="checkout"{% if cart == empty %} disabled{% endif %} form="cart">
+                  {{ 'sections.cart.checkout' | t }}
+                </button>
+              </div>
+
+              {%- if additional_checkout_buttons -%}
+                <div class="cart__dynamic-checkout-buttons additional-checkout-buttons">
+                  {{ content_for_additional_checkout_buttons }}
+                </div>
+              {%- endif -%}
+          {%- endcase -%}
+        {% endfor %}
+
+        <div id="cart-errors"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    function isIE() {
+      const ua = window.navigator.userAgent;
+      const msie = ua.indexOf('MSIE ');
+      const trident = ua.indexOf('Trident/');
+
+      return (msie > 0 || trident > 0);
+    }
+
+    if (!isIE()) return;
+    const cartSubmitInput = document.createElement('input');
+    cartSubmitInput.setAttribute('name', 'checkout');
+    cartSubmitInput.setAttribute('type', 'hidden');
+    document.querySelector('#cart').appendChild(cartSubmitInput);
+    document.querySelector('#checkout').addEventListener('click', function(event) {
+      document.querySelector('#cart').submit();
+    });
+  });
+</script>
+
+{% schema %}
+{
+  "name": "t:sections.main-cart-footer.name",
+  "class": "cart__footer-wrapper",
+  "blocks": [
+    {
+      "type": "subtotal",
+      "name": "t:sections.main-cart-footer.blocks.subtotal.name",
+      "limit": 1
+    },
+    {
+      "type": "buttons",
+      "name": "t:sections.main-cart-footer.blocks.buttons.name",
+      "limit": 1
+    },
+    {
+      "type": "@app"
+    }
+  ]
+}
+{% endschema %}

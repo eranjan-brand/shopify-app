@@ -1,0 +1,495 @@
+
+{{ 'section-newsletter-hp.css' | asset_url | stylesheet_tag }}
+
+{%- style -%}
+    .section-{{ section.id }}-padding {
+        padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+        padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+        background: {{ section.settings.newsletter_bg_color }}
+    }
+
+    .section-{{ section.id }}-padding .newsletter__heading, .section-{{ section.id }}-padding .newsletter-form__message--success h3  {
+        font-size: {{ section.settings.heading_font_size }}px;
+        font-weight: {{ section.settings.heading_font_weight }};
+        color: {{ section.settings.heading_font_color }};
+        text-align: {{ section.settings.text_alignment }}
+    }
+
+
+    .section-{{ section.id }}-padding .newsletter__subheading, .section-{{ section.id }}-padding .newsletter-form__message--success p {
+        font-size: {{ section.settings.subheading_font_size }}px;
+        font-weight: {{ section.settings.subheading_font_weight }};
+        color: {{ section.settings.subheading_font_color }};
+        text-align: {{ section.settings.text_alignment }};
+        text-transform: none;
+    }
+
+    .section-{{ section.id }}-padding .newsletter__subheading {
+        margin-block: 0;
+    }
+
+    .section-{{ section.id }}-padding .newsletter-form__subtext {
+        color: {{ section.settings.subheading_font_color }};
+        text-align: {{ section.settings.text_alignment }};
+        text-transform: none;
+        font-size: {{ section.settings.subtext_font_size }}px;
+    }
+
+    .section-{{ section.id }}-padding .newsletter-form__button {
+        {%- if section.settings.button_border_enabled -%}
+            border: 1px solid {{ section.settings.button_text_color }};
+        {%- endif -%}
+        background-color: {{ section.settings.button_bg_color }}!important;
+        color: {{ section.settings.button_text_color }};
+    }
+
+    .section-{{ section.id }}-padding .newsletter-form__button:hover {
+        {%- if section.settings.button_border_enabled -%}
+        border: 1px solid {{ section.settings.button_text_color_hover }};
+        {%- endif -%}
+        background-color: {{ section.settings.button_bg_color_hover }}!important;
+        color: {{ section.settings.button_text_color_hover }};
+    }
+
+    .section-{{ section.id }}-padding .footer-signup .newsletter-form__button-primary {
+      {%- if section.settings.button_border_enabled -%}
+            border: 1px solid {{ section.settings.button_text_color }};
+        {%- endif -%}
+        background-color: {{ section.settings.button_bg_color }}!important;
+        color: {{ section.settings.button_text_color }};
+        padding: 1.15rem;
+        text-decoration: none;
+        display: inline-block;
+    }
+    .section-{{ section.id }}-padding .footer-signup .newsletter-form__button-primary:hover{
+      {%- if section.settings.button_border_enabled -%}
+        border: 1px solid {{ section.settings.button_text_color_hover }};
+        {%- endif -%}
+        background-color: {{ section.settings.button_bg_color_hover }}!important;
+        color: {{ section.settings.button_text_color_hover }};
+    }
+
+
+    .section-{{ section.id }}-padding .newsletter-wrapper {
+        position: relative;
+        z-index: 1;
+        margin-top: {{ section.settings.margin_top }}px;
+        margin-bottom: {{ section.settings.margin_bottom }}px;
+    }
+
+    @media screen and (min-width: 750px) {
+      .footer-signup {
+        margin: 0 auto;
+        max-width: 36rem;
+      }
+    }
+
+    .footer-signup {
+      text-align: center;
+    }
+
+{%- endstyle -%}
+
+<div class="newsletter__section section-{{ section.id }}-padding">
+    {% if section.settings.newsletter_bg_image %}
+        <picture>
+            <source media="(min-width: 750px)" srcset="{%- if section.settings.newsletter_bg_image.width >= 375 -%}{{ section.settings.newsletter_bg_image | image_url: width: 375 }} 375w,{%- endif -%}
+            {%- if section.settings.newsletter_bg_image.width >= 550 -%}{{ section.settings.newsletter_bg_image | image_url: width: 550 }} 550w,{%- endif -%}
+            {%- if section.settings.newsletter_bg_image.width >= 750 -%}{{ section.settings.newsletter_bg_image | image_url: width: 750 }} 750w,{%- endif -%}
+            {%- if section.settings.newsletter_bg_image.width >= 1100 -%}{{ section.settings.newsletter_bg_image | image_url: width: 1100 }} 1100w,{%- endif -%}
+            {%- if section.settings.newsletter_bg_image.width >= 1500 -%}{{ section.settings.newsletter_bg_image | image_url: width: 1500 }} 1500w,{%- endif -%}
+            {%- if section.settings.newsletter_bg_image.width >= 1780 -%}{{ section.settings.newsletter_bg_image | image_url: width: 1780 }} 1780w,{%- endif -%}
+            {%- if section.settings.newsletter_bg_image.width >= 2000 -%}{{ section.settings.newsletter_bg_image | image_url: width: 2000 }} 2000w,{%- endif -%}
+            {%- if section.settings.newsletter_bg_image.width >= 3000 -%}{{ section.settings.newsletter_bg_image | image_url: width: 3000 }} 3000w,{%- endif -%}
+            {%- if section.settings.newsletter_bg_image.width >= 3840 -%}{{ section.settings.newsletter_bg_image | image_url: width: 3840 }} 3840w,{%- endif -%}
+            {{ section.settings.newsletter_bg_image | image_url }} {{ section.settings.newsletter_bg_image.width }}w">
+            <source media="(max-width: 749px)" srcset="{{ section.settings.newsletter_bg_image_mobile | image_url }}">
+            <img
+              sizes="100vw"
+              src="{{ section.settings.newsletter_bg_image_mobile | image_url: width: 1500 }}"
+              loading="lazy"
+              alt="{{ section.settings.newsletter_bg_image_mobile.alt | escape }}"
+              width="{{ section.settings.newsletter_bg_image_mobile.width }}"
+              height="{{ section.settings.newsletter_bg_image_mobile.width | divided_by: section.settings.newsletter_bg_image_mobile.aspect_ratio | round }}"
+              style="width:100%;height:100%;object-fit:cover"
+              class="newsletter__section--image"
+            >
+          </picture>
+    {% endif %}
+      <div class="newsletter-wrapper">
+        {%- if section.settings.newsletter_heading != blank and form.posted_successfully? != true -%}
+          <h2 class="newsletter__heading">{{ section.settings.newsletter_heading | escape }}</h2>
+        {%- endif -%}
+        {%- if section.settings.newsletter_subheading != blank and form.posted_successfully? != true -%}
+          <div class="newsletter__subheading">{{ section.settings.newsletter_subheading }}</div>
+        {%- endif -%}
+        
+        {%- if section.settings.newsletter_form_enabled == true -%}
+          {%- form 'customer', id: 'ContactFooter', class: 'footer__newsletter newsletter-form' -%}
+              {%- if form.posted_successfully? -%}
+                  <style>
+                      .newsletter__heading {display: none;}
+                      .newsletter__subheading {display: none;}
+                  </style>
+                  <div class="newsletter-form__message newsletter-form__message--success form__message">
+                      <h3 class="" id="ContactFooter-success" tabindex="-1">{{ section.settings.newsletter_success_heading }}
+                      </h3>
+                      <p>{{ section.settings.newsletter_success_subheading }}</p>
+                  </div>
+              {% else %}
+                  <input type="hidden" name="contact[tags]" value="newsletter">
+                  <div class="newsletter-form__field-wrapper">
+                      <div class="field newsletter-form--name">
+                          <input id="first-name" 
+                              type="text" 
+                              name="contact[first_name]"
+                              placeholder="First Name"
+                              autocomplete="given-name"
+                              autocorrect="off"
+                              required
+                              aria-required="true"
+                              autocapitalize="true"
+                              value="{{ form.first_name }}"
+                          />
+                      </div>
+                      <div class="field newsletter-form--name">
+                          <input id="last-name" 
+                              type="text" 
+                              name="contact[last_name]" 
+                              placeholder="Last Name"
+                              autocomplete="family-name"
+                              autocorrect="off"
+                              required
+                              aria-required="true"
+                              autocapitalize="true"
+                              value="{{ form.last_name }}"
+                          />
+                      </div>
+                      <div class="field-wrapper">
+                          <div class="field newsletter-form--email">
+                              <input id="email" type="email" name="contact[email]"
+                                  autocorrect="off"
+                                  autocapitalize="off"
+                                  autocomplete="email"
+                                  placeholder="{{ 'newsletter.label' | t }}"
+                                  required
+                                  aria-required="true"
+                                  value="{{ form.email }}"
+                                  type="email"
+                              />
+                          </div>
+                          <button type="submit" class="newsletter-form__button field__button" name="commit" id="Subscribe" aria-label="{{ 'newsletter.button_label' | t }}">
+                              {{ section.settings.button_text }}
+                          </button>
+                      </div>
+                  
+                      {%- if form.errors -%}
+                          <small class="newsletter-form__message form__message" id="ContactFooter-error">{% render 'icon-error' %}
+                              {{ form.errors | default_errors }}
+                          </small>
+                      {%- endif -%}
+                  </div>
+              {% endif %}
+          {%- endform -%}
+        {%- endif -%}
+        <div class="footer-signup">
+          {%- if section.settings.newsletter_form_enabled == false -%}
+            <a href="{%- if customer -%}{{ routes.account_url }}{%- else -%}{{ section.settings.button_link }}{%- endif -%}" class="newsletter-form__button-primary">{{ section.settings.button_text | escape }}</a>
+        {%- endif -%}
+        <small class="newsletter-form__subtext">{{ section.settings.newsletter_subtext }}</small>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+{% schema %}
+{
+  "name": "Newsletter sign up",
+  "settings": [
+    {
+      "type": "color",
+      "id": "newsletter_bg_color",
+      "label": "Background",
+      "default": "#fff"
+    },
+    {
+      "type": "image_picker",
+      "id": "newsletter_bg_image",
+      "label": "Background Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "newsletter_bg_image_mobile",
+      "label": "Background image mobile"
+    },
+    {
+      "type": "text",
+      "id": "newsletter_heading",
+      "default": "WANT THE LATEST FROM Hush Puppies??",
+      "label": "t:sections.footer.settings.newsletter_heading.label"
+    },
+    {
+      "type": "number",
+      "id": "heading_font_size",
+      "default": 16,
+      "label": "Heading font size"
+    },
+    {
+      "type": "select",
+      "id": "heading_font_weight",
+      "label": "Font Weight",
+      "options": [
+        {
+          "value": "100",
+          "label": "100"
+        },
+        {
+          "value": "200",
+          "label": "200"
+        },
+        {
+          "value": "300",
+          "label": "300"
+        },
+        {
+          "value": "400",
+          "label": "400"
+        },
+        {
+          "value": "500",
+          "label": "500"
+        },
+        {
+          "value": "600",
+          "label": "600"
+        },
+        {
+          "value": "700",
+          "label": "700"
+        },
+        {
+          "value": "800",
+          "label": "800"
+        },
+        {
+          "value": "900",
+          "label": "900"
+        }
+      ],
+      "default": "500"
+    },
+    {
+      "type": "color",
+      "id": "heading_font_color",
+      "default": "#000",
+      "label": "Heading font colour"
+    },
+    {
+      "type": "richtext",
+      "id": "newsletter_subheading",
+      "default": "<p>*By submitting this form you agree to receiving updates and offers from Hush Puppies via email in accordance with our Privacy Policy and agree to the Terms and Conditions</p>",
+      "label": "Sub Heading"
+    },
+    {
+      "type": "number",
+      "id": "subheading_font_size",
+      "default": 16,
+      "label": "Subheading font size"
+    },
+    {
+      "type": "select",
+      "id": "subheading_font_weight",
+      "label": "Subheading Font Weight",
+      "options": [
+        {
+          "value": "100",
+          "label": "100"
+        },
+        {
+          "value": "200",
+          "label": "200"
+        },
+        {
+          "value": "300",
+          "label": "300"
+        },
+        {
+          "value": "400",
+          "label": "400"
+        },
+        {
+          "value": "500",
+          "label": "500"
+        },
+        {
+          "value": "600",
+          "label": "600"
+        },
+        {
+          "value": "700",
+          "label": "700"
+        },
+        {
+          "value": "800",
+          "label": "800"
+        },
+        {
+          "value": "900",
+          "label": "900"
+        }
+      ],
+      "default": "500"
+    },
+    {
+      "type": "color",
+      "id": "subheading_font_color",
+      "default": "#000",
+      "label": "Subheading font colour"
+    },
+    {
+      "type": "select",
+      "id": "text_alignment",
+      "options": [
+        {
+          "value": "left",
+          "label": "Left"
+        },
+        {
+          "value": "center",
+          "label": "Center"
+        },
+        {
+          "value": "right",
+          "label": "Right"
+        }
+      ],
+      "default": "center",
+      "label": "Text Alignment"
+    },
+    {
+        "type": "richtext",
+        "id": "newsletter_subtext",
+        "default": "<p>*By submitting this form you agree to receiving updates and offers from Hush Puppies via email in accordance with our Privacy Policy and agree to the Terms and Conditions</p>",
+        "label": "Form subtext",
+        "info": "Takes colour from subheading"
+      },
+      {
+        "type": "number",
+        "id": "subtext_font_size",
+        "default": 14,
+        "label": "Subtext font size"
+      },
+    {
+      "type": "text",
+      "id": "button_text",
+      "label": "Button text",
+      "default": "Sign up"
+    },
+    {
+      "type": "text",
+      "id": "button_link",
+      "label": "Button Link",
+      "default": "/account/register"
+    },
+    {
+      "type": "color",
+      "id": "button_bg_color",
+      "default": "#fff",
+      "label": "Button background colour"
+    },
+    {
+      "type": "color",
+      "id": "button_bg_color_hover",
+      "default": "#fff",
+      "label": "Button background colour hover"
+    },
+    {
+      "type": "color",
+      "id": "button_text_color",
+      "default": "#000",
+      "label": "Button text colour"
+    },
+    {
+      "type": "color",
+      "id": "button_text_color_hover",
+      "default": "#617f59",
+      "label": "Button text colour hover"
+    },
+    {
+      "type": "checkbox",
+      "id": "button_border_enabled",
+      "default": true,
+      "label": "Button Border"
+    },
+    {
+        "type": "text",
+        "id": "newsletter_success_heading",
+        "default": "You are now a Hush Puppies VIP!",
+        "label": "Success heading",
+        "info": "Text styling taken from main heading"
+      },
+      {
+        "type": "text",
+        "id": "newsletter_success_subheading",
+        "default": "You will receive an email shortly with your $10 off* coupon code",
+        "label": "Success subheading",
+        "info": "Text styling taken from main subheading"
+      },
+    {
+      "type": "range",
+      "id": "margin_top",
+      "min": 0,
+      "max": 200,
+      "step": 4,
+      "unit": "px",
+      "label": "Margin top",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "margin_bottom",
+      "min": 0,
+      "max": 200,
+      "step": 4,
+      "unit": "px",
+      "label": "Margin bottom",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 36
+    },
+    {
+      "type": "checkbox",
+      "id": "newsletter_form_enabled",
+      "default": false,
+      "label": "Newsletter form enabled"
+    }
+  ],
+  "blocks": [
+
+  ],
+  "presets": [
+    {
+      "name": "Newsletter"
+    }
+  ]
+}
+{% endschema %}

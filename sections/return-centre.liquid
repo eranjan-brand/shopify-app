@@ -1,0 +1,144 @@
+{{ 'return-center.css' | asset_url | stylesheet_tag }}
+{{ 'return-centre-hp.css' | asset_url | stylesheet_tag }}
+
+<script>
+    let returnsCenterSettings = {
+        store_code: '{{section.settings.store_code}}',
+        free_return_shipping_offered: '{{section.settings.free_return_shipping_offered}}',
+        free_return_shipping_threshold: '{{section.settings.free_return_shipping_threshold}}',
+        allow_return_within_x_days: '{{section.settings.allow_return_within_x_days}}',
+        show_shipping_cost_page: '{{section.settings.show_shipping_cost_page}}',
+        show_preparing_items_page: '{{section.settings.show_preparing_items_page}}',
+        show_terms_and_conditions_page: '{{section.settings.show_terms_and_conditions_page}}',
+        current_environment: '{{section.settings.current_environment}}',
+        custom: '{{section.settings.custom}}',
+        contact_page_url: '{{section.settings.contact_page_url}}',
+        return_center_title : '{{section.settings.return_center_title}}',
+        welcome_page_content: '{{section.settings.welcome_page_content}}',
+        welcome_page_condition_points: '{{section.settings.welcome_page_condition_points}}',
+        default_conditions_points: '{{section.settings.default_conditions_points}}',
+        default_threshold_text: '{{section.settings.default_threshold_text}}'
+
+
+    };
+</script>
+
+{%- style -%}
+
+{{section.settings.custom_returns_css}}
+
+{%- endstyle -%}
+
+<script id="return-center" type="module" src="{{ 'return-center.js' | asset_url }}"></script>
+
+{% schema %}
+
+{
+    "name": "Return Centre",
+    "tag": "section",
+    "class": "section",
+    "settings": [
+        {
+            "type": "text",
+            "id": "store_code",
+            "label": "Store Code API"
+        }, {
+            "type": "checkbox",
+            "id": "free_return_shipping_offered",
+            "label": "Free Return Shipping Offered"
+        }, {
+            "type": "number",
+            "id": "free_return_shipping_threshold",
+            "label": "Free Return Shipping Threshold"
+        }, {
+            "type": "checkbox",
+            "id": "show_shipping_cost_page",
+            "label": "Show Shipping Cost Page"
+        }, {
+            "type": "checkbox",
+            "id": "show_preparing_items_page",
+            "label": "Show Preparing Items Page"
+        }, {
+            "type": "checkbox",
+            "id": "show_terms_and_conditions_page",
+            "label": "Show Terms and Conditions Page"
+        }, {
+            "type": "select",
+            "id": "current_environment",
+            "options": [
+                {
+                    "value": "dev",
+                    "label": "development"
+                }, {
+                    "value": "production",
+                    "label": "production"
+                }
+            ],
+            "label": "Current Enviroment"
+        }, {
+            "type": "text",
+            "id": "contact_page_url",
+            "label": "Contact Us Page URL"
+        }, {
+            "type": "number",
+            "id": "allow_return_within_x_days",
+            "label": "Allowed Return Within Days"
+        }, {
+            "type": "text",
+            "id": "return_center_title",
+            "label": "Return Center Title"
+        }, {
+            "type": "header",
+            "content": "Advanced"
+        }, {
+            "type": "text",
+            "id": "custom",
+            "label": "Welcome Page Store"
+        }, {
+            "type": "checkbox",
+            "id": "default_threshold_text",
+            "label": "Default Threshold Text (SNS)"
+        }, {
+            "type": "checkbox",
+            "id": "default_conditions_points",
+            "label": "Default Conditions Points     (SNS, SDY, RBK)"
+        }, {
+            "type": "textarea",
+            "id": "welcome_page_content",
+            "label": "Welcome Page Content"
+        }, {
+            "type": "textarea",
+            "id": "welcome_page_condition_points",
+            "label": "Welcome Page Condition Points"
+        }, {
+            "type": "textarea",
+            "id": "custom_returns_css",
+            "label": "Custom CSS"
+        }
+    ],
+    "presets": [
+        {
+            "name": "Return Centre",
+            "settings": {
+                "custom_returns_css": "",
+                "store_code": "RBK",
+                "free_return_shipping_offered": false,
+                "free_return_shipping_threshold": 0,
+                "allow_return_within_x_days": 28,
+                "show_shipping_cost_page": false,
+                "show_preparing_items_page": false,
+                "show_terms_and_conditions_page": false,
+                "current_environment": "dev",
+                "custom": "RBK",
+                "contact_page_url": "/pages/contact",
+                "return_center_title": "Return Centre",
+                "welcome_page_content": "<p className='welcome_page_thresholdText'> We want you to be passionate about your purchase. If you’re not feeling the love, return your volley.com.au product(s) within 30 days from the date of delivery free of charge for a full refund (less any shipping costs paid).</p>",
+                "welcome_page_condition_points": "<p>We have 3 conditions for returns due to a change of mind:</p><p><strong>1.</strong> Items must be returned within 28 days of the order date;</p><p><strong>2.</strong> Items must be unworn with the original tags still attached - we are unable to accept returns with dirty marks or wear marks;</p><p><strong>3.</strong> Items must be purchased directly from our website.</p>",
+                "default_conditions_points": false,
+                "default_threshold_text": false
+            }
+        }
+    ]
+}
+
+{% endschema %}

@@ -1,0 +1,278 @@
+{{ 'component-top-banner.css' | asset_url | stylesheet_tag }}
+
+{%- style -%}
+  #marquee-section-{{ section.id }} {
+    background-color: {{ section.settings.bg_colour }};
+  }
+  #marquee-section-{{ section.id }} a, #marquee-section-{{ section.id }} p{
+    font-size: {{ section.settings.font_size }}px;
+    padding: {{ section.settings.padding }}px;
+    font-weight: {{ section.settings.font_weight}};
+  }
+  #marquee-section-{{ section.id }} .announcement-bar {
+      background-color: {{ section.settings.bg_colour }};
+      color: {{ section.settings.text_colour }}
+    }
+    #marquee-section-{{ section.id }} .announcement-bar a {
+      color: {{ section.settings.text_colour }}
+    }
+    #marquee-section-{{ section.id }} .announcement-bar a:hover {
+      color: {{ section.settings.text_hover_colour }}
+    }
+  
+
+{% if section.settings.marquee_enabled %}
+
+    #marquee-section-{{ section.id }}.marquee {
+      background-color: {{ section.settings.bg_colour }};
+    }
+
+    #marquee-section-{{ section.id }} .marquee__content {
+    animation: scroll {{ section.settings.animation_speed }}s linear infinite;
+  }
+
+  @media screen and (min-width: 450px) {
+    #marquee-section-{{ section.id }} .marquee__content {
+        animation: scroll {{ section.settings.animation_speed | plus: 12 }}s linear infinite;
+    }
+  }
+
+  @media screen and (min-width: 900px) {
+    #marquee-section-{{ section.id }} .marquee__content {
+        animation: scroll {{ section.settings.animation_speed | plus: 20 }}s linear infinite;
+    }
+  }
+    
+
+  {% endif %}
+
+
+
+{%- endstyle -%}
+{% if section.blocks %}
+  {% if section.settings.marquee_enabled %}
+    
+    <div class="marquee" id="marquee-section-{{ section.id }}">
+      <ul class="marquee__content">
+        {%- for block in section.blocks -%}
+          {%- case block.type -%}
+            {%- when 'announcement' -%}
+              <li>
+                <div class="announcement-bar gradient" role="region" aria-label="{{ 'sections.header.announcement' | t }}" {{ block.shopify_attributes }}>
+                  
+                      <a href="{{ block.settings.link }}" class=" announcement-bar__link link link--text focus-inset animate-arrow content-slide announcement-bar__message {{ block.settings.text_alignment }} h5 topbanner-message">
+                            {{ block.settings.text | escape }}
+                      </a>
+                    
+                </div>
+              
+              </li>
+            {%- endcase -%}
+          {%- endfor -%}
+      </ul>
+      <ul class="marquee__content">
+        {%- for block in section.blocks -%}
+          {%- case block.type -%}
+            {%- when 'announcement' -%}
+              <li>
+                <div class="announcement-bar gradient" role="region" aria-label="{{ 'sections.header.announcement' | t }}" {{ block.shopify_attributes }}>
+                  
+                      <a href="{{ block.settings.link }}" class=" announcement-bar__link link link--text focus-inset animate-arrow content-slide announcement-bar__message {{ block.settings.text_alignment }} h5 topbanner-message">
+                            {{ block.settings.text | escape }}
+                      </a>
+                    
+                </div>
+              
+              </li>
+            {%- endcase -%}
+          {%- endfor -%}
+      </ul>
+    </div>
+
+  {% else %}
+
+    <div class="top-banner-slider topbanner-load" id="marquee-section-{{ section.id }}">
+      {%- for block in section.blocks -%}
+        {%- case block.type -%}
+          {%- when 'announcement' -%}
+            <div class="content-slide announcement-bar" role="region" aria-label="{{ 'sections.header.announcement' | t }}" {{ block.shopify_attributes }}>
+              {%- if block.settings.text != blank -%}
+                {%- if block.settings.link != blank -%}
+                  <a href="{{ block.settings.link }}" class="announcement-bar__link link link--text focus-inset animate-arrow">
+                {%- endif -%}
+                    <div class="page-width">
+                      <p class="announcement-bar__message {{ block.settings.text_alignment }} h5">
+                        {{ block.settings.text | escape }}
+                        {%- if block.settings.link != blank -%}
+                          {% render 'icon-arrow' %}
+                        {%- endif -%}
+                      </p>
+                    </div>
+                {%- if block.settings.link != blank -%}
+                  </a>
+                {%- endif -%}
+              {%- endif -%}
+            </div>
+        {%- endcase -%}
+      {%- endfor -%}
+    </div>
+  {% endif %}
+  
+{% endif %}
+
+
+
+{% schema %}
+{
+  "name": "t:sections.announcement-bar.name",
+  "tag": "section",
+  "class": "section",
+  "max_blocks": 5,
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "marquee_enabled",
+      "label": "Scrolling text",
+      "default": true
+    },
+    {
+      "type": "number",
+      "id": "animation_speed",
+      "label": "Scroll animation speed",
+      "default": 10
+    },
+    {
+      "type": "color",
+      "id": "text_colour",
+      "label": "Text Colour",
+      "default": "#000",
+      "info": "For use with scrolling banner"
+    },
+    {
+      "type": "color",
+      "id": "text_hover_colour",
+      "label": "Text Hover Colour",
+      "default": "#000",
+      "info": "For use with scrolling banner"
+    },
+    {
+      "type": "color",
+      "id": "bg_colour",
+      "label": "Background Colour",
+      "default": "#fff",
+      "info": "For use with scrolling banner"
+    },
+    {
+      "type": "number",
+      "id": "padding",
+      "label": "Padding",
+      "default": 10,
+      "info": "Add height to banner"
+    },
+    {
+      "type": "number",
+      "id": "font_size",
+      "label": "Font Size",
+      "default": 16
+    },
+    {
+      "type": "select",
+      "id": "font_weight",
+      "label": "Font Weight",
+      "options": [
+        {
+          "value": "100",
+          "label": "100"
+        },
+        {
+          "value": "200",
+          "label": "200"
+        },
+        {
+          "value": "300",
+          "label": "300"
+        },
+        {
+          "value": "400",
+          "label": "400"
+        },
+        {
+          "value": "500",
+          "label": "500"
+        },
+        {
+          "value": "600",
+          "label": "600"
+        },
+        {
+          "value": "700",
+          "label": "700"
+        },
+        {
+          "value": "800",
+          "label": "800"
+        },
+        {
+          "value": "900",
+          "label": "900"
+        }
+      ],
+      "default": "500"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "announcement",
+      "name": "t:sections.announcement-bar.blocks.announcement.name",
+      "settings": [
+        {
+          "type": "text",
+          "id": "text",
+          "default": "Welcome to our store",
+          "label": "t:sections.announcement-bar.blocks.announcement.settings.text.label"
+        },
+        {
+          "type": "select",
+          "id": "text_alignment",
+          "options": [
+            {
+              "value": "left",
+              "label": "t:sections.announcement-bar.blocks.announcement.settings.text_alignment.options__1.label"
+            },
+            {
+              "value": "center",
+              "label": "t:sections.announcement-bar.blocks.announcement.settings.text_alignment.options__2.label"
+            },
+            {
+              "value": "right",
+              "label": "t:sections.announcement-bar.blocks.announcement.settings.text_alignment.options__3.label"
+            }
+          ],
+          "default": "center",
+          "label": "t:sections.announcement-bar.blocks.announcement.settings.text_alignment.label"
+        },
+        {
+          "type": "url",
+          "id": "link",
+          "label": "t:sections.announcement-bar.blocks.announcement.settings.link.label"
+        }
+      ]
+    }
+  ],
+  "presets": [{
+    "name": "Scrolling Banner",
+    "category": "Text",
+    "blocks": [
+      {
+      "type": "announcement"
+      },
+      {
+        "type": "announcement"
+      },
+      {
+        "type": "announcement"
+      }
+    ]
+  }]
+}
+{% endschema %}

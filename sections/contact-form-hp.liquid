@@ -1,0 +1,223 @@
+{{ 'section-contact-form-hp.css' | asset_url | stylesheet_tag }}
+
+{%- style -%}
+
+.section-{{ section.id }}-padding {
+    width: 100%!important;
+    
+}
+
+@media screen and (min-width: 990px) {
+    .section-{{ section.id }}-padding {
+        padding-bottom: {{ section.settings.padding_bottom }}px;
+        /* float: right;
+        width: 50%!important; */
+    }
+}
+
+{%- endstyle -%}
+<div class="contact-modal-container">
+    <div class='contact-modal-content'>
+    <h2>Your message was sent successfully.</h2>
+    <p>You will be emailed a confirmation with details of your message for your records shortly!</p>
+    </div>
+</div>
+<div id="contact-page">
+    <div class="color-{{ section.settings.color_scheme }} gradient">
+        <div class="contact page-width section-{{ section.id }}-padding">
+            {%- if section.settings.heading != blank -%}
+                <h2 class="title title-wrapper--no-top-margin {{ section.settings.heading_size }}">{{ section.settings.heading | escape }}</h2>
+            {%- else -%}
+                <h2 class="visually-hidden">{{ 'templates.contact.form.title' | t }}</h2>
+            {%- endif -%}
+            <div class="required-field-note"><span>* Required fields</span></div>
+
+            {%- form 'contact', id: 'ContactForm', class: 'isolate' -%}
+            	{{ form.errors | default_errors }}
+                {%- if form.posted_successfully? -%}
+                    <h2 autofocus class="form-status form-status-list form__message" tabindex="-1">{% render 'icon-success' %}
+                        {{ 'templates.contact.form.post_success' | t }}</h2>
+                {%- elsif form.errors -%}
+                    <div class="form__message">
+                        <h2 autofocus class="form-status caption-large text-body" role="alert" tabindex="-1">{% render 'icon-error' %}
+                            {{ 'templates.contact.form.error_heading' | t }}</h2>
+                    </div>
+                    <ul class="form-status-list caption-large" role="list">
+                        <li>
+                            <a class="link" href="#ContactForm-email">
+                                {{ form.errors.translated_fields['email'] | capitalize }}
+                                {{ form.errors.messages['email'] }}
+                            </a>
+                        </li>
+                    </ul>
+                {%- endif -%}
+                <div class="field required select">
+                    <select class="field__input" autocomplete="topic" type="text" id="ContactForm-topic" name="contact[Topic]" onchange = "" required>
+                        <option disabled selected value="">
+                            Select a topic</option>
+                        <option value="Existing Online Order">Existing Online Order</option>
+                        <option value="Returns">Returns</option>
+                        <option value="Product and Size Information">Product and Size Information</option>
+                        <option value="Shipping and Delivery Information">Shipping and Delivery Information</option>
+                        <option value="Promotions">Promotions</option>
+                        <option value="Website/Account Issues">Website/Account Issues</option>
+                        <option value="General Enquiry">General Enquiry</option>
+                    </select>
+                    {% render 'icon-caret' %}
+                    <div class="required-icon"><span>*</span></div>
+                    <div id="topic-err-msg" class="contact-err-msg">Please select a topic</div>
+
+                </div>
+                
+                <div class="field required"> 
+                    <input class="field__input" autocomplete="name" type="text" id="ContactForm-name" name="contact[{{ 'templates.contact.form.name' | t }}]" value="{% if form.name %}{{ form.name }}{% elsif customer %}{{ customer.name }}{% endif %}" placeholder="{{ 'templates.contact.form.name' | t }}" required>
+                    <label class="field__label" for="ContactForm-name">{{ 'templates.contact.form.name' | t }}</label>
+                    <div class="required-icon"><span>*</span></div>
+                    <div id="name-err-msg" class="contact-err-msg">Please enter your full name</div>
+
+                </div>
+                
+                <div class="field">
+                    <input  autocomplete="email" type="email" id="ContactForm-email" class="field__input" name="contact[Email]" spellcheck="false" autocapitalize="off" value="{% if form.email %}{{ form.email }}{% elsif customer %}{{ customer.email }}{% endif %}" aria-required="true" {% if form.errors contains 'email' %} aria-invalid="true" aria-describedby="ContactForm-email-error" {% endif %} placeholder="{{ 'templates.contact.form.email' | t }}">
+                    <label class="field__label" for="ContactForm-email">Email</label>
+                    <div class="required-icon"><span>*</span></div>
+                    <div id="email-err-msg" class="contact-err-msg">Please enter a valid email address</div>
+
+                </div>
+                <div class="field">
+                    <input type="tel" id="ContactForm-phone" class="field__input" autocomplete="tel" name="contact[Phone_number]" pattern="[0-9\-]*" value="{% if form.phone %}{{ form.phone }}{% elsif customer %}{{ customer.phone }}{% endif %}" placeholder="{{ 'templates.contact.form.phone' | t }}">
+                    <label class="field__label" for="ContactForm-phone">Phone Number</label>
+                </div>
+                <div class="field">
+                    <input class="field__input" autocomplete="orderNo" type="text" id="ContactForm-orderNo" name="contact[Order_Number]" value="{% if form.name %}{{ form.name }}{% elsif customer %}{{ customer.name }}{% endif %}" placeholder="{{ 'templates.contact.form.orderNo' | t }}">
+                    <label class="field__label" for="ContactForm-orderNo">Order Number</label>
+                </div>
+                <div class="field textarea">    
+                    <textarea rows="10" id="ContactForm-body" class="text-area field__input" name="contact[Comment]" placeholder="{{ 'templates.contact.form.comment' | t }}" required>
+                        {{- form.body -}}
+                    </textarea>
+                    <label id = "comment_label" class="form__label field__label" for="ContactForm-body">{{ 'templates.contact.form.comment' | t }}</label>
+                    <div id="comment-err-msg" class="contact-err-msg">Please enter your comment</div>
+
+                </div>
+              
+            {%- endform -%}
+                <div class="contact__button">
+                    <button class="button" type="submit">
+                        Submit Message
+                    </button>
+                </div>
+                <div class="contact__submit-error" hidden><p>Error submitting form, please try again.</p></div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+ const contact_us_enviroment = '{{section.settings.contact_form_enviroment}}'
+</script>
+
+
+<script src="{{ 'contact-form-hp.js' | asset_url }}" defer >
+
+
+</script>
+
+
+{% schema %}
+
+{
+    "name": "Contact Form HP",
+    "tag": "section",
+    "class": "section",
+    "settings": [
+        {
+            "type": "text",
+            "id": "heading",
+            "default": "Contact form",
+            "label": "Heading"
+        }, {
+            "type": "select",
+            "id": "heading_size",
+            "options": [
+                {
+                    "value": "h2",
+                    "label": "t:sections.all.heading_size.options__1.label"
+                }, {
+                    "value": "h1",
+                    "label": "t:sections.all.heading_size.options__2.label"
+                }, {
+                    "value": "h0",
+                    "label": "t:sections.all.heading_size.options__3.label"
+                }
+            ],
+            "default": "h1",
+            "label": "t:sections.all.heading_size.label"
+        }, {
+            "type": "select",
+            "id": "color_scheme",
+            "options": [
+                {
+                    "value": "accent-1",
+                    "label": "t:sections.all.colors.accent_1.label"
+                }, {
+                    "value": "accent-2",
+                    "label": "t:sections.all.colors.accent_2.label"
+                }, {
+                    "value": "background-1",
+                    "label": "t:sections.all.colors.background_1.label"
+                }, {
+                    "value": "background-2",
+                    "label": "t:sections.all.colors.background_2.label"
+                }, {
+                    "value": "inverse",
+                    "label": "t:sections.all.colors.inverse.label"
+                }
+            ],
+            "default": "background-1",
+            "label": "t:sections.all.colors.label"
+        }, {
+            "type": "header",
+            "content": "t:sections.all.padding.section_padding_heading"
+        }, {
+            "type": "range",
+            "id": "padding_top",
+            "min": 0,
+            "max": 100,
+            "step": 4,
+            "unit": "px",
+            "label": "t:sections.all.padding.padding_top",
+            "default": 36
+        }, {
+            "type": "range",
+            "id": "padding_bottom",
+            "min": 0,
+            "max": 100,
+            "step": 4,
+            "unit": "px",
+            "label": "t:sections.all.padding.padding_bottom",
+            "default": 36
+        },
+        {
+            "type": "select",
+            "id": "contact_form_enviroment",
+            "options": [
+                {
+                    "value": "dev",
+                    "label": "Development"
+                }, {
+                    "value": "prod",
+                    "label": "Production"
+                }
+            ],
+            "label": "Contact Us Enviroment",
+            "default": "dev"
+        }
+    ],
+    "presets": [
+        {
+            "name": "t:sections.contact-form.presets.name"
+        }
+    ]
+}
+
+{% endschema %}

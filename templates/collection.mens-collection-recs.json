@@ -1,0 +1,192 @@
+{
+  "sections": {
+    "d3db301e-af84-4958-93c6-5df60c636bc4": {
+      "type": "image-banner-hp",
+      "blocks": {
+        "template--18774199042329__d3db301e-af84-4958-93c6-5df60c636bc4-16829177873e6a3aeb-0": {
+          "type": "heading",
+          "disabled": true,
+          "settings": {
+            "heading": "Image banner",
+            "timer_after_heading": "Test heading",
+            "heading_size": "h1",
+            "heading_color": "#000000"
+          }
+        },
+        "template--18774199042329__d3db301e-af84-4958-93c6-5df60c636bc4-16829177873e6a3aeb-2": {
+          "type": "buttons",
+          "disabled": true,
+          "settings": {
+            "button_label_1": "Button label",
+            "button_link_1": "",
+            "button_style_secondary_1": false,
+            "button_label_2": "Button label",
+            "button_link_2": "",
+            "button_style_secondary_2": false,
+            "button_label_3": "Button label 3",
+            "button_link_3": "",
+            "button_label_4": "Button label 4",
+            "button_link_4": "",
+            "btn_color": "#000000",
+            "btn_color_hover": "#000000",
+            "btn_text_color": "#000000"
+          }
+        }
+      },
+      "block_order": [
+        "template--18774199042329__d3db301e-af84-4958-93c6-5df60c636bc4-16829177873e6a3aeb-0",
+        "template--18774199042329__d3db301e-af84-4958-93c6-5df60c636bc4-16829177873e6a3aeb-2"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/HP-50_Off_Boots_23_Banner-Desktop.jpg",
+        "image_mobile": "shopify:\/\/shop_images\/mobilebannerhires_1.5x.jpg",
+        "img_link": "",
+        "clickable_img": false,
+        "show_text_box": true,
+        "text_box_color": "#ffffff",
+        "desktop_content_position": "middle-center",
+        "desktop_content_alignment": "center",
+        "color_scheme": "background-1",
+        "mobile_below_image": false,
+        "mobile_img_padding_bottom": 50,
+        "mobile_top": 50,
+        "mobile_left": 50,
+        "mobile_content_alignment": "center"
+      }
+    },
+    "banner": {
+      "type": "main-collection-banner",
+      "settings": {
+        "show_collection_description": false,
+        "show_collection_image": false,
+        "color_scheme": "background-1"
+      }
+    },
+    "ea8c5a1e-a85a-4d4e-9fd2-cff140e80f59": {
+      "type": "collection-list-plp",
+      "blocks": {
+        "template--16464605479163__ea8c5a1e-a85a-4d4e-9fd2-cff140e80f59-1674444608f37a9c9c-0": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "mens-boots",
+            "collection_title": "",
+            "collection_link": "",
+            "product_override": ""
+          }
+        },
+        "2bc67479-b422-49f3-8d3a-c41901b968e8": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "mens-slippers",
+            "collection_title": "",
+            "collection_link": "",
+            "product_override": ""
+          }
+        },
+        "template--16464605479163__ea8c5a1e-a85a-4d4e-9fd2-cff140e80f59-1674444608f37a9c9c-1": {
+          "type": "featured_collection",
+          "disabled": true,
+          "settings": {
+            "collection": "mens-dress-shoes",
+            "collection_title": "",
+            "collection_link": "",
+            "product_override": ""
+          }
+        },
+        "95ba6bf1-174f-4e9d-9600-330963c023fb": {
+          "type": "featured_collection",
+          "disabled": true,
+          "settings": {
+            "collection": "mens-work-shoes",
+            "collection_title": "",
+            "collection_link": "",
+            "product_override": ""
+          }
+        },
+        "03e753cc-67cd-45a5-8262-e6099644ed51": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "mens-sneakers",
+            "collection_title": "",
+            "collection_link": "",
+            "product_override": ""
+          }
+        },
+        "12a92a8c-64d3-4a33-befc-57c7b792124f": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "mens-sandals",
+            "collection_title": "",
+            "collection_link": "",
+            "product_override": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--16464605479163__ea8c5a1e-a85a-4d4e-9fd2-cff140e80f59-1674444608f37a9c9c-0",
+        "2bc67479-b422-49f3-8d3a-c41901b968e8",
+        "template--16464605479163__ea8c5a1e-a85a-4d4e-9fd2-cff140e80f59-1674444608f37a9c9c-1",
+        "95ba6bf1-174f-4e9d-9600-330963c023fb",
+        "03e753cc-67cd-45a5-8262-e6099644ed51",
+        "12a92a8c-64d3-4a33-befc-57c7b792124f"
+      ],
+      "settings": {
+        "title": "",
+        "heading_size": "h1",
+        "image_ratio": "adapt",
+        "columns_desktop": 9,
+        "color_scheme": "background-1",
+        "bg_colour": "#ffffff",
+        "bg_image_padding": 0,
+        "show_view_all": false,
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "product-grid": {
+      "type": "main-collection-product-grid-hp",
+      "settings": {
+        "infinite_scroll": true,
+        "products_per_page": 16,
+        "columns_desktop": 4,
+        "image_ratio": "portrait",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "enable_quick_add": true,
+        "enable_filtering": true,
+        "filter_type": "horizontal",
+        "enable_sorting": true,
+        "columns_mobile": "2",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "a40d980f-7d31-4146-b484-09247213c50d": {
+      "type": "main-collection-description",
+      "settings": {
+        "show_title": true,
+        "color_scheme": "background-1",
+        "content_alignment": "center",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "1681194565d20f1d04": {
+      "type": "apps",
+      "settings": {
+        "include_margins": true
+      }
+    }
+  },
+  "order": [
+    "d3db301e-af84-4958-93c6-5df60c636bc4",
+    "banner",
+    "ea8c5a1e-a85a-4d4e-9fd2-cff140e80f59",
+    "product-grid",
+    "a40d980f-7d31-4146-b484-09247213c50d",
+    "1681194565d20f1d04"
+  ]
+}

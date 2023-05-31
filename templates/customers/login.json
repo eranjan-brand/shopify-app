@@ -1,0 +1,59 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-login",
+      "settings": {
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "3dbb535f-7e55-45cc-874a-c40d75e103f1": {
+      "type": "rich-text",
+      "blocks": {
+        "template--18177240695065__3dbb535f-7e55-45cc-874a-c40d75e103f1-168264519336efea91-0": {
+          "type": "heading",
+          "disabled": true,
+          "settings": {
+            "heading": "<p>Talk about your brand<\/p>",
+            "heading_size": "h1"
+          }
+        },
+        "template--18177240695065__3dbb535f-7e55-45cc-874a-c40d75e103f1-168264519336efea91-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p><em>We have a brand new website! If you previously held an account with us, you will need to create a new one. Looking for your order history? Visit our FAQs <\/em><a href=\"\/pages\/faq\" title=\"FAQ\"><em>here<\/em><\/a><em>.<\/em><\/p>"
+          }
+        },
+        "template--18177240695065__3dbb535f-7e55-45cc-874a-c40d75e103f1-168264519336efea91-2": {
+          "type": "button",
+          "disabled": true,
+          "settings": {
+            "button_label": "Button label",
+            "button_link": "",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "template--18177240695065__3dbb535f-7e55-45cc-874a-c40d75e103f1-168264519336efea91-0",
+        "template--18177240695065__3dbb535f-7e55-45cc-874a-c40d75e103f1-168264519336efea91-1",
+        "template--18177240695065__3dbb535f-7e55-45cc-874a-c40d75e103f1-168264519336efea91-2"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "background-1",
+        "full_width": true,
+        "padding_top": 0,
+        "padding_bottom": 40
+      }
+    }
+  },
+  "order": [
+    "main",
+    "3dbb535f-7e55-45cc-874a-c40d75e103f1"
+  ]
+}
