@@ -1,0 +1,54 @@
+/* Fading Slider */
+.topbanner-load ol li:not(:first-child){
+    display:none;
+  }
+
+  .content-slide .announcement-bar__message{
+    transition: opacity ease-in-out 300ms;
+  }
+  .top-banner-slider.topbanner-load {
+    display: none;
+  }
+  .topbanner-message {
+    font-size:12px;
+    font-weight:400;
+    line-height:20px;
+    text-transform:capitalize;
+  }
+  .topbanner-message:hover{
+    cursor:pointer;
+  }
+/* End Slider */
+
+  .marquee {
+    --gap: 1rem;
+    display: flex;
+    overflow: hidden;
+    gap: var(--gap);
+  }
+  
+  .marquee__content {
+    list-style: none;
+    flex-shrink: 0;
+    display: flex;
+    justify-content: space-around;
+    min-width: 100%;
+    gap: var(--gap);
+    margin: 0;
+  }
+
+  @keyframes scroll {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(calc(-100% - var(--gap)));
+    }
+  }
+
+  .announcement-bar { 
+    border-bottom: none;
+  }
+
+
+/* End Marquee */

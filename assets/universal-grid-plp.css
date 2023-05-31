@@ -1,0 +1,120 @@
+#FacetFiltersFormDesktop .size-grid__wrapper {
+    min-width: 42rem;
+}
+
+.size-grid__wrapper ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.size-grid__wrapper a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: #666;
+}
+
+.size-grid__wrapper li:hover {
+    background: #ddd;
+}
+
+.size-grid__wrapper .size-grid__nav--item.active {
+    border-bottom: 2px solid #000000;
+}
+
+.size-grid__wrapper div {
+    display: none;
+}
+.size-grid__tab {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 1rem;
+}
+
+.size-grid__tab-nonuniversal {
+    margin-bottom: .5rem!important;
+}
+
+#FacetFiltersFormMobile .size-grid__wrapper .size-grid__tab {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+.size-grid__tab--item {
+    text-align: center;
+    border: 1px solid #E8E8E8;
+    aspect-ratio: 1;
+}
+
+.size-grid__tab--item.active {
+    background-color: black;
+    color: white;
+}
+.size-grid__tab--item.active:hover {
+    background-color: black;
+    color: white;
+    opacity: .7;
+}
+
+.size-grid__nav {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    text-align: center;
+    gap: 1rem;
+    border-bottom: 1px solid #E8E8E8;
+    margin-bottom: 1rem!important;
+
+}
+
+.size-grid__wrapper svg {
+    display: none;
+}
+
+.size-grid__wrapper .facet-checkbox {
+    justify-content: center;
+    white-space: nowrap;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.size-grid__wrapper .facet-checkbox .facet-checkbox--title {
+    font-size: 11px;
+    font-family: 'Swiss-Bold-hp';
+}
+
+.size-grid__gender--nav {
+    display: grid;
+    text-align: center;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    border-bottom: 1px solid #E8E8E8;
+}
+
+.size-grid__gender--nav .active {
+    border-bottom: 2px solid #000000;
+}
+
+.parent-display.facets__display {
+    min-width: fit-content;
+    /* width: fit-content; */
+}
+
+.size-grid__wrapper .size-grid__tab--wrapper {
+    min-width: 29rem;
+}
+
+.size-grid__wrapper > .size-grid__tab--wrapper {
+    display: block;
+}
+
+.size-grid__wrapper > .size-grid__tab--wrapper ~ .size-grid__tab--wrapper {
+    display: none;
+}
+
+.size-grid__tab li {
+    display: none;
+}
+
+.size-grid__tab li.visible {
+    display: flex;
+}

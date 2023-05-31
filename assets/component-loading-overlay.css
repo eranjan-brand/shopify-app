@@ -1,0 +1,148 @@
+.loading-overlay {
+  position: absolute;
+  z-index: 1;
+  width: 1.8rem;
+}
+
+@media screen and (max-width: 749px) {
+  .loading-overlay {
+    top: 0;
+    right: 0;
+  }
+}
+
+@media screen and (min-width: 750px) {
+  .loading-overlay {
+    left: 0;
+  }
+}
+
+.loading-overlay__spinner {
+  width: 1.8rem;
+  display: inline-block;
+}
+
+.spinner {
+  animation: rotator 1.4s linear infinite;
+}
+
+@keyframes rotator {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(270deg);
+  }
+}
+
+.path {
+  stroke-dasharray: 280;
+  stroke-dashoffset: 0;
+  transform-origin: center;
+  stroke: rgb(var(--color-foreground));
+  animation: dash 1.4s ease-in-out infinite;
+}
+
+@media screen and (forced-colors: active) {
+  .path{
+    stroke: CanvasText;
+  }
+}
+
+@keyframes dash {
+  0% {
+    stroke-dashoffset: 280;
+  }
+  50% {
+    stroke-dashoffset: 75;
+    transform: rotate(135deg);
+  }
+  100% {
+    stroke-dashoffset: 280;
+    transform: rotate(450deg);
+  }
+}
+
+.loading-overlay:not(.hidden) + .cart-item__price-wrapper,
+.loading-overlay:not(.hidden) ~ cart-remove-button {
+  opacity: 50%;
+}
+
+.loading-overlay:not(.hidden) ~ cart-remove-button {
+  pointer-events: none;
+  cursor: default;
+}
+
+
+
+/* START custom loading CSS - SEARCHSPRING */
+
+#product-grid {
+  transition: opacity 2s;
+}
+
+.searchspring-facets .facets.shimmer {
+  width: 50%;
+  height: 30px;
+}
+
+
+.shimmer {
+  color: grey;
+  -webkit-mask:linear-gradient(-60deg,#000 30%,#0005,#000 70%) right/300% 100%;
+  background-repeat: no-repeat;
+  animation: shimmer 1.5s infinite;
+  text-color: transparent;
+  border-radius: 20px;
+  background: lightgrey;
+}
+
+.card-shimmer {
+  width: 100%;
+  height: 300px;
+}
+
+.card-shimmer-text {
+  width: 65%;
+  height: 30px;
+  margin-top: 10px;
+}
+.card-shimmer-text-2 {
+  width: 50%;
+  height: 30px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+@keyframes shimmer {
+  100% {-webkit-mask-position:left}
+}
+
+@media screen and (max-width: 600px) {
+  .card-shimmer {
+    height: 150px;
+  }
+
+  .grid--1-col-tablet-down .card-shimmer {
+    height: 300px;
+  }
+}
+
+@media screen and (max-width: 990px) {
+  
+
+  .searchspring-facets.facets-container.loading * {
+    opacity: 0;
+  }
+  .searchspring-facets.facets-container.loading {
+    color: grey;
+    -webkit-mask:linear-gradient(-60deg,#000 30%,#0005,#000 70%) right/300% 100%;
+    background-repeat: no-repeat;
+    animation: shimmer 1.5s infinite;
+    text-color: transparent;
+    border-radius: 20px;
+    background: lightgrey;
+  }
+}
+
+/* END custom loading CSS - SEARCHSPRING */

@@ -1,0 +1,108 @@
+:root {
+    --hp-green: #617F59
+}
+
+.instructions-container-steps .stepsBlock .circle-icon {
+    background-color: #fff;
+    background: var(--hp-green)!important;
+    color: #fff;
+    border: none;
+    cursor: default;
+}
+
+#return-center .bc-return-inbox-button button {
+    background: var(--hp-green)!important;
+    color: #fff!important;
+    border: none;
+}
+
+#return-center .bc-return-inbox-button button:hover {
+    cursor: pointer;
+}
+
+
+#return-center li a {
+    color: #1e87f0;
+}
+
+#return-center .button-container .start-over-button-container {
+    background-color: #000;
+    color: #fff;
+}
+
+#return-center .button-container .next-button-container {
+    background-color: white;
+    color: black;
+}
+
+.exchange-details p {
+    color: rgb(102,102,102)
+}
+
+.return-confirmation-wrapper .return-confirmation-info {
+    color: rgb(102,102,102)
+}
+
+.confirmation-return-reference-container .confirmation-return-reference-text {
+    color: rgb(153,153,153);
+}
+
+.rc-bullet-text li{
+    color: #333333;
+}
+
+/*  */.shopify-returns-app .inputBlocks:focus, .shopify-returns-app .inputBlocks:focus-visible {
+    box-shadow: 0 0 0 2px;
+    outline: 0;
+    border-radius: var(--inputs-radius);
+}
+
+.bc-return-inbox-button .bc-returns-button1 {
+    background-color: #000;
+    color: #fff;
+    font-family:"Swiss-721-hp"
+}
+
+.bc-return-inbox-button .bc-returns-button1:hover {
+    background-color: #244496;
+    cursor: pointer
+}
+
+.bc-return-inbox-button .bc-returns-button2 {
+    background-color: white!important;
+    color: black!important;
+    font-family:"Swiss-721-hp"
+}
+
+.bc-return-inbox-button .bc-returns-button2:hover {
+    box-shadow: 0 0 0 3px;
+}
+
+.return-navigation .start-over-button-container {
+    background-color: #000;
+    color: #fff;
+}
+
+.return-navigation .start-over-button-container:hover {
+    background-color: #244496!important;
+    cursor: pointer
+}
+
+.shopify-returns-app .inputBlocks {
+    font-family:"Swiss-721-hp"
+}
+
+#return-center .return-centre-intro .welcome-page-title{font-weight: 700;
+    font-size: 30px;
+    border-bottom: 1px solid #eaeaea;
+    margin: 0;
+    padding-bottom: 20px;
+}
+
+#return-center .title{font-family:Swiss-721-hp,Arial,Helvetica,sans-serif!important;}
+
+#return-center{width:100%;font-family:Swiss-721-hp,Arial,Helvetica,sans-serif!important;display:flow-root;box-sizing:content-box;margin-top:0!important;margin-left:auto;margin-right:auto}
+
+#return-center .return-centre-intro{font-family:Swiss-721-hp,Arial,Helvetica,sans-serif!important;text-align:center!important;padding:0 15px 15px}
+
+#return-center .title{font-family:Swiss-721-hp,Arial,Helvetica,sans-serif!important;letter-spacing:.25px;text-transform:uppercase;margin-top:0;font-weight:900;font-size:42px;margin-bottom:40px!important;line-height:1.3}

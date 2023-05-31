@@ -1,0 +1,103 @@
+
+.iti {
+    width: 100%;
+}
+
+.iti__arrow {
+    display: block!important;
+}
+
+.iti__flag {
+    background-image: url("{{ 'flags.png' | asset_url }}");
+    display: block!important;
+}
+
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .iti__flag {background-image: url("{{ 'flags@2x.png' | asset_url }}");}
+}
+
+
+
+.newsletter__section {
+    position: relative;
+}
+
+.newsletter__section .newsletter__section--image {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+}
+
+.newsletter-form__field-wrapper .field::after, .newsletter-form__field-wrapper .field::before {
+    box-shadow: none;
+}
+
+.newsletter-form__field-wrapper {
+    --field-spacing: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    align-items: center;
+}
+
+.newsletter-form__message {
+    text-align: center;
+    justify-content: center!important;
+    width: 100%;
+    flex-direction: column;
+}
+
+.newsletter-form__message h3 {
+    font-weight: bold;
+}
+
+.newsletter-form__field-wrapper .field {
+    min-width: fit-content;
+    width: 100%;
+}
+
+.newsletter-form__field-wrapper .field input {
+    width: 100%;
+    padding: 1rem;
+    border-radius: 0;
+}
+
+.newsletter-form__field-wrapper .newsletter-form--name {
+    width: calc(50% - var(--field-spacing) /2);
+}
+
+.newsletter-form__field-wrapper .field-wrapper {
+    display: flex;
+    width: 100%;
+}
+
+.newsletter-form__field-wrapper .newsletter-form--bday {
+    position: relative;
+    width: auto;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.newsletter-form__field-wrapper .newsletter-form--bday input {
+    padding-left:33%;
+    
+}
+
+.newsletter-form__field-wrapper .newsletter-form--bday label {
+    position: absolute;
+    top: 1rem;
+    left: 10px;
+    font-size: 13px;
+    color: #848181;
+    letter-spacing: 0;
+}
+.newsletter-form__field-wrapper .newsletter-form__button {
+    position: unset;
+    margin-left: 1rem;
+    width: auto;
+    height: 100%;
+    white-space: nowrap;
+    min-width: fit-content;
+    padding: 1.15rem;
+}

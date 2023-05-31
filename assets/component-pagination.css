@@ -1,0 +1,153 @@
+.pagination-wrapper {
+  margin-top: 4rem;
+}
+
+@media screen and (min-width: 990px) {
+  .pagination-wrapper {
+    margin-top: 5rem;
+  }
+}
+
+.pagination__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.pagination__list > li {
+  flex: 1 0 4.4rem;
+  max-width: 4.4rem;
+}
+
+.pagination__list > li:not(:last-child) {
+  margin-right: 1rem;
+}
+
+.pagination__item {
+  color: rgb(var(--color-foreground));
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  height: 4.4rem;
+  width: 100%;
+  padding: 0;
+  text-decoration: none;
+}
+
+a.pagination__item:hover::after {
+  height: 0.1rem;
+}
+
+.pagination__item .icon-caret {
+  height: 0.6rem;
+}
+
+.pagination__item--current::after {
+  height: 0.1rem;
+}
+
+.pagination__item--current::after,
+.pagination__item:hover::after {
+  content: '';
+  display: block;
+  width: 2rem;
+  position: absolute;
+  bottom: 8px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: currentColor;
+}
+
+.pagination__item--next .icon {
+  margin-left: -0.2rem;
+  transform: rotate(90deg);
+}
+
+.pagination__item--next:hover .icon {
+  transform: rotate(90deg) scale(1.07);
+}
+
+.pagination__item--prev .icon {
+  margin-right: -0.2rem;
+  transform: rotate(-90deg);
+}
+
+.pagination__item--prev:hover .icon {
+  transform: rotate(-90deg) scale(1.07);
+}
+
+.pagination__item-arrow:hover::after {
+  display: none;
+}
+
+
+
+/* Custom Pagination CSS - SEARCHSPRING */
+
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.pagination__list {
+  overflow-x: auto;
+  /* flex-wrap: nowrap; */
+  position: relative;
+  padding-block: 1rem;
+  justify-content: unset;
+  /* min-width: 70%; */
+  display: block;
+  white-space: nowrap;
+}
+
+.pagination__list li {
+  display: inline-block;
+ 
+}
+.pagination__list li a{
+  padding-inline: 1.2rem;
+  /* font-size: 2rem; */
+}
+
+/* width */
+.pagination__list::-webkit-scrollbar {
+  height: 2px;
+}
+
+/* Track */
+.pagination__list::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+/* Handle */
+.pagination__list::-webkit-scrollbar-thumb {
+  background: #000;
+  border-radius: 10px;
+
+}
+
+/* Handle on hover */
+.pagination__list::-webkit-scrollbar-thumb:hover {
+  background: #555;
+  cursor: pointer;
+}
+
+.pagination__list > li:first-child, .pagination__list > li:last-child{
+  position: sticky;
+  background: white;
+  z-index: 10;
+}
+
+.pagination__list > li:first-child {
+  left: 0;
+}
+.pagination__list > li:last-child {
+  right: 0;
+}
+
+
+/* END Custom Pagination CSS - SEARCHSPRING */

@@ -1,0 +1,61 @@
+.search__input.field__input {
+  /* padding-right: 5rem; */
+}
+
+@media screen and (min-width: 900px) {
+  .search__input.field__input:not(:placeholder-shown) {
+    position: absolute;
+      left: 0;
+      background: white;
+      z-index: 1;
+      border-bottom: 1px solid #8B8B8B;
+  
+  }
+}
+
+
+.search__button {
+  right: var(--inputs-border-width);
+  top: var(--inputs-border-width);
+}
+
+.search__button:focus-visible {
+  background-color: rgb(var(--color-background));
+  z-index: 2;
+}
+
+.search__button:focus {
+  background-color: rgb(var(--color-background));
+  z-index: 2;
+}
+
+.search__button:not(:focus-visible):not(.focused){
+  box-shadow: inherit;
+  background-color: inherit;
+}
+
+.search__button .icon {
+  height: 1.8rem;
+  width: 1.8rem;
+}
+
+/* Remove extra spacing for search inputs in Safari */
+input::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+
+/* START Custom CSS */
+
+.template-search__header h1{
+  text-align: left;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 32px;
+  margin-bottom: 0;
+}
+
+.product-count-vertical {
+  margin: 0!important;
+  text-align: left;
+}
