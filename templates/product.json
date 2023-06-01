@@ -18,17 +18,12 @@
         "caption": {
           "type": "text",
           "settings": {
-            "text": "{{ product.metafields.descriptors.subtitle.value }}",
+            "text": "",
             "text_style": "subtitle"
           }
         },
         "price": {
           "type": "price",
-          "settings": {
-          }
-        },
-        "d12a65e1-e0f3-45c2-9e3b-3f7fadbab0d7": {
-          "type": "shopify:\/\/apps\/bazaarvoice-reviews-photos\/blocks\/rating-summary-block\/766ed9d3-b120-48f3-8444-448f45152f47",
           "settings": {
           }
         },
@@ -95,7 +90,7 @@
           "settings": {
             "heading": "Materials & Details",
             "icon": "none",
-            "content": "<p>Product Code: {{ product.metafields.utopia.colour_code.value }}<\/p><p>Sole Material: {{ product.metafields.utopia.sole_material.value }}<\/p><p>Sock Material: {{ product.metafields.utopia.sock_material.value }}<\/p><p>Lining Material: {{ product.metafields.utopia.lining_material.value }}<\/p><p>Upper Material: {{ product.metafields.utopia.upout_material.value }}<\/p><p>Country Of Origin: {{ product.metafields.utopia.coo.value }}<\/p><p><\/p>",
+            "content": "<p>Product Code: <\/p><p>Sole Material: <\/p><p>Sock Material: <\/p><p>Lining Material:<\/p><p>Upper Material:<\/p><p>Country Of Origin:<\/p><p><\/p>",
             "page": ""
           }
         },
@@ -140,7 +135,6 @@
         "title",
         "caption",
         "price",
-        "d12a65e1-e0f3-45c2-9e3b-3f7fadbab0d7",
         "6cd1211e-1dec-4981-b51f-b73aeef0e8e4",
         "e5c5263b-356b-4a32-a3ae-6b02dab770f0",
         "9b97b7c9-bd51-479b-928b-7220fc88f51a",
@@ -229,28 +223,6 @@
         "padding_bottom": 28
       }
     },
-    "1681356694b69022e2": {
-      "type": "apps",
-      "blocks": {
-        "8084338f-acfe-4c4b-8995-8ab16d3851e8": {
-          "type": "shopify:\/\/apps\/bazaarvoice-reviews-photos\/blocks\/reviews-block\/766ed9d3-b120-48f3-8444-448f45152f47",
-          "settings": {
-          }
-        },
-        "ec1d4441-4094-4988-922f-7e2d37fa999d": {
-          "type": "shopify:\/\/apps\/bazaarvoice-reviews-photos\/blocks\/questions_and_answers_block\/766ed9d3-b120-48f3-8444-448f45152f47",
-          "settings": {
-          }
-        }
-      },
-      "block_order": [
-        "8084338f-acfe-4c4b-8995-8ab16d3851e8",
-        "ec1d4441-4094-4988-922f-7e2d37fa999d"
-      ],
-      "settings": {
-        "include_margins": true
-      }
-    },
     "feature-badge-desc": {
       "type": "feature-badge-section",
       "settings": {
@@ -264,7 +236,6 @@
     "main",
     "multicolumn",
     "product-recommendations",
-    "1681356694b69022e2",
     "feature-badge-desc"
   ]
 }
